@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en-SG">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Remote Volunteering · The Little Letters Club</title>
+<meta name="description" content="Create kindness from anywhere. Proposed remote creative volunteering programmes from The Little Letters Club.">
+<link rel="icon" href="/assets/8bda083cb5af8508bbc9696637fdb16f.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&amp;family=Inter:wght@400;500;600&amp;family=Gaegu:wght@400;700&amp;display=swap">
+<link rel="stylesheet" href="/tokens.css">
+<link rel="stylesheet" href="/ds/llc/components/bundle.css">
+<link rel="stylesheet" href="/site.css">
+<style>body{margin:0}</style>
+<script src="/js/preact.min.js"></script>
+<script src="/js/tllc-runtime.js"></script>
+<script src="/js/asset-ext.js"></script>
+</head>
+<body>
+<div id="app"></div>
+<noscript><p style="font-family:sans-serif;padding:24px">The Little Letters Club website needs JavaScript turned on.</p></noscript>
+<script type="application/x-tllc-template" data-dc="Remote">["\n\n",["div",{"class":"llc-root","style":"position: relative; width: 100%; min-height: 100vh; display: flex; flex-direction: column; overflow-x: clip; background: var(--warm-beige); color: var(--ink); font-family: var(--font-sans)"},["\n",["a",{"class":"skip","href":"#main"},["Skip to content"]],"\n",["div",{"style":"position: sticky; top: 0; z-index: 50"},[["dc-import",{"name":"Nav","current":"remote","hint-size":"100%,96px"},[]]]],"\n",["main",{"id":"main"},["\n\n",["sc-if",{"value":"{{isHub}}","hint-placeholder-val":"{{true}}"},["\n\n",["section",{"class":"sec","style":"padding-top: 48px; padding-bottom: 40px","aria-labelledby":"rv-h1"},["\n",["div",{"class":"wrap rv-hero"},["\n",["div",{"class":"stack","style":"gap: 18px"},["\n",["p",{"class":"llc-eyebrow rise"},["Remote volunteering · proposed"]],"\n",["h1",{"id":"rv-h1","class":"llc-h1 rise rise--2"},["Create kindness ",["span",{"class":"llc-hand accent","style":"font-size: 1.12em; font-weight: 600"},["from anywhere."]]]],"\n",["p",{"class":"lead rise rise--3","style":"max-width: 560px"},["A little time, a little creativity and a little kindness can travel a long way."]],"\n",["div",{"class":"row rise rise--3"},["\n",["a",{"class":"llc-btn llc-btn--primary","href":"/opportunities/"},["Explore Opportunities ",["span",{"aria-hidden":"true"},["→"]]]],"\n",["a",{"class":"llc-btn llc-btn--secondary","href":"/volunteer/#interest-form"},["Join the Little Creators"]],"\n"]],"\n",["p",{"class":"llc-caption"},[["span",{"class":"status status--planned"},["Programmes below are proposed and not open yet"]]]],"\n"]],"\n",["div",{"class":"rv-hero__art","aria-hidden":"true"},["\n",["div",{"class":"rv-env"},["\n",["div",{"class":"rv-env__letter"},[["span",{"class":"llc-hand"},["Dear, you…"]],["i",{},[]],["i",{},[]],["i",{},[]]]],"\n",["div",{"class":"rv-env__back"},[]],"\n",["div",{"class":"rv-env__front"},[]],"\n",["div",{"class":"rv-env__flap"},[]],"\n"]],"\n",["img",{"class":"rv-hero__lumi float","src":"/assets/4c452092456d92bcb0ff087a3636a4cf.webp","alt":""},[]],"\n",["img",{"class":"stk sway","src":"/assets/ddfeee74de178b943d676f14636aff05.webp","alt":"","style":"width: 16%; top: 4%; left: 4%"},[]],"\n",["img",{"class":"stk float float--late","src":"/assets/3d14025a0ee394f245eb539ebaa6d849.webp","alt":"","style":"width: 9%; top: 10%; right: 8%"},[]],"\n"]],"\n"]],"\n"]],"\n\n",["section",{"class":"sec bg-paper rule-top rule-bottom","aria-labelledby":"rv-how"},["\n",["div",{"class":"wrap"},["\n",["div",{"class":"sec-head"},["\n",["p",{"class":"llc-eyebrow"},["How remote volunteering works"]],"\n",["h2",{"id":"rv-how","class":"llc-h2"},["Wherever you are, there's a way to help."]],"\n",["p",{"class":"lead","style":"max-width: 680px"},["Contribute through creative projects, digital campaigns, educational materials and approved community initiatives, on your own or with a team. Each programme sets its own eligibility, and some need guardian consent for volunteers under 18."]],"\n"]],"\n",["ol",{"class":"rv-steps"},["\n",["sc-for",{"list":"{{steps}}","as":"s","hint-placeholder-count":"4"},["\n",["li",{"class":"{{s.cls}}"},[["img",{"src":"{{s.img}}","alt":""},[]],["b",{},["{{s.t}}"]],["span",{},["{{s.d}}"]]]],"\n"]],"\n"]],"\n",["p",{"class":"llc-caption","style":"margin-top: 18px"},["Volunteers never contact the people who receive their work directly. Every letter and creation passes through review and reaches people only through an approved partner."]],"\n"]],"\n"]],"\n\n",["section",{"class":"sec","aria-labelledby":"rv-dir"},["\n",["div",{"class":"wrap"},["\n",["div",{"class":"sec-head"},["\n",["p",{"class":"llc-eyebrow"},["Programme directory"]],"\n",["h2",{"id":"rv-dir","class":"llc-h2"},["Six ways to create from home."]],"\n"]],"\n",["div",{"class":"rv-filters","role":"group","aria-label":"Filter programmes"},["\n",["sc-for",{"list":"{{filters}}","as":"f","hint-placeholder-count":"5"},["\n",["button",{"type":"button","class":"{{f.cls}}","aria-pressed":"{{f.on}}","onclick":"{{f.pick}}"},["{{f.label}} ",["span",{"class":"rv-filter__n"},["{{f.n}}"]]]],"\n"]],"\n"]],"\n",["div",{"class":"rv-progs"},["\n",["sc-for",{"list":"{{progs}}","as":"p","hint-placeholder-count":"6"},["\n",["article",{"class":"{{p.cls}}"},["\n",["div",{"class":"rv-stamp"},[["img",{"src":"{{p.stamp}}","alt":""},[]]]],"\n",["p",{"class":"llc-eyebrow"},["{{p.kicker}}"]],"\n",["h3",{"class":"llc-card__title"},["{{p.name}}"]],"\n",["p",{"class":"llc-body"},["{{p.short}}"]],"\n",["div",{"class":"rv-tags"},[["sc-for",{"list":"{{p.tags}}","as":"t","hint-placeholder-count":"3"},[["span",{"class":"rv-tag"},["{{t}}"]]]]]],"\n",["p",{"class":"llc-caption"},[["span",{"class":"{{p.statusCls}}"},["{{p.status}}"]]]],"\n",["div",{},[["button",{"type":"button","class":"llc-btn llc-btn--secondary","onclick":"{{p.open}}"},["About {{p.name}} ",["span",{"aria-hidden":"true"},["→"]]]]]],"\n"]],"\n"]],"\n"]],"\n"]],"\n"]],"\n\n",["section",{"id":"impact","class":"sec bg-paper rule-top rule-bottom","aria-labelledby":"rv-impact"},["\n",["div",{"class":"wrap"},["\n",["div",{"class":"sec-head"},["\n",["p",{"class":"llc-eyebrow"},["Impact"]],"\n",["h2",{"id":"rv-impact","class":"llc-h2"},["We'll only count what we can verify."]],"\n",["p",{"class":"lead","style":"max-width: 680px"},["These figures will be filled in from reviewed records once projects are completed. Until then, nothing here is estimated."]],"\n"]],"\n",["div",{"class":"rv-metrics"},["\n",["sc-for",{"list":"{{metrics}}","as":"m","hint-placeholder-count":"6"},["\n",["div",{"class":"rv-metric"},[["span",{"class":"llc-eyebrow"},["{{m.label}}"]],["b",{},["—"]],["span",{"class":"llc-caption"},["{{m.note}}"]]]],"\n"]],"\n"]],"\n",["div",{"class":"rv-map"},["\n",["img",{"src":"/assets/ddf2197f1b6162a2e344a418c25803a7.png","alt":""},[]],"\n",["div",{"class":"stack","style":"gap: 8px"},["\n",["p",{"class":"hand-md"},["Our project map is still blank."]],"\n",["p",{"class":"llc-body"},["When a project is completed and its records are checked, its location will be pinned here, at a level of detail that protects the people involved."]],"\n"]],"\n"]],"\n"]],"\n"]],"\n\n",["section",{"id":"chapters","class":"sec","aria-labelledby":"rv-ch"},["\n",["div",{"class":"wrap split","style":"align-items: start"},["\n",["div",{"class":"stack","style":"gap: 12px"},["\n",["p",{"class":"llc-eyebrow"},["Future initiative"]],"\n",["h2",{"id":"rv-ch","class":"llc-h2"},["Community Chapters & Ambassadors"]],"\n",["p",{"class":"llc-body"},["Later on, we'd like small groups in schools and neighbourhoods to run TLLC projects locally, supported by trained ambassadors. This isn't open yet. We'll share how to take part once the first programmes are running."]],"\n",["p",{"class":"llc-caption"},[["span",{"class":"status status--planned"},["Not launched"]]]],"\n",["p",{"class":"llc-body"},["Thinking of starting a chapter? Write to ",["a",{"class":"txt","href":"mailto:hello@thelittlelettersclub.org"},["hello@thelittlelettersclub.org"]],"."]],"\n"]],"\n",["ul",{"class":"rv-future"},["\n",["sc-for",{"list":"{{chapters}}","as":"c","hint-placeholder-count":"6"},["\n",["li",{},[["b",{},["{{c.t}}"]],["span",{},["{{c.d}}"]]]],"\n"]],"\n"]],"\n"]],"\n"]],"\n\n"]],"\n\n",["sc-if",{"value":"{{isProg}}","hint-placeholder-val":"{{false}}"},["\n",["section",{"class":"sec","style":"padding-top: 32px","aria-labelledby":"pg-h1"},["\n",["div",{"class":"wrap"},["\n",["button",{"type":"button","class":"txt rv-back","onclick":"{{goHub}}"},[["span",{"aria-hidden":"true"},["←"]]," All programmes"]],"\n",["div",{"class":"rv-pghead"},["\n",["div",{"class":"rv-stamp rv-stamp--lg"},[["img",{"src":"{{prog.stamp}}","alt":""},[]]]],"\n",["div",{"class":"stack","style":"gap: 10px"},["\n",["p",{"class":"llc-eyebrow"},["{{prog.kicker}}"]],"\n",["h1",{"id":"pg-h1","class":"llc-h1","style":"font-size: clamp(36px, 5vw, 56px)"},["{{prog.name}}"]],"\n",["p",{"class":"lead","style":"max-width: 640px"},["{{prog.lead}}"]],"\n",["p",{"class":"llc-caption"},[["span",{"class":"{{prog.statusCls}}"},["{{prog.status}}"]]]],"\n"]],"\n"]],"\n"]],"\n"]],"\n",["section",{"class":"sec bg-paper rule-top rule-bottom","style":"padding-top: 40px","aria-label":"Programme details"},["\n",["div",{"class":"wrap rv-pgbody"},["\n",["div",{"class":"stack","style":"gap: 22px"},["\n",["div",{"class":"stack","style":"gap: 10px"},["\n",["h2",{"class":"llc-h3"},["{{prog.listTitle}}"]],"\n",["ul",{"class":"rv-list"},[["sc-for",{"list":"{{prog.items}}","as":"i","hint-placeholder-count":"5"},[["li",{},["{{i}}"]]]]]],"\n"]],"\n",["div",{"class":"stack","style":"gap: 10px"},["\n",["h2",{"class":"llc-h3"},["How a project runs"]],"\n",["ol",{"class":"rv-list rv-list--num"},[["sc-for",{"list":"{{prog.flow}}","as":"i","hint-placeholder-count":"4"},[["li",{},["{{i}}"]]]]]],"\n"]],"\n",["sc-if",{"value":"{{prog.hasOpps}}","hint-placeholder-val":"{{true}}"},["\n",["div",{"class":"row"},[["a",{"class":"llc-btn llc-btn--primary","href":"/opportunities/"},["See proposed opportunities ",["span",{"aria-hidden":"true"},["→"]]]],["a",{"class":"llc-btn llc-btn--secondary","href":"{{prog.mail}}"},["Register interest by email"]]]],"\n",["p",{"class":"llc-caption"},["Or write to ",["b",{},["volunteer@thelittlelettersclub.org"]]," and name the programme."]],"\n"]],"\n",["sc-if",{"value":"{{prog.soon}}","hint-placeholder-val":"{{false}}"},["\n",["div",{"class":"notice notice--plain","role":"note"},[["strong",{},["Coming soon"]],["span",{},["This programme will open only once qualified supervisors, safeguards and suitable partner arrangements are in place."]]]],"\n"]],"\n"]],"\n",["aside",{"class":"rv-safe"},["\n",["p",{"class":"llc-eyebrow"},["Safeguards for this programme"]],"\n",["ul",{"class":"rv-list"},[["sc-for",{"list":"{{prog.safe}}","as":"i","hint-placeholder-count":"3"},[["li",{},["{{i}}"]]]]]],"\n",["p",{"class":"llc-caption"},["Eligibility: {{prog.elig}}"]],"\n"]],"\n"]],"\n"]],"\n"]],"\n\n"]],"\n",["div",{"style":"margin-top: auto"},[["dc-import",{"name":"Footer","hint-size":"100%,480px"},[]]]],"\n"]],"\n"]</script>
+<script type="application/x-tllc-template" data-dc="Nav">["\n\n",["header",{"class":"llc-root","style":"position: relative; z-index: 30; width: 100%; box-sizing: border-box; padding: 12px 24px; background: var(--warm-beige); font-family: var(--font-sans); color: var(--ink)"},["\n",["div",{"style":"max-width: 1248px; margin: 0 auto"},["\n",["nav",{"class":"llc-nav","aria-label":"Main"},["\n",["a",{"href":"/","style":"display: block; flex: none; border-radius: 8px","aria-label":"The Little Letters Club, home"},["\n",["img",{"class":"llc-nav__logo","src":"/assets/4827cd5e7ac01a186531a4bde3041dc2.webp","alt":"The Little Letters Club, Singapore","style":"width: auto; height: 72px"},[]],"\n"]],"\n",["ul",{"class":"llc-nav__links"},["\n",["sc-for",{"list":"{{groups}}","as":"g","hint-placeholder-count":"4"},["\n",["li",{"class":"dd"},["\n",["sc-if",{"value":"{{g.isLink}}","hint-placeholder-val":"{{false}}"},[["a",{"class":"llc-nav__link","href":"{{g.href}}","aria-current":"{{g.cur}}"},[["span",{"class":"env-nav","aria-hidden":"true"},[]],"{{g.label}}"]]]],"\n",["sc-if",{"value":"{{g.isMenu}}","hint-placeholder-val":"{{true}}"},["\n",["button",{"type":"button","class":"llc-nav__link dd__btn","aria-expanded":"{{g.expanded}}","aria-haspopup":"true","aria-current":"{{g.cur}}","onclick":"{{g.toggle}}"},[["span",{"class":"env-nav","aria-hidden":"true"},[]],"{{g.label}} ",["svg",{"width":"12","height":"12","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","stroke-width":"2.4","stroke-linecap":"round","stroke-linejoin":"round","aria-hidden":"true"},[["path",{"d":"m6 9 6 6 6-6"},[]]]]]],"\n",["sc-if",{"value":"{{g.show}}","hint-placeholder-val":"{{false}}"},["\n",["ul",{"class":"dd__menu"},["\n",["sc-for",{"list":"{{g.items}}","as":"i","hint-placeholder-count":"3"},["\n",["li",{"class":"{{i.liCls}}"},["\n",["sc-if",{"value":"{{i.live}}","hint-placeholder-val":"{{true}}"},[["a",{"class":"dd__item","href":"{{i.href}}","aria-current":"{{i.cur}}"},[["b",{},["{{i.label}}"]],["span",{},["{{i.hint}}"]]]]]],"\n",["sc-if",{"value":"{{i.soon}}","hint-placeholder-val":"{{false}}"},[["span",{"class":"dd__item dd__item--soon","aria-disabled":"true"},[["b",{},["{{i.label}} ",["em",{"class":"soon-pill"},["Coming soon"]]]],["span",{},["{{i.hint}}"]]]]]],"\n"]],"\n"]],"\n"]],"\n"]],"\n"]],"\n"]],"\n"]],"\n"]],"\n",["div",{"class":"llc-nav__actions"},["\n",["a",{"class":"llc-btn llc-btn--primary llc-btn--small nav-cta","href":"/getinvolved/"},["Get Involved ",["span",{"aria-hidden":"true"},["→"]]]],"\n",["button",{"type":"button","class":"llc-iconbtn llc-nav__menu","aria-label":"{{menuLabel}}","aria-expanded":"{{expanded}}","aria-controls":"mobile-menu","onclick":"{{toggle}}"},["\n",["svg",{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","stroke-width":"1.8","stroke-linecap":"round","stroke-linejoin":"round","aria-hidden":"true"},[["path",{"d":"M4 7h16"},[]],["path",{"d":"M4 12h16"},[]],["path",{"d":"M4 17h16"},[]]]],"\n"]],"\n"]],"\n"]],"\n",["sc-if",{"value":"{{open}}","hint-placeholder-val":"{{false}}"},["\n",["div",{"id":"mobile-menu","class":"drawer"},["\n",["sc-for",{"list":"{{groups}}","as":"g","hint-placeholder-count":"4"},["\n",["sc-if",{"value":"{{g.isLink}}","hint-placeholder-val":"{{false}}"},[["a",{"class":"drawer__link","href":"{{g.href}}","aria-current":"{{g.cur}}"},["{{g.label}}"]]]],"\n",["sc-if",{"value":"{{g.isMenu}}","hint-placeholder-val":"{{true}}"},["\n",["div",{"class":"drawer__group"},["{{g.label}}"]],"\n",["sc-for",{"list":"{{g.items}}","as":"i","hint-placeholder-count":"3"},["\n",["sc-if",{"value":"{{i.live}}","hint-placeholder-val":"{{true}}"},[["a",{"class":"drawer__link drawer__link--sub","href":"{{i.href}}","aria-current":"{{i.cur}}"},["{{i.label}}"]]]],"\n",["sc-if",{"value":"{{i.soon}}","hint-placeholder-val":"{{false}}"},[["span",{"class":"drawer__link drawer__link--sub drawer__link--soon","aria-disabled":"true"},["{{i.label}} ",["em",{"class":"soon-pill"},["Coming soon"]]]]]],"\n"]],"\n"]],"\n"]],"\n",["a",{"class":"llc-btn llc-btn--primary","href":"/getinvolved/","style":"margin-top: 8px"},["Get Involved ",["span",{"aria-hidden":"true"},["→"]]]],"\n"]],"\n"]],"\n"]],"\n"]],"\n"]</script>
+<script type="application/x-tllc-template" data-dc="Footer">["\n\n",["div",{"class":"llc-root","style":"width: 100%; box-sizing: border-box; padding: 48px 0 32px; background: var(--warm-beige); font-family: var(--font-sans); color: var(--ink)"},["\n",["div",{"class":"wrap","style":"display: flex; flex-direction: column; gap: 24px"},["\n",["div",{"class":"sb-foot"},["\n",["div",{"class":"sb-foot__stage"},["\n",["img",{"class":"sb-i sb-sway sb-hide-m","src":"/assets/0d64320dbae386920a683e2d9edd7561.png","alt":"","aria-hidden":"true","style":"left:-1%; bottom:2%; width:15%; z-index:4"},[]],"\n",["img",{"class":"sb-i sb-sway sb-sway--b sb-hide-m","src":"/assets/3ad3113d9a81488f5eead45075b3971a.png","alt":"","aria-hidden":"true","style":"right:-1%; bottom:2%; width:14%; rotate:5deg; z-index:4"},[]],"\n",["img",{"class":"sb-i","src":"/assets/c308dc5e0ae8d98b55d5b8ec645e1e93.webp","alt":"","aria-hidden":"true","style":"left:30%; top:-2%; width:26%; rotate:-5deg; z-index:5"},[]],"\n",["div",{"class":"sb-foot__env","aria-hidden":"true"},[["img",{"src":"/assets/60744f25a6e10870f62c0433b37fccc8.png","alt":""},[]]]],"\n",["div",{"class":"sb-foot__paper"},[["img",{"src":"/assets/313c609f37b6a8a255eff432ce98288a.png","alt":""},[]],["div",{},[["p",{},["thank you for being part of our little story."]],["em",{},["little creations. lasting connections."]]]]]],"\n",["img",{"class":"sb-i sb-hide-m","src":"/assets/fb6da06754db5f0e915d67a10a7ed9de.png","alt":"","aria-hidden":"true","style":"right:16%; bottom:6%; width:11%; rotate:8deg; z-index:5"},[]],"\n"]],"\n"]],"\n",["section",{"class":"llc-newsletter","aria-labelledby":"nl-title"},["\n",["img",{"class":"llc-newsletter__art","src":"/assets/c4142018fdd1a3c0cb79cdd93a58c7ca.png","alt":""},[]],"\n",["div",{"class":"llc-newsletter__copy","style":"display: flex; flex-direction: column; gap: 6px"},["\n",["h2",{"id":"nl-title","class":"llc-newsletter__title"},["A little note in your inbox?"]],"\n",["p",{"class":"llc-caption"},["Get updates on upcoming collections, creative guides and opportunities to volunteer. No clutter, just the occasional little letter."]],"\n"]],"\n",["div",{"style":"flex: 1; max-width: 460px; display: flex; flex-direction: column; gap: 8px; min-width: 240px"},["\n",["form",{"class":"llc-newsletter__form","onsubmit":"{{quick}}","style":"max-width: none"},["\n",["label",{"class":"sr-only","for":"nl-email"},["Email address"]],"\n",["input",{"id":"nl-email","name":"email","type":"email","required":"","autocomplete":"email","placeholder":"Your email address"},[]],"\n",["button",{"class":"llc-btn llc-btn--primary llc-btn--small","type":"submit"},["Send Me Little Updates"]],"\n"]],"\n",["p",{"class":"privacy-line"},["We'll only use your details to send TLLC updates. ",["a",{"class":"txt","href":"/support/#privacy"},["Privacy Notice (pending review)"]]]],"\n"]],"\n"]],"\n",["footer",{"class":"llc-footer","style":"flex-wrap: wrap"},["\n",["img",{"class":"llc-footer__logo","src":"/assets/a76cbe2cd4d403a460252ecc50649c88.webp","alt":"The Little Letters Club, Singapore","style":"width: auto; height: 140px"},[]],"\n",["nav",{"aria-label":"Footer","class":"ft-cols"},["\n",["div",{"class":"ft-col"},[["h2",{"class":"ft-h"},["Explore"]],["ul",{"class":"llc-footer__links ft-list"},["\n",["li",{},[["a",{"href":"/"},["Home"]]]],"\n",["li",{},[["a",{"href":"/about/"},["About Us"]]]],"\n",["li",{},[["a",{"href":"/team/"},["Meet the Team"]]]],"\n",["li",{},[["a",{"href":"/programmes/"},["Programmes"]]]],"\n",["li",{},[["a",{"href":"/chapters/"},["Chapters"]]]],"\n",["li",{},[["a",{"href":"/journal/"},["Journal"]]]],"\n",["li",{},[["a",{"href":"/letterbox/"},["The Little Letterbox"]]]],"\n"]]]],"\n",["div",{"class":"ft-col"},[["h2",{"class":"ft-h"},["Get Involved"]],["ul",{"class":"llc-footer__links ft-list"},["\n",["li",{},[["a",{"href":"/volunteer/"},["Volunteer With Us"]]]],"\n",["li",{},[["a",{"href":"/exco/"},["Work With Us"]]]],"\n",["li",{},[["a",{"href":"/community/"},["Partner With Us"]]]],"\n",["li",{},[["a",{"href":"/supportus/"},["Support Us"]]]],"\n",["li",{},[["a",{"href":"/getinvolved/"},["All Ways to Help"]]]],"\n"]]]],"\n",["div",{"class":"ft-col"},[["h2",{"class":"ft-h"},["Good to Know"]],["ul",{"class":"llc-footer__links ft-list"},["\n",["li",{},[["a",{"href":"/contact/"},["Contact"]]]],"\n",["li",{},[["a",{"href":"/support/"},["FAQ"]]]],"\n",["li",{},[["a",{"href":"/support/#safeguarding"},["Safeguarding"]]]],"\n",["li",{},[["a",{"href":"/support/#privacy"},["Privacy Notice"]]]],"\n",["li",{},[["a",{"href":"/support/#terms"},["Terms of Use"]]]],"\n",["li",{},[["a",{"href":"/support/#accessibility"},["Accessibility"]]]],"\n"]]]],"\n"]],"\n",["p",{"class":"llc-footer__sign"},["Made with care",["br",{},[]],"in Singapore ",["span",{"class":"llc-heart","aria-hidden":"true"},["♥"]]]],"\n"]],"\n",["div",{"class":"ft-legal"},["\n",["nav",{"class":"ft-legal__links","aria-label":"Site information"},["\n",["a",{"href":"/sitemap/"},["Sitemap"]],"\n",["a",{"href":"/support/#terms"},["Terms of Use"]],"\n",["a",{"href":"/support/#privacy"},["Privacy Notice"]],"\n",["a",{"href":"/support/#whistleblowing"},["Whistleblowing Policy"]],"\n"]],"\n",["div",{"class":"ft-legal__social"},["\n",["span",{"class":"ft-legal__lbl"},["follow us on"]],"\n",["a",{"class":"ft-ig","href":"https://www.instagram.com/thelittlelettersclubsg/","target":"_blank","rel":"noopener noreferrer","aria-label":"Instagram, @thelittlelettersclubsg (opens in a new tab)"},[["svg",{"viewBox":"0 0 24 24","width":"20","height":"20","aria-hidden":"true","fill":"none","stroke":"currentColor","stroke-width":"1.8"},[["rect",{"x":"3","y":"3","width":"18","height":"18","rx":"5"},[]],["circle",{"cx":"12","cy":"12","r":"4.2"},[]],["circle",{"cx":"17.3","cy":"6.7","r":"1.1","fill":"currentColor","stroke":"none"},[]]]]]],"\n",["a",{"class":"ft-ig","href":"mailto:hello@thelittlelettersclub.org","aria-label":"Email hello@thelittlelettersclub.org"},[["svg",{"viewBox":"0 0 24 24","width":"20","height":"20","aria-hidden":"true","fill":"none","stroke":"currentColor","stroke-width":"1.8"},[["rect",{"x":"3","y":"5","width":"18","height":"14","rx":"3"},[]],["path",{"d":"M4 7l8 6 8-6"},[]]]]]],"\n"]],"\n",["div",{"class":"ft-legal__sub"},["\n",["span",{"class":"ft-legal__lbl"},["be in the know"]],"\n",["button",{"type":"button","class":"llc-btn llc-btn--primary llc-btn--small","onclick":"{{openSub}}"},["Subscribe"]],"\n"]],"\n"]],"\n",["p",{"class":"llc-caption ft-legal__note"},["The Little Letters Club is a youth-led initiative, not a registered charity. A little letter goes a long way. © 2026"]],"\n",["sc-if",{"value":"{{open}}","hint-placeholder-val":"{{false}}"},["\n",["div",{"class":"gl-box sub-box","onclick":"{{backdrop}}","onkeydown":"{{key}}"},["\n",["div",{"class":"gl-box__panel sub-panel","role":"dialog","aria-modal":"true","aria-labelledby":"sub-title"},["\n",["button",{"type":"button","class":"llc-iconbtn gl-box__close","id":"sub-close","aria-label":"Close","onclick":"{{close}}"},["×"]],"\n",["img",{"class":"sub-art","src":"/assets/c4142018fdd1a3c0cb79cdd93a58c7ca.png","alt":""},[]],"\n",["p",{"class":"llc-eyebrow","style":"margin: 0"},["be in the know"]],"\n",["h2",{"id":"sub-title","class":"llc-h3","style":"margin: 0"},["Subscribe to our little letters"]],"\n",["p",{"class":"llc-caption","style":"margin: 0"},["Sign up for occasional updates on new collections, creative guides and ways to volunteer."]],"\n",["sc-if",{"value":"{{notSent}}","hint-placeholder-val":"{{true}}"},["\n",["form",{"class":"sub-form","onsubmit":"{{submit}}","novalidate":""},["\n",["div",{"class":"sub-row"},["\n",["label",{"class":"sub-field"},[["span",{},["First name",["b",{"aria-hidden":"true"},["*"]]]],["input",{"id":"sub-first","name":"first","type":"text","required":"","autocomplete":"given-name","aria-required":"true"},[]]]],"\n",["label",{"class":"sub-field"},[["span",{},["Last name",["b",{"aria-hidden":"true"},["*"]]]],["input",{"name":"last","type":"text","required":"","autocomplete":"family-name","aria-required":"true"},[]]]],"\n"]],"\n",["label",{"class":"sub-field"},[["span",{},["Email",["b",{"aria-hidden":"true"},["*"]]]],["input",{"id":"sub-email","name":"email","type":"email","required":"","autocomplete":"email","aria-required":"true"},[]]]],"\n",["fieldset",{"class":"sub-consent"},["\n",["legend",{},["Staying in touch"]],"\n",["p",{},["We'd love to send you news about TLLC activities, collections and volunteering opportunities. If you're happy to hear from us, tick how you'd like us to reach you:"]],"\n",["label",{"class":"sub-check"},[["input",{"type":"checkbox","name":"byEmail"},[]]," Email updates"]],"\n"]],"\n",["fieldset",{"class":"sub-consent"},["\n",["legend",{},["Storing your details",["b",{"aria-hidden":"true"},["*"]]]],"\n",["p",{},["To send you updates, we need to store and use your name and email. Please tick to agree:"]],"\n",["label",{"class":"sub-check"},[["input",{"type":"checkbox","name":"store","required":"","aria-required":"true"},[]]," I agree to TLLC storing and processing my details for this purpose."]],"\n"]],"\n",["sc-if",{"value":"{{err}}","hint-placeholder-val":"{{false}}"},[["p",{"class":"sub-err","role":"alert"},["{{err}}"]]]],"\n",["p",{"class":"llc-caption","style":"margin: 0"},["You can unsubscribe at any time using the link in any of our emails, or by writing to ",["a",{"class":"txt","href":"mailto:hello@thelittlelettersclub.org"},["hello@thelittlelettersclub.org"]],". For how we look after your information, see our ",["a",{"class":"txt","href":"/support/#privacy"},["Privacy Notice"]]," (pending review)."]],"\n",["button",{"class":"llc-btn llc-btn--primary","type":"submit"},["Subscribe"]],"\n"]],"\n"]],"\n",["sc-if",{"value":"{{sent}}","hint-placeholder-val":"{{false}}"},["\n",["div",{"class":"notice","role":"status"},["\n",["strong",{},["Prototype only: nothing was sent."]],"\n",["span",{},["The updates list isn't connected yet, so your details weren't stored. Connect a mailing-list service at ",["span",{"class":"ph"},["[NEWSLETTER_ENDPOINT]"]]," before launch."]],"\n"]],"\n",["button",{"type":"button","id":"sub-done","class":"llc-btn llc-btn--secondary","onclick":"{{close}}"},["Close"]],"\n"]],"\n"]],"\n"]],"\n"]],"\n"]],"\n"]],"\n","\n"]</script>
+<script>
+TLLC.define("Footer", function (DCLogic) {
+
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { open: false, sent: false, err: '' }; }
+  openSub(email) {
+    try { this.lastFocus = document.activeElement; } catch (e) {}
+    this.setState({ open: true, sent: false, err: '' }, () => {
+      try {
+        const em = document.getElementById('sub-email'); if (em && email) em.value = email;
+        const f = document.getElementById('sub-first'); f && f.focus();
+      } catch (e) {}
+    });
+  }
+  closeSub() { this.setState({ open: false }, () => { try { this.lastFocus && this.lastFocus.focus && this.lastFocus.focus(); } catch (e) {} }); }
+  renderVals() {
+    return {
+      open: this.state.open, sent: this.state.sent, notSent: !this.state.sent, err: this.state.err,
+      openSub: () => this.openSub(''),
+      quick: (e) => { e.preventDefault(); const v = (e.target.elements.email || {}).value || ''; this.openSub(v); },
+      close: () => this.closeSub(),
+      backdrop: (e) => { if (e.target === e.currentTarget) this.closeSub(); },
+      key: (e) => {
+        if (e.key === 'Escape') { e.preventDefault(); this.closeSub(); }
+        else if (e.key === 'Tab') { // keep focus inside the dialog
+          const panel = document.querySelector('.sub-panel'); if (!panel) return;
+          const els = panel.querySelectorAll('button, a[href], input, [tabindex]:not([tabindex="-1"])');
+          const first = els[0], last = els[els.length - 1];
+          if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+          else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+        }
+      },
+      // Integration point: send these fields to the mailing-list service, and only show a
+      // "thank you for subscribing" message once it succeeds. Record both consent ticks with a timestamp.
+      submit: (e) => {
+        e.preventDefault();
+        const f = e.target.elements;
+        if (!f.first.value.trim() || !f.last.value.trim()) return this.setState({ err: 'Please add your first and last name.' });
+        if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.email.value.trim())) return this.setState({ err: 'Please enter a valid email address.' });
+        if (!f.store.checked) return this.setState({ err: 'Please tick the box to let us store your details, so we can send updates.' });
+        this.setState({ sent: true, err: '' }, () => { try { const d = document.getElementById('sub-done'); d && d.focus(); } catch (er) {} });
+      }
+    };
+  }
+}
+
+return Component;
+});
+TLLC.define("Nav", function (DCLogic) {
+
+// ---- TLLC envelope cursor (desktop fine pointers only; off for touch and reduced motion) ----
+const TLLC_CURSOR_SVG = { d: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"128\" height=\"128\" viewBox=\"0 0 128 128\"><defs><filter id=\"shadow\" x=\"-30%\" y=\"-40%\" width=\"160%\" height=\"180%\"><feDropShadow dx=\"1\" dy=\"3\" stdDeviation=\"3\" flood-color=\"#8B6F61\" flood-opacity=\".25\"/></filter></defs><g filter=\"url(#shadow)\"><rect x=\"21\" y=\"44\" width=\"87\" height=\"60\" rx=\"10\" fill=\"#FFF9F0\" stroke=\"#8B6F61\" stroke-width=\"3\"/><path d=\"M24 50 L64 79 L105 50\" fill=\"none\" stroke=\"#8B6F61\" stroke-width=\"3\" stroke-linejoin=\"round\"/><path d=\"M24 101 L51 71 M105 101 L77 71\" fill=\"none\" stroke=\"#E8B8BE\" stroke-width=\"2.5\"/><path d=\"M64 91 C46 81 51 69 59 73 C62 74 64 77 64 77 C72 67 83 79 64 91Z\" fill=\"#E8B8BE\" stroke=\"#B66F7B\" stroke-width=\"2\"/></g></svg>", h: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"128\" height=\"128\" viewBox=\"0 0 128 128\"><defs><filter id=\"shadow\" x=\"-30%\" y=\"-40%\" width=\"160%\" height=\"180%\"><feDropShadow dx=\"1\" dy=\"3\" stdDeviation=\"3\" flood-color=\"#8B6F61\" flood-opacity=\".25\"/></filter></defs><g filter=\"url(#shadow)\"><path d=\"M21 51 L64 17 L108 51 L108 103 Q108 108 102 108 L27 108 Q21 108 21 102Z\" fill=\"#F2DFA6\" stroke=\"#8B6F61\" stroke-width=\"3\" stroke-linejoin=\"round\"/><rect x=\"33\" y=\"34\" width=\"63\" height=\"62\" rx=\"3\" fill=\"#FFF9F0\" stroke=\"#D4B9A4\" stroke-width=\"2\"/><path d=\"M44 56 H84 M44 66 H81\" stroke=\"#D4B9A4\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M21 54 L64 83 L108 54 L108 102 Q108 108 102 108 L27 108 Q21 108 21 102Z\" fill=\"#FFF9F0\" stroke=\"#8B6F61\" stroke-width=\"3\" stroke-linejoin=\"round\"/><path d=\"M21 104 L51 75 M108 104 L77 75\" stroke=\"#E8B8BE\" stroke-width=\"2.5\"/></g><path d=\"M64 42 C49 30 39 43 45 54 C49 62 64 71 64 71 C64 71 81 60 85 51 C91 37 75 30 64 42Z\" fill=\"#E8B8BE\" stroke=\"#B66F7B\" stroke-width=\"2.5\"/><path d=\"M102 17 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4Z\" fill=\"#F2DFA6\" stroke=\"#8B6F61\" stroke-width=\"1.4\"/><circle cx=\"16\" cy=\"33\" r=\"3\" fill=\"#A9BE9A\"/></svg>", c: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"128\" height=\"128\" viewBox=\"0 0 128 128\"><defs><filter id=\"shadow\" x=\"-30%\" y=\"-40%\" width=\"160%\" height=\"180%\"><feDropShadow dx=\"1\" dy=\"3\" stdDeviation=\"3\" flood-color=\"#8B6F61\" flood-opacity=\".25\"/></filter></defs><g filter=\"url(#shadow)\"><path d=\"M21 51 L64 17 L108 51 L108 103 Q108 108 102 108 L27 108 Q21 108 21 102Z\" fill=\"#F2DFA6\" stroke=\"#8B6F61\" stroke-width=\"3\" stroke-linejoin=\"round\"/><rect x=\"33\" y=\"34\" width=\"63\" height=\"62\" rx=\"3\" fill=\"#FFF9F0\" stroke=\"#D4B9A4\" stroke-width=\"2\"/><path d=\"M44 56 H84 M44 66 H81\" stroke=\"#D4B9A4\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M21 54 L64 83 L108 54 L108 102 Q108 108 102 108 L27 108 Q21 108 21 102Z\" fill=\"#FFF9F0\" stroke=\"#8B6F61\" stroke-width=\"3\" stroke-linejoin=\"round\"/><path d=\"M21 104 L51 75 M108 104 L77 75\" stroke=\"#E8B8BE\" stroke-width=\"2.5\"/></g><path d=\"M64 42 C49 30 39 43 45 54 C49 62 64 71 64 71 C64 71 81 60 85 51 C91 37 75 30 64 42Z\" fill=\"#E8B8BE\" stroke=\"#B66F7B\" stroke-width=\"2.5\"/><path d=\"M102 17 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4Z\" fill=\"#F2DFA6\" stroke=\"#8B6F61\" stroke-width=\"1.4\"/><circle cx=\"16\" cy=\"33\" r=\"3\" fill=\"#A9BE9A\"/><g fill=\"none\" stroke=\"#E8B8BE\" stroke-width=\"4\" stroke-linecap=\"round\"><path d=\"M64 5V14M115 53h9M7 69h10M112 98l9 6M18 21l-8 -7\"/></g></svg>" };
+function tllcCursorMount() {
+  if (typeof window === 'undefined' || !window.matchMedia) return null;
+  if (!matchMedia('(hover: hover) and (pointer: fine)').matches || matchMedia('(prefers-reduced-motion: reduce)').matches) return null;
+  if (window.__tllcCursor) { window.__tllcCursor.n++; return window.__tllcCursor; }
+  const HOVER = 'a,button,[role="button"],summary,label,.sb-pol,.sb-lift,.pc--link,.pc-filter';
+  const TEXT = 'input,textarea,select,[contenteditable="true"]';
+  const root = document.createElement('div'); root.id = 'tllc-cursor'; root.setAttribute('aria-hidden', 'true'); root.dataset.s = 'd';
+  // all three states are decoded up front and only shown/hidden, so a click never flashes blank
+  ['d', 'h', 'c'].forEach((k) => { const i = document.createElement('img'); i.alt = ''; i.className = 'tc-' + k; i.decoding = 'sync'; i.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(TLLC_CURSOR_SVG[k]); root.appendChild(i); });
+  document.body.appendChild(root); document.body.classList.add('tllc-cursor-enabled');
+  let clicking = false, hover = false, timer = 0, lastX = -100, lastY = -100;
+  const show = (s) => { if (root.dataset.s !== s) root.dataset.s = s; };
+  const place = () => { root.style.translate = (lastX - 7) + 'px ' + (lastY - 8) + 'px'; };
+  const isEl = (t) => t && t.nodeType === 1 && t.closest;
+  const move = (e) => {
+    if (e.pointerType && e.pointerType !== 'mouse') return;
+    lastX = e.clientX; lastY = e.clientY; place();
+    const t = isEl(e.target) ? e.target : null;
+    const inText = !!(t && t.closest(TEXT));
+    if (root.style.display !== (inText ? 'none' : 'block')) root.style.display = inText ? 'none' : 'block';
+    hover = !!(t && t.closest(HOVER));
+    root.classList.toggle('is-hover', hover);
+    if (!clicking) show(hover ? 'h' : 'd');
+  };
+  const down = (e) => {
+    if (e.pointerType !== 'mouse' || e.button !== 0) return;
+    if (isEl(e.target) && e.target.closest(TEXT)) return;
+    lastX = e.clientX; lastY = e.clientY; place();
+    clicking = true; show('c');
+    root.classList.remove('is-click'); void root.offsetWidth; root.classList.add('is-click');
+    clearTimeout(timer);
+    timer = setTimeout(() => { clicking = false; root.classList.remove('is-click'); show(hover ? 'h' : 'd'); }, 260);
+  };
+  const leave = () => { root.style.display = 'none'; };
+  const enter = () => { root.style.display = 'block'; };
+  window.addEventListener('pointermove', move, { passive: true });
+  window.addEventListener('pointerdown', down, { passive: true, capture: true });
+  document.documentElement.addEventListener('mouseleave', leave);
+  document.documentElement.addEventListener('mouseenter', enter);
+  window.__tllcCursor = { n: 1, off() {
+    clearTimeout(timer);
+    window.removeEventListener('pointermove', move); window.removeEventListener('pointerdown', down, { capture: true });
+    document.documentElement.removeEventListener('mouseleave', leave); document.documentElement.removeEventListener('mouseenter', enter);
+    root.remove(); document.body.classList.remove('tllc-cursor-enabled'); window.__tllcCursor = null;
+  } };
+  return window.__tllcCursor;
+}
+function tllcCursorUnmount() { const c = typeof window !== 'undefined' && window.__tllcCursor; if (c && --c.n <= 0) c.off(); }
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { open: false, group: null }; this.onDoc = this.onDoc.bind(this); this.onKey = this.onKey.bind(this); }
+  componentDidMount() { document.addEventListener('click', this.onDoc); document.addEventListener('keydown', this.onKey); tllcCursorMount(); }
+  componentWillUnmount() { document.removeEventListener('click', this.onDoc); document.removeEventListener('keydown', this.onKey); tllcCursorUnmount(); }
+  onDoc(e) { if (this.state.group && !(e.target.closest && e.target.closest('.dd'))) this.setState({ group: null }); }
+  onKey(e) { if (e.key === 'Escape' && this.state.group) this.setState({ group: null }); }
+  renderVals() {
+    const current = this.props.current ?? 'home';
+    // Sitemap: items with `soon: true` aren't built yet, so they show as "Coming soon" instead of linking anywhere.
+    const tree = [
+      { id: 'home', label: 'Home', href: '/' },
+      { id: 'about', label: 'About', items: [
+        { id: 'about', label: 'Our Story', hint: 'Why TLLC exists', href: '/about/#story-title' },
+        { id: 'about-values', label: 'Mission & Values', hint: 'What we believe and how we work', href: '/about/#values-title' },
+        { id: 'about-team', label: 'Meet the Team', hint: 'EXCO, volunteers and friends', href: '/team/' },
+        { id: 'about-creators', label: 'Meet Our Creators', hint: 'The makers behind the collections', href: '/creators/' }
+      ] },
+      { id: 'work', label: 'Our Work', items: [
+        { id: 'programmes', label: 'Dear, You', hint: 'Creative correspondence', href: '/programmes/#dear-you' },
+        { id: 'prog-2', label: 'Little Things Studio', hint: 'Small things, thoughtfully made', href: '/programmes/#little-things-studio' },
+        { id: 'prog-3', label: 'Seasons of Kindness', hint: 'Festive and seasonal campaigns', href: '/programmes/#seasons-of-kindness' },
+        { id: 'prog-4', label: 'Across Generations', hint: 'Supervised shared activities', href: '/programmes/#across-generations' },
+        { id: 'event', label: 'Letters & Little Blooms', hint: 'Across Generations · our first event', href: '/event/' },
+        { id: 'prog-5', label: 'The Kindness Workshop', hint: 'Learn something lovely', href: '/programmes/#kindness-workshop' }
+      ] },
+      { id: 'involved', label: 'Get Involved', items: [
+        { id: 'volunteer', label: 'Volunteer With Us', hint: 'In person or from home', href: '/volunteer/' },
+        { id: 'exco', label: 'Work With Us', hint: 'Apply for the 2026 Founding EXCO', href: '/exco/' },
+        { id: 'community', label: 'Partner With Us', hint: 'Charities, schools and collaborators', href: '/community/#partner-form' },
+        { id: 'supportus', label: 'Support Us', hint: 'The Little Giving Circle', href: '/supportus/' },
+        { id: 'getinvolved', label: 'All ways to help', hint: 'Volunteer, join the team, partner, attend', href: '/getinvolved/', all: true }
+      ] },
+      { id: 'chapters', label: 'Chapters', items: [
+        { id: 'chapters', label: 'Our Chapters', hint: 'One little world, many communities', href: '/chapters/' },
+        { id: 'chapters-sg', label: '🇸🇬 Singapore', hint: 'Home Chapter', href: '/about/' },
+        { id: 'india', label: '🇮🇳 India', hint: 'Forming', href: '/india/' },
+        { id: 'chapters-start', label: '＋ Start a Chapter', hint: 'Tell us where the next letter should travel', href: '/contact/' }
+      ] },
+      { id: 'lbx', label: 'Letterbox', items: [
+        { id: 'letterbox', label: 'Create a Letter', hint: 'Write and decorate an e-letter', href: '/letterbox/#studio' },
+        { id: 'myletters', label: 'My Letters', hint: 'Your saved and sent letters', soon: true },
+        { id: 'lbarchive', label: 'Community Archive', hint: 'Letters shared with permission', soon: true },
+        { id: 'lbhow', label: 'How It Works', hint: 'From draft to delivery', soon: true }
+      ] },
+      { id: 'more', label: 'Explore', items: [
+        { id: 'journal', label: 'Journal', hint: 'Stories, ideas and prompts', href: '/journal/' },
+        { id: 'impact', label: 'Our Impact', hint: 'Verified figures only', href: '/remote/#impact' },
+        { id: 'gallery', label: 'Little Moments', hint: 'Our Polaroid gallery', href: '/gallery/' },
+        { id: 'scrapbook', label: 'Our Little Scrapbook', hint: 'Moments from our little corner', soon: true }
+      ] },
+      { id: 'contact', label: 'Contact', href: '/contact/' }
+    ];
+    const groups = tree.map((g) => {
+      if (!g.items) return { label: g.label, href: g.href, isLink: true, isMenu: false, cur: g.id === current ? 'page' : undefined };
+      const inGroup = g.items.some((i) => i.id === current);
+      const isOpen = this.state.group === g.id;
+      return {
+        label: g.label, isLink: false, isMenu: true, cur: inGroup ? 'true' : undefined, show: isOpen, expanded: isOpen ? 'true' : 'false',
+        toggle: () => this.setState({ group: isOpen ? null : g.id }),
+        items: g.items.map((i) => ({ ...i, live: !i.soon, soon: !!i.soon, liCls: i.all ? 'dd__all' : '', cur: i.id === current ? 'page' : undefined }))
+      };
+    });
+    const open = this.state.open;
+    return {
+      groups,
+      open,
+      expanded: open ? 'true' : 'false',
+      menuLabel: open ? 'Close menu' : 'Open menu',
+      toggle: () => this.setState({ open: !this.state.open })
+    };
+  }
+}
+
+return Component;
+});
+TLLC.define("Remote", function (DCLogic) {
+
+// All six programmes are PROPOSED. Change `status` only when a programme genuinely opens.
+const MAIL = 'mailto:volunteer@thelittlelettersclub.org?subject=';
+const STD_SAFE = ['Volunteers never receive recipients’ names, addresses or personal details.', 'Every submission is reviewed before it is used.', 'Volunteers under 18 need guardian consent.'];
+const PROGRAMMES = [
+  { id: 'dear-you', kicker: 'Digital letter campaigns', name: 'Dear, You', cat: 'writing', stamp: '/assets/1f6942d3f9c9f9e49c26fbb2705d9c2a.webp', tone: 'llc-card--pink',
+    short: 'Write and illustrate encouraging letters for approved community initiatives.',
+    lead: 'Write and illustrate encouraging letters for approved community initiatives, such as intergenerational connection, community appreciation and seasonal kindness.',
+    tags: ['Writing', 'Illustration', 'Remote'], listTitle: 'What volunteers would use',
+    items: ['Campaign-specific writing prompts', 'The Little Letterbox digital letter editor', 'TLLC stationery, stickers and illustrations', 'Draft saving and submission', 'Campaign progress updates'],
+    flow: ['Pick an open campaign and read its prompt.', 'Write and decorate your letter in the Little Letterbox.', 'Submit it for review. A reviewer checks it before anything goes out.', 'Approved letters reach recipients only through the partner’s delivery process.'],
+    safe: STD_SAFE.concat(['Letters are moderated for tone and personal details before delivery.']), elig: 'set per campaign by the partner.', soon: false },
+  { id: 'little-library', kicker: 'Educational creations', name: 'The Little Library', cat: 'education', stamp: '/assets/cae7e9d19b46583263bff02dfaaa6150.png', tone: 'llc-card--sunny',
+    short: 'Illustrated stories, educational postcards and accessible reading materials.',
+    lead: 'Collaborate on illustrated children’s stories, educational postcards, printable learning resources and accessible reading materials.',
+    tags: ['Writing', 'Illustration', 'Translation', 'Team'], listTitle: 'Possible projects',
+    items: ['Illustrated mini-books', 'Bilingual reading materials', 'Educational activity sheets', 'Digital storytelling', 'Book collection campaigns, when supported by a confirmed partner'],
+    flow: ['Join a project team and read the brief.', 'Draft text and illustrations together.', 'An editor reviews everything meant for children for accuracy, tone and age-suitability.', 'Approved materials are shared with a partner or published as free resources.'],
+    safe: STD_SAFE.concat(['Anything for children goes through editorial review.']), elig: 'set per project.', soon: false },
+  { id: 'little-things-studio', kicker: 'Creative contributions', name: 'Little Things Studio', cat: 'design', stamp: '/assets/3b332e91a349aa311005e606609b7dae.webp', tone: 'llc-card--sage',
+    short: 'Design artwork and creative resources for approved community projects.',
+    lead: 'Design artwork and creative resources for approved community projects. Every opportunity comes with a clear brief, deliverable, deadline and submission requirements.',
+    tags: ['Illustration', 'Design', 'Remote'], listTitle: 'Tasks may include',
+    items: ['Printable greeting cards', 'Digital illustrations', 'Craft templates', 'Bookmarks', 'Seasonal creative collections', 'Event materials'],
+    flow: ['Choose a brief that suits your skills.', 'Create to the stated size, format and deadline.', 'Upload your file. The team reviews it and may ask for small changes.', 'Approved designs are used in the named project, credited if you agree.'],
+    safe: STD_SAFE.concat(['You choose separately whether your name may be credited publicly.']), elig: 'set per brief.', soon: false },
+  { id: 'stories-that-connect', kicker: 'Digital storytelling', name: 'Stories That Connect', cat: 'media', stamp: '/assets/ddf2197f1b6162a2e344a418c25803a7.png', tone: 'llc-card--sky',
+    short: 'Help tell TLLC’s story through writing, design, photography and video.',
+    lead: 'Support TLLC’s communications through writing, illustration, design, photography and video editing.',
+    tags: ['Writing', 'Design', 'Photography', 'Video'], listTitle: 'Projects include',
+    items: ['Volunteer stories', 'Campaign announcements', 'Educational social media content', 'Programme recaps', 'Community newsletters'],
+    flow: ['Pick up a content brief from the team.', 'Draft your piece using only approved information and images.', 'An editor reviews it. Anyone pictured or named must have given media consent.', 'Approved work is published on TLLC’s channels.'],
+    safe: ['Editorial approval before anything is published.', 'Media consent is checked for everyone shown or named.', 'Volunteers under 18 need guardian consent.'], elig: 'set per brief.', soon: false },
+  { id: 'little-mentors', kicker: 'Education and mentorship', name: 'The Little Mentors', cat: 'education', stamp: '/assets/9165ca1f0fed9b9aadc86a1aebdbe67a.webp', tone: '',
+    short: 'Reading activities, learning resources and supervised mentorship.',
+    lead: 'A proposed future programme for educational volunteering, including reading activities, learning resources and supervised mentorship.',
+    tags: ['Education', 'Supervised'], listTitle: 'What it could include',
+    items: ['Reading activities', 'Learning resources', 'Supervised mentorship sessions'],
+    flow: ['Recruit qualified supervisors.', 'Agree safeguards and arrangements with a suitable partner.', 'Train volunteer mentors.', 'Open a small pilot.'],
+    safe: ['No unsupervised contact between volunteers and young people.', 'Supervisors and partners agreed before launch.', 'Volunteer training before any session.'], elig: 'to be decided with partners.', soon: true },
+  { id: 'seasons-of-kindness', kicker: 'Seasonal creative campaigns', name: 'Seasons of Kindness', cat: 'writing', stamp: '/assets/f8789155e2e28bc830b3e39fd96ac131.webp', tone: 'llc-card--pink',
+    short: 'Seasonal campaigns where volunteers anywhere contribute to a shared initiative.',
+    lead: 'Seasonal campaigns that let volunteers in different places contribute creative work to one shared initiative. International delivery and partnerships will only be announced once confirmed.',
+    tags: ['Writing', 'Illustration', 'Team', 'Remote'], listTitle: 'Potential campaigns',
+    items: ['A Little Letter for Someone', 'Postcards Across Generations', 'The Kindness Calendar', 'Little Blooms', 'Letters Around the World'],
+    flow: ['A campaign opens with its theme, dates and prompts.', 'Volunteers create on their own or in teams.', 'Submissions are reviewed and collected.', 'Outcomes are reported after the campaign closes.'],
+    safe: STD_SAFE, elig: 'set per campaign.', soon: false }
+];
+const FILTERS = [['all', 'All'], ['writing', 'Writing & letters'], ['design', 'Art & design'], ['education', 'Education'], ['media', 'Storytelling & media']];
+const STEPS = [
+  { t: 'Choose', d: 'Browse programmes and pick something that suits your skills and time.', img: '/assets/ee81f3c799e637029141180e396c6d2f.webp' },
+  { t: 'Create', d: 'Follow a clear brief with a deadline, on your own or with a team.', img: '/assets/e5b97ba2c28351efacbf3c2a1a9e5001.webp' },
+  { t: 'Submit', d: 'Send your work in. Every piece is reviewed before it is used.', img: '/assets/a3554ad343d55b60f7157c0b4962c3ad.webp' },
+  { t: 'See it land', d: 'Approved work reaches people through a partner. Verified contributions are recorded.', img: '/assets/97f7070fb41bf61cd71e2bebf94d7ff8.webp' }
+];
+const METRICS = [
+  { label: 'Active volunteers', note: 'Counted from verified records' },
+  { label: 'Completed projects', note: 'After each project closes' },
+  { label: 'Approved letters', note: 'Only letters that passed review' },
+  { label: 'Community partnerships', note: 'Confirmed partners only' },
+  { label: 'Verified volunteer hours', note: 'Approved by the team, never automatic' },
+  { label: 'Communities reached', note: 'Reported by partners' }
+];
+const CHAPTERS = [
+  { t: 'Community chapters', d: 'Small local groups running TLLC projects.' },
+  { t: 'Ambassador applications', d: 'Trained volunteers who support a chapter.' },
+  { t: 'Chapter projects', d: 'Projects designed for a chapter’s own community.' },
+  { t: 'Local campaign coordination', d: 'Chapters joining seasonal campaigns together.' },
+  { t: 'Community recognition', d: 'Celebrating verified contributions, with consent.' },
+  { t: 'Chapter reporting', d: 'Each chapter reports what it has verified.' }
+];
+
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { view: 'hub', prog: null, filter: 'all' }; }
+  open(id) { this.setState({ view: 'prog', prog: id }); try { window.scrollTo(0, 0); } catch (e) {} }
+  renderVals() {
+    const s = this.state;
+    const p = PROGRAMMES.find((x) => x.id === s.prog) || PROGRAMMES[0];
+    const status = (x) => (x.soon ? 'Coming soon' : 'Proposed · not open yet');
+    return {
+      isHub: s.view === 'hub', isProg: s.view === 'prog',
+      goHub: () => { this.setState({ view: 'hub' }); try { window.scrollTo(0, 0); } catch (e) {} },
+      steps: STEPS.map((x, i) => ({ ...x, cls: 'rv-step rv-step--' + (i + 1) })),
+      filters: FILTERS.map(([id, label]) => ({ label, n: id === 'all' ? PROGRAMMES.length : PROGRAMMES.filter((x) => x.cat === id).length, on: s.filter === id ? 'true' : 'false', cls: 'rv-filter' + (s.filter === id ? ' is-on' : ''), pick: () => this.setState({ filter: id }) })),
+      progs: PROGRAMMES.filter((x) => s.filter === 'all' || x.cat === s.filter).map((x) => ({ ...x, cls: 'llc-card rv-prog ' + x.tone, status: status(x), statusCls: x.soon ? 'status status--planned' : 'status status--planned', open: () => this.open(x.id) })),
+      prog: { ...p, status: status(p), statusCls: 'status status--planned', hasOpps: !p.soon, mail: MAIL + encodeURIComponent('Interest: ' + p.name) },
+      metrics: METRICS, chapters: CHAPTERS
+    };
+  }
+}
+
+return Component;
+});
+TLLC.start("Remote", document.getElementById('app'));
+</script>
+</body>
+</html>

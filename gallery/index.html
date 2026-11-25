@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en-SG">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Little Moments, Kept Forever · The Little Letters Club</title>
+<meta name="description" content="A scrapbook-style gallery of approved photographs and creations from The Little Letters Club.">
+<link rel="icon" href="/assets/8bda083cb5af8508bbc9696637fdb16f.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&amp;family=Fraunces:opsz,wght@9..144,400..700&amp;family=Inter:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="/tokens.css">
+<link rel="stylesheet" href="/ds/llc/components/bundle.css">
+<link rel="stylesheet" href="/site.css">
+<style>body{margin:0}</style>
+<script src="/js/preact.min.js"></script>
+<script src="/js/tllc-runtime.js"></script>
+<script src="/js/asset-ext.js"></script>
+</head>
+<body>
+<div id="app"></div>
+<noscript><p style="font-family:sans-serif;padding:24px">The Little Letters Club website needs JavaScript turned on.</p></noscript>
+<script type="application/x-tllc-template" data-dc="Gallery">["\n\n",["div",{"class":"llc-root","style":"position: relative; width: 100%; min-height: 100vh; display: flex; flex-direction: column; overflow-x: clip; background: var(--warm-beige); color: var(--ink); font-family: var(--font-sans)"},["\n",["a",{"class":"skip","href":"#main"},["Skip to content"]],"\n",["div",{"style":"position: sticky; top: 0; z-index: 50"},[["dc-import",{"name":"Nav","current":"gallery","hint-size":"100%,96px"},[]]]],"\n",["main",{"id":"main"},["\n",["section",{"class":"sec","style":"padding-top: 48px; padding-bottom: 16px","aria-labelledby":"gl-h1"},["\n",["img",{"class":"sb-i sb-hide-m","src":"/assets/6574047dc93edcab24265e9bf00f766b.png","alt":"","aria-hidden":"true","style":"left:8%; top:60px; width:130px; rotate:-10deg"},[]],"\n",["img",{"class":"sb-i sb-sway sb-hide-m","src":"/assets/3ad3113d9a81488f5eead45075b3971a.png","alt":"","aria-hidden":"true","style":"right:7%; top:50px; width:90px"},[]],"\n",["img",{"class":"sb-i sb-hide-m","src":"/assets/fb6da06754db5f0e915d67a10a7ed9de.png","alt":"","aria-hidden":"true","style":"right:15%; top:170px; width:70px; rotate:8deg"},[]],"\n",["img",{"class":"sb-i sb-hide-t","src":"/assets/6e1583fc81e8d4dbcfc8716798b488c5.webp","alt":"","aria-hidden":"true","style":"left:3%; top:130px; width:190px; rotate:-7deg; z-index:1"},[]],["img",{"class":"sb-i sb-hide-t","src":"/assets/42b3b447c791e1ca0998cec92fa1d854.webp","alt":"","aria-hidden":"true","style":"right:3%; top:250px; width:120px; rotate:-4deg; z-index:1"},[]],"\n",["div",{"class":"wrap sec-head sec-head--center","style":"margin-bottom: 0"},["\n",["p",{"class":"llc-eyebrow"},["Gallery"]],"\n",["h1",{"id":"gl-h1","class":"llc-h1"},["Little Moments, ",["span",{"class":"llc-hand accent","style":"font-size: 1.12em; font-weight: 700"},["Kept Forever"]]]],"\n",["p",{"class":"lead","style":"max-width: 640px"},["Photographs and creations from our activities, shown only once everyone in them, and the organisations we work with, have approved them."]],"\n",["div",{"class":"gl-filters","role":"group","aria-label":"Filter by category"},["\n",["sc-for",{"list":"{{cats}}","as":"c","hint-placeholder-count":"7"},[["button",{"type":"button","class":"pc-filter","aria-pressed":"{{c.on}}","onclick":"{{c.go}}"},["{{c.label}}"]]]],"\n"]],"\n"]],"\n"]],"\n\n",["section",{"class":"sec","style":"padding-top: 24px","aria-label":"Gallery"},["\n",["div",{"class":"wrap stack","style":"gap: 26px"},["\n",["sc-if",{"value":"{{illus}}","hint-placeholder-val":"{{true}}"},["\n",["div",{"class":"gl-note","role":"note"},[["img",{"src":"/assets/9ec7f80cd8dfe5afe199bf62043b5e1a.webp","alt":""},[]],["p",{"class":"llc-body","style":"margin: 0"},[["b",{},["No photographs are published yet."]]," These frames are ",["b",{},["illustrations"]]," made from our scrapbook artwork, not pictures of real events. Approved photos will replace them."]]]],"\n"]],"\n",["p",{"class":"llc-caption","aria-live":"polite","style":"text-align: center"},["{{countText}}"]],"\n",["div",{"class":"gl-grid"},["\n",["sc-for",{"list":"{{items}}","as":"p","hint-placeholder-count":"6"},["\n",["button",{"type":"button","class":"gl-card","style":"--r: {{p.r}}deg; --tone: {{p.tone}}","onclick":"{{p.open}}","aria-label":"{{p.label}}"},["\n",["img",{"class":"gl-tape","src":"{{p.tape}}","alt":""},[]],"\n",["span",{"class":"gl-frame"},["\n",["img",{"class":"gl-pol","src":"/assets/d50133881bea4fedcefebdbcabbf2118.png","alt":""},[]],"\n",["span",{"class":"gl-ph"},[["img",{"class":"{{p.imgCls}}","src":"{{p.art}}","alt":"","loading":"lazy"},[]]]],"\n",["span",{"class":"gl-cap"},["{{p.caption}}"]],"\n"]],"\n",["sc-if",{"value":"{{p.isIll}}","hint-placeholder-val":"{{true}}"},[["span",{"class":"gl-tag"},["illustration"]]]],"\n",["span",{"class":"gl-reveal"},["{{p.reveal}}"]],"\n"]],"\n"]],"\n"]],"\n",["sc-if",{"value":"{{none}}","hint-placeholder-val":"{{false}}"},["\n",["div",{"class":"empty"},[["img",{"src":"/assets/9ec7f80cd8dfe5afe199bf62043b5e1a.webp","alt":""},[]],["p",{"class":"hand-md"},["Nothing in this category yet."]],["button",{"type":"button","class":"llc-btn llc-btn--secondary","onclick":"{{showAll}}"},["Show everything"]]]],"\n"]],"\n"]],"\n"]],"\n\n",["sc-if",{"value":"{{boxOpen}}","hint-placeholder-val":"{{false}}"},["\n",["div",{"class":"gl-box","onclick":"{{boxBackdrop}}","onkeydown":"{{boxKey}}"},["\n",["div",{"class":"gl-box__panel","role":"dialog","aria-modal":"true","aria-labelledby":"gl-box-title","style":"--tone: {{b.tone}}"},["\n",["button",{"type":"button","class":"llc-iconbtn gl-box__close","id":"gl-close","aria-label":"Close","onclick":"{{close}}"},["×"]],"\n",["div",{"class":"gl-box__art"},[["img",{"class":"{{b.imgCls}}","src":"{{b.full}}","alt":"{{b.alt}}"},[]]]],"\n",["div",{"class":"stack","style":"gap: 6px"},["\n",["p",{"class":"llc-eyebrow"},["{{b.category}}{{b.dateText}}"]],"\n",["h2",{"id":"gl-box-title","class":"llc-h3","style":"margin: 0"},["{{b.caption}}"]],"\n",["p",{"class":"llc-body","style":"margin: 0"},["{{b.detail}}"]],"\n"]],"\n",["div",{"class":"gl-box__nav"},["\n",["button",{"type":"button","class":"llc-btn llc-btn--secondary llc-btn--small","onclick":"{{prev}}"},[["span",{"aria-hidden":"true"},["←"]]," Previous"]],"\n",["span",{"class":"llc-caption"},["{{pos}}"]],"\n",["button",{"type":"button","class":"llc-btn llc-btn--secondary llc-btn--small","onclick":"{{next}}"},["Next ",["span",{"aria-hidden":"true"},["→"]]]],"\n"]],"\n"]],"\n"]],"\n"]],"\n"]],"\n",["div",{"style":"margin-top: auto"},[["dc-import",{"name":"Footer","hint-size":"100%,480px"},[]]]],"\n"]],"\n"]</script>
+<script type="application/x-tllc-template" data-dc="Nav">["\n\n",["header",{"class":"llc-root","style":"position: relative; z-index: 30; width: 100%; box-sizing: border-box; padding: 12px 24px; background: var(--warm-beige); font-family: var(--font-sans); color: var(--ink)"},["\n",["div",{"style":"max-width: 1248px; margin: 0 auto"},["\n",["nav",{"class":"llc-nav","aria-label":"Main"},["\n",["a",{"href":"/","style":"display: block; flex: none; border-radius: 8px","aria-label":"The Little Letters Club, home"},["\n",["img",{"class":"llc-nav__logo","src":"/assets/4827cd5e7ac01a186531a4bde3041dc2.webp","alt":"The Little Letters Club, Singapore","style":"width: auto; height: 72px"},[]],"\n"]],"\n",["ul",{"class":"llc-nav__links"},["\n",["sc-for",{"list":"{{groups}}","as":"g","hint-placeholder-count":"4"},["\n",["li",{"class":"dd"},["\n",["sc-if",{"value":"{{g.isLink}}","hint-placeholder-val":"{{false}}"},[["a",{"class":"llc-nav__link","href":"{{g.href}}","aria-current":"{{g.cur}}"},[["span",{"class":"env-nav","aria-hidden":"true"},[]],"{{g.label}}"]]]],"\n",["sc-if",{"value":"{{g.isMenu}}","hint-placeholder-val":"{{true}}"},["\n",["button",{"type":"button","class":"llc-nav__link dd__btn","aria-expanded":"{{g.expanded}}","aria-haspopup":"true","aria-current":"{{g.cur}}","onclick":"{{g.toggle}}"},[["span",{"class":"env-nav","aria-hidden":"true"},[]],"{{g.label}} ",["svg",{"width":"12","height":"12","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","stroke-width":"2.4","stroke-linecap":"round","stroke-linejoin":"round","aria-hidden":"true"},[["path",{"d":"m6 9 6 6 6-6"},[]]]]]],"\n",["sc-if",{"value":"{{g.show}}","hint-placeholder-val":"{{false}}"},["\n",["ul",{"class":"dd__menu"},["\n",["sc-for",{"list":"{{g.items}}","as":"i","hint-placeholder-count":"3"},["\n",["li",{"class":"{{i.liCls}}"},["\n",["sc-if",{"value":"{{i.live}}","hint-placeholder-val":"{{true}}"},[["a",{"class":"dd__item","href":"{{i.href}}","aria-current":"{{i.cur}}"},[["b",{},["{{i.label}}"]],["span",{},["{{i.hint}}"]]]]]],"\n",["sc-if",{"value":"{{i.soon}}","hint-placeholder-val":"{{false}}"},[["span",{"class":"dd__item dd__item--soon","aria-disabled":"true"},[["b",{},["{{i.label}} ",["em",{"class":"soon-pill"},["Coming soon"]]]],["span",{},["{{i.hint}}"]]]]]],"\n"]],"\n"]],"\n"]],"\n"]],"\n"]],"\n"]],"\n"]],"\n"]],"\n",["div",{"class":"llc-nav__actions"},["\n",["a",{"class":"llc-btn llc-btn--primary llc-btn--small nav-cta","href":"/getinvolved/"},["Get Involved ",["span",{"aria-hidden":"true"},["→"]]]],"\n",["button",{"type":"button","class":"llc-iconbtn llc-nav__menu","aria-label":"{{menuLabel}}","aria-expanded":"{{expanded}}","aria-controls":"mobile-menu","onclick":"{{toggle}}"},["\n",["svg",{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","stroke-width":"1.8","stroke-linecap":"round","stroke-linejoin":"round","aria-hidden":"true"},[["path",{"d":"M4 7h16"},[]],["path",{"d":"M4 12h16"},[]],["path",{"d":"M4 17h16"},[]]]],"\n"]],"\n"]],"\n"]],"\n",["sc-if",{"value":"{{open}}","hint-placeholder-val":"{{false}}"},["\n",["div",{"id":"mobile-menu","class":"drawer"},["\n",["sc-for",{"list":"{{groups}}","as":"g","hint-placeholder-count":"4"},["\n",["sc-if",{"value":"{{g.isLink}}","hint-placeholder-val":"{{false}}"},[["a",{"class":"drawer__link","href":"{{g.href}}","aria-current":"{{g.cur}}"},["{{g.label}}"]]]],"\n",["sc-if",{"value":"{{g.isMenu}}","hint-placeholder-val":"{{true}}"},["\n",["div",{"class":"drawer__group"},["{{g.label}}"]],"\n",["sc-for",{"list":"{{g.items}}","as":"i","hint-placeholder-count":"3"},["\n",["sc-if",{"value":"{{i.live}}","hint-placeholder-val":"{{true}}"},[["a",{"class":"drawer__link drawer__link--sub","href":"{{i.href}}","aria-current":"{{i.cur}}"},["{{i.label}}"]]]],"\n",["sc-if",{"value":"{{i.soon}}","hint-placeholder-val":"{{false}}"},[["span",{"class":"drawer__link drawer__link--sub drawer__link--soon","aria-disabled":"true"},["{{i.label}} ",["em",{"class":"soon-pill"},["Coming soon"]]]]]],"\n"]],"\n"]],"\n"]],"\n",["a",{"class":"llc-btn llc-btn--primary","href":"/getinvolved/","style":"margin-top: 8px"},["Get Involved ",["span",{"aria-hidden":"true"},["→"]]]],"\n"]],"\n"]],"\n"]],"\n"]],"\n"]</script>
+<script type="application/x-tllc-template" data-dc="Footer">["\n\n",["div",{"class":"llc-root","style":"width: 100%; box-sizing: border-box; padding: 48px 0 32px; background: var(--warm-beige); font-family: var(--font-sans); color: var(--ink)"},["\n",["div",{"class":"wrap","style":"display: flex; flex-direction: column; gap: 24px"},["\n",["div",{"class":"sb-foot"},["\n",["div",{"class":"sb-foot__stage"},["\n",["img",{"class":"sb-i sb-sway sb-hide-m","src":"/assets/0d64320dbae386920a683e2d9edd7561.png","alt":"","aria-hidden":"true","style":"left:-1%; bottom:2%; width:15%; z-index:4"},[]],"\n",["img",{"class":"sb-i sb-sway sb-sway--b sb-hide-m","src":"/assets/3ad3113d9a81488f5eead45075b3971a.png","alt":"","aria-hidden":"true","style":"right:-1%; bottom:2%; width:14%; rotate:5deg; z-index:4"},[]],"\n",["img",{"class":"sb-i","src":"/assets/c308dc5e0ae8d98b55d5b8ec645e1e93.webp","alt":"","aria-hidden":"true","style":"left:30%; top:-2%; width:26%; rotate:-5deg; z-index:5"},[]],"\n",["div",{"class":"sb-foot__env","aria-hidden":"true"},[["img",{"src":"/assets/60744f25a6e10870f62c0433b37fccc8.png","alt":""},[]]]],"\n",["div",{"class":"sb-foot__paper"},[["img",{"src":"/assets/313c609f37b6a8a255eff432ce98288a.png","alt":""},[]],["div",{},[["p",{},["thank you for being part of our little story."]],["em",{},["little creations. lasting connections."]]]]]],"\n",["img",{"class":"sb-i sb-hide-m","src":"/assets/fb6da06754db5f0e915d67a10a7ed9de.png","alt":"","aria-hidden":"true","style":"right:16%; bottom:6%; width:11%; rotate:8deg; z-index:5"},[]],"\n"]],"\n"]],"\n",["section",{"class":"llc-newsletter","aria-labelledby":"nl-title"},["\n",["img",{"class":"llc-newsletter__art","src":"/assets/c4142018fdd1a3c0cb79cdd93a58c7ca.png","alt":""},[]],"\n",["div",{"class":"llc-newsletter__copy","style":"display: flex; flex-direction: column; gap: 6px"},["\n",["h2",{"id":"nl-title","class":"llc-newsletter__title"},["A little note in your inbox?"]],"\n",["p",{"class":"llc-caption"},["Get updates on upcoming collections, creative guides and opportunities to volunteer. No clutter, just the occasional little letter."]],"\n"]],"\n",["div",{"style":"flex: 1; max-width: 460px; display: flex; flex-direction: column; gap: 8px; min-width: 240px"},["\n",["form",{"class":"llc-newsletter__form","onsubmit":"{{quick}}","style":"max-width: none"},["\n",["label",{"class":"sr-only","for":"nl-email"},["Email address"]],"\n",["input",{"id":"nl-email","name":"email","type":"email","required":"","autocomplete":"email","placeholder":"Your email address"},[]],"\n",["button",{"class":"llc-btn llc-btn--primary llc-btn--small","type":"submit"},["Send Me Little Updates"]],"\n"]],"\n",["p",{"class":"privacy-line"},["We'll only use your details to send TLLC updates. ",["a",{"class":"txt","href":"/support/#privacy"},["Privacy Notice (pending review)"]]]],"\n"]],"\n"]],"\n",["footer",{"class":"llc-footer","style":"flex-wrap: wrap"},["\n",["img",{"class":"llc-footer__logo","src":"/assets/a76cbe2cd4d403a460252ecc50649c88.webp","alt":"The Little Letters Club, Singapore","style":"width: auto; height: 140px"},[]],"\n",["nav",{"aria-label":"Footer","class":"ft-cols"},["\n",["div",{"class":"ft-col"},[["h2",{"class":"ft-h"},["Explore"]],["ul",{"class":"llc-footer__links ft-list"},["\n",["li",{},[["a",{"href":"/"},["Home"]]]],"\n",["li",{},[["a",{"href":"/about/"},["About Us"]]]],"\n",["li",{},[["a",{"href":"/team/"},["Meet the Team"]]]],"\n",["li",{},[["a",{"href":"/programmes/"},["Programmes"]]]],"\n",["li",{},[["a",{"href":"/chapters/"},["Chapters"]]]],"\n",["li",{},[["a",{"href":"/journal/"},["Journal"]]]],"\n",["li",{},[["a",{"href":"/letterbox/"},["The Little Letterbox"]]]],"\n"]]]],"\n",["div",{"class":"ft-col"},[["h2",{"class":"ft-h"},["Get Involved"]],["ul",{"class":"llc-footer__links ft-list"},["\n",["li",{},[["a",{"href":"/volunteer/"},["Volunteer With Us"]]]],"\n",["li",{},[["a",{"href":"/exco/"},["Work With Us"]]]],"\n",["li",{},[["a",{"href":"/community/"},["Partner With Us"]]]],"\n",["li",{},[["a",{"href":"/supportus/"},["Support Us"]]]],"\n",["li",{},[["a",{"href":"/getinvolved/"},["All Ways to Help"]]]],"\n"]]]],"\n",["div",{"class":"ft-col"},[["h2",{"class":"ft-h"},["Good to Know"]],["ul",{"class":"llc-footer__links ft-list"},["\n",["li",{},[["a",{"href":"/contact/"},["Contact"]]]],"\n",["li",{},[["a",{"href":"/support/"},["FAQ"]]]],"\n",["li",{},[["a",{"href":"/support/#safeguarding"},["Safeguarding"]]]],"\n",["li",{},[["a",{"href":"/support/#privacy"},["Privacy Notice"]]]],"\n",["li",{},[["a",{"href":"/support/#terms"},["Terms of Use"]]]],"\n",["li",{},[["a",{"href":"/support/#accessibility"},["Accessibility"]]]],"\n"]]]],"\n"]],"\n",["p",{"class":"llc-footer__sign"},["Made with care",["br",{},[]],"in Singapore ",["span",{"class":"llc-heart","aria-hidden":"true"},["♥"]]]],"\n"]],"\n",["div",{"class":"ft-legal"},["\n",["nav",{"class":"ft-legal__links","aria-label":"Site information"},["\n",["a",{"href":"/sitemap/"},["Sitemap"]],"\n",["a",{"href":"/support/#terms"},["Terms of Use"]],"\n",["a",{"href":"/support/#privacy"},["Privacy Notice"]],"\n",["a",{"href":"/support/#whistleblowing"},["Whistleblowing Policy"]],"\n"]],"\n",["div",{"class":"ft-legal__social"},["\n",["span",{"class":"ft-legal__lbl"},["follow us on"]],"\n",["a",{"class":"ft-ig","href":"https://www.instagram.com/thelittlelettersclubsg/","target":"_blank","rel":"noopener noreferrer","aria-label":"Instagram, @thelittlelettersclubsg (opens in a new tab)"},[["svg",{"viewBox":"0 0 24 24","width":"20","height":"20","aria-hidden":"true","fill":"none","stroke":"currentColor","stroke-width":"1.8"},[["rect",{"x":"3","y":"3","width":"18","height":"18","rx":"5"},[]],["circle",{"cx":"12","cy":"12","r":"4.2"},[]],["circle",{"cx":"17.3","cy":"6.7","r":"1.1","fill":"currentColor","stroke":"none"},[]]]]]],"\n",["a",{"class":"ft-ig","href":"mailto:hello@thelittlelettersclub.org","aria-label":"Email hello@thelittlelettersclub.org"},[["svg",{"viewBox":"0 0 24 24","width":"20","height":"20","aria-hidden":"true","fill":"none","stroke":"currentColor","stroke-width":"1.8"},[["rect",{"x":"3","y":"5","width":"18","height":"14","rx":"3"},[]],["path",{"d":"M4 7l8 6 8-6"},[]]]]]],"\n"]],"\n",["div",{"class":"ft-legal__sub"},["\n",["span",{"class":"ft-legal__lbl"},["be in the know"]],"\n",["button",{"type":"button","class":"llc-btn llc-btn--primary llc-btn--small","onclick":"{{openSub}}"},["Subscribe"]],"\n"]],"\n"]],"\n",["p",{"class":"llc-caption ft-legal__note"},["The Little Letters Club is a youth-led initiative, not a registered charity. A little letter goes a long way. © 2026"]],"\n",["sc-if",{"value":"{{open}}","hint-placeholder-val":"{{false}}"},["\n",["div",{"class":"gl-box sub-box","onclick":"{{backdrop}}","onkeydown":"{{key}}"},["\n",["div",{"class":"gl-box__panel sub-panel","role":"dialog","aria-modal":"true","aria-labelledby":"sub-title"},["\n",["button",{"type":"button","class":"llc-iconbtn gl-box__close","id":"sub-close","aria-label":"Close","onclick":"{{close}}"},["×"]],"\n",["img",{"class":"sub-art","src":"/assets/c4142018fdd1a3c0cb79cdd93a58c7ca.png","alt":""},[]],"\n",["p",{"class":"llc-eyebrow","style":"margin: 0"},["be in the know"]],"\n",["h2",{"id":"sub-title","class":"llc-h3","style":"margin: 0"},["Subscribe to our little letters"]],"\n",["p",{"class":"llc-caption","style":"margin: 0"},["Sign up for occasional updates on new collections, creative guides and ways to volunteer."]],"\n",["sc-if",{"value":"{{notSent}}","hint-placeholder-val":"{{true}}"},["\n",["form",{"class":"sub-form","onsubmit":"{{submit}}","novalidate":""},["\n",["div",{"class":"sub-row"},["\n",["label",{"class":"sub-field"},[["span",{},["First name",["b",{"aria-hidden":"true"},["*"]]]],["input",{"id":"sub-first","name":"first","type":"text","required":"","autocomplete":"given-name","aria-required":"true"},[]]]],"\n",["label",{"class":"sub-field"},[["span",{},["Last name",["b",{"aria-hidden":"true"},["*"]]]],["input",{"name":"last","type":"text","required":"","autocomplete":"family-name","aria-required":"true"},[]]]],"\n"]],"\n",["label",{"class":"sub-field"},[["span",{},["Email",["b",{"aria-hidden":"true"},["*"]]]],["input",{"id":"sub-email","name":"email","type":"email","required":"","autocomplete":"email","aria-required":"true"},[]]]],"\n",["fieldset",{"class":"sub-consent"},["\n",["legend",{},["Staying in touch"]],"\n",["p",{},["We'd love to send you news about TLLC activities, collections and volunteering opportunities. If you're happy to hear from us, tick how you'd like us to reach you:"]],"\n",["label",{"class":"sub-check"},[["input",{"type":"checkbox","name":"byEmail"},[]]," Email updates"]],"\n"]],"\n",["fieldset",{"class":"sub-consent"},["\n",["legend",{},["Storing your details",["b",{"aria-hidden":"true"},["*"]]]],"\n",["p",{},["To send you updates, we need to store and use your name and email. Please tick to agree:"]],"\n",["label",{"class":"sub-check"},[["input",{"type":"checkbox","name":"store","required":"","aria-required":"true"},[]]," I agree to TLLC storing and processing my details for this purpose."]],"\n"]],"\n",["sc-if",{"value":"{{err}}","hint-placeholder-val":"{{false}}"},[["p",{"class":"sub-err","role":"alert"},["{{err}}"]]]],"\n",["p",{"class":"llc-caption","style":"margin: 0"},["You can unsubscribe at any time using the link in any of our emails, or by writing to ",["a",{"class":"txt","href":"mailto:hello@thelittlelettersclub.org"},["hello@thelittlelettersclub.org"]],". For how we look after your information, see our ",["a",{"class":"txt","href":"/support/#privacy"},["Privacy Notice"]]," (pending review)."]],"\n",["button",{"class":"llc-btn llc-btn--primary","type":"submit"},["Subscribe"]],"\n"]],"\n"]],"\n",["sc-if",{"value":"{{sent}}","hint-placeholder-val":"{{false}}"},["\n",["div",{"class":"notice","role":"status"},["\n",["strong",{},["Prototype only: nothing was sent."]],"\n",["span",{},["The updates list isn't connected yet, so your details weren't stored. Connect a mailing-list service at ",["span",{"class":"ph"},["[NEWSLETTER_ENDPOINT]"]]," before launch."]],"\n"]],"\n",["button",{"type":"button","id":"sub-done","class":"llc-btn llc-btn--secondary","onclick":"{{close}}"},["Close"]],"\n"]],"\n"]],"\n"]],"\n"]],"\n"]],"\n"]],"\n","\n"]</script>
+<script>
+TLLC.define("Footer", function (DCLogic) {
+
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { open: false, sent: false, err: '' }; }
+  openSub(email) {
+    try { this.lastFocus = document.activeElement; } catch (e) {}
+    this.setState({ open: true, sent: false, err: '' }, () => {
+      try {
+        const em = document.getElementById('sub-email'); if (em && email) em.value = email;
+        const f = document.getElementById('sub-first'); f && f.focus();
+      } catch (e) {}
+    });
+  }
+  closeSub() { this.setState({ open: false }, () => { try { this.lastFocus && this.lastFocus.focus && this.lastFocus.focus(); } catch (e) {} }); }
+  renderVals() {
+    return {
+      open: this.state.open, sent: this.state.sent, notSent: !this.state.sent, err: this.state.err,
+      openSub: () => this.openSub(''),
+      quick: (e) => { e.preventDefault(); const v = (e.target.elements.email || {}).value || ''; this.openSub(v); },
+      close: () => this.closeSub(),
+      backdrop: (e) => { if (e.target === e.currentTarget) this.closeSub(); },
+      key: (e) => {
+        if (e.key === 'Escape') { e.preventDefault(); this.closeSub(); }
+        else if (e.key === 'Tab') { // keep focus inside the dialog
+          const panel = document.querySelector('.sub-panel'); if (!panel) return;
+          const els = panel.querySelectorAll('button, a[href], input, [tabindex]:not([tabindex="-1"])');
+          const first = els[0], last = els[els.length - 1];
+          if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+          else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+        }
+      },
+      // Integration point: send these fields to the mailing-list service, and only show a
+      // "thank you for subscribing" message once it succeeds. Record both consent ticks with a timestamp.
+      submit: (e) => {
+        e.preventDefault();
+        const f = e.target.elements;
+        if (!f.first.value.trim() || !f.last.value.trim()) return this.setState({ err: 'Please add your first and last name.' });
+        if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.email.value.trim())) return this.setState({ err: 'Please enter a valid email address.' });
+        if (!f.store.checked) return this.setState({ err: 'Please tick the box to let us store your details, so we can send updates.' });
+        this.setState({ sent: true, err: '' }, () => { try { const d = document.getElementById('sub-done'); d && d.focus(); } catch (er) {} });
+      }
+    };
+  }
+}
+
+return Component;
+});
+TLLC.define("Nav", function (DCLogic) {
+
+// ---- TLLC envelope cursor (desktop fine pointers only; off for touch and reduced motion) ----
+const TLLC_CURSOR_SVG = { d: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"128\" height=\"128\" viewBox=\"0 0 128 128\"><defs><filter id=\"shadow\" x=\"-30%\" y=\"-40%\" width=\"160%\" height=\"180%\"><feDropShadow dx=\"1\" dy=\"3\" stdDeviation=\"3\" flood-color=\"#8B6F61\" flood-opacity=\".25\"/></filter></defs><g filter=\"url(#shadow)\"><rect x=\"21\" y=\"44\" width=\"87\" height=\"60\" rx=\"10\" fill=\"#FFF9F0\" stroke=\"#8B6F61\" stroke-width=\"3\"/><path d=\"M24 50 L64 79 L105 50\" fill=\"none\" stroke=\"#8B6F61\" stroke-width=\"3\" stroke-linejoin=\"round\"/><path d=\"M24 101 L51 71 M105 101 L77 71\" fill=\"none\" stroke=\"#E8B8BE\" stroke-width=\"2.5\"/><path d=\"M64 91 C46 81 51 69 59 73 C62 74 64 77 64 77 C72 67 83 79 64 91Z\" fill=\"#E8B8BE\" stroke=\"#B66F7B\" stroke-width=\"2\"/></g></svg>", h: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"128\" height=\"128\" viewBox=\"0 0 128 128\"><defs><filter id=\"shadow\" x=\"-30%\" y=\"-40%\" width=\"160%\" height=\"180%\"><feDropShadow dx=\"1\" dy=\"3\" stdDeviation=\"3\" flood-color=\"#8B6F61\" flood-opacity=\".25\"/></filter></defs><g filter=\"url(#shadow)\"><path d=\"M21 51 L64 17 L108 51 L108 103 Q108 108 102 108 L27 108 Q21 108 21 102Z\" fill=\"#F2DFA6\" stroke=\"#8B6F61\" stroke-width=\"3\" stroke-linejoin=\"round\"/><rect x=\"33\" y=\"34\" width=\"63\" height=\"62\" rx=\"3\" fill=\"#FFF9F0\" stroke=\"#D4B9A4\" stroke-width=\"2\"/><path d=\"M44 56 H84 M44 66 H81\" stroke=\"#D4B9A4\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M21 54 L64 83 L108 54 L108 102 Q108 108 102 108 L27 108 Q21 108 21 102Z\" fill=\"#FFF9F0\" stroke=\"#8B6F61\" stroke-width=\"3\" stroke-linejoin=\"round\"/><path d=\"M21 104 L51 75 M108 104 L77 75\" stroke=\"#E8B8BE\" stroke-width=\"2.5\"/></g><path d=\"M64 42 C49 30 39 43 45 54 C49 62 64 71 64 71 C64 71 81 60 85 51 C91 37 75 30 64 42Z\" fill=\"#E8B8BE\" stroke=\"#B66F7B\" stroke-width=\"2.5\"/><path d=\"M102 17 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4Z\" fill=\"#F2DFA6\" stroke=\"#8B6F61\" stroke-width=\"1.4\"/><circle cx=\"16\" cy=\"33\" r=\"3\" fill=\"#A9BE9A\"/></svg>", c: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"128\" height=\"128\" viewBox=\"0 0 128 128\"><defs><filter id=\"shadow\" x=\"-30%\" y=\"-40%\" width=\"160%\" height=\"180%\"><feDropShadow dx=\"1\" dy=\"3\" stdDeviation=\"3\" flood-color=\"#8B6F61\" flood-opacity=\".25\"/></filter></defs><g filter=\"url(#shadow)\"><path d=\"M21 51 L64 17 L108 51 L108 103 Q108 108 102 108 L27 108 Q21 108 21 102Z\" fill=\"#F2DFA6\" stroke=\"#8B6F61\" stroke-width=\"3\" stroke-linejoin=\"round\"/><rect x=\"33\" y=\"34\" width=\"63\" height=\"62\" rx=\"3\" fill=\"#FFF9F0\" stroke=\"#D4B9A4\" stroke-width=\"2\"/><path d=\"M44 56 H84 M44 66 H81\" stroke=\"#D4B9A4\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M21 54 L64 83 L108 54 L108 102 Q108 108 102 108 L27 108 Q21 108 21 102Z\" fill=\"#FFF9F0\" stroke=\"#8B6F61\" stroke-width=\"3\" stroke-linejoin=\"round\"/><path d=\"M21 104 L51 75 M108 104 L77 75\" stroke=\"#E8B8BE\" stroke-width=\"2.5\"/></g><path d=\"M64 42 C49 30 39 43 45 54 C49 62 64 71 64 71 C64 71 81 60 85 51 C91 37 75 30 64 42Z\" fill=\"#E8B8BE\" stroke=\"#B66F7B\" stroke-width=\"2.5\"/><path d=\"M102 17 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4Z\" fill=\"#F2DFA6\" stroke=\"#8B6F61\" stroke-width=\"1.4\"/><circle cx=\"16\" cy=\"33\" r=\"3\" fill=\"#A9BE9A\"/><g fill=\"none\" stroke=\"#E8B8BE\" stroke-width=\"4\" stroke-linecap=\"round\"><path d=\"M64 5V14M115 53h9M7 69h10M112 98l9 6M18 21l-8 -7\"/></g></svg>" };
+function tllcCursorMount() {
+  if (typeof window === 'undefined' || !window.matchMedia) return null;
+  if (!matchMedia('(hover: hover) and (pointer: fine)').matches || matchMedia('(prefers-reduced-motion: reduce)').matches) return null;
+  if (window.__tllcCursor) { window.__tllcCursor.n++; return window.__tllcCursor; }
+  const HOVER = 'a,button,[role="button"],summary,label,.sb-pol,.sb-lift,.pc--link,.pc-filter';
+  const TEXT = 'input,textarea,select,[contenteditable="true"]';
+  const root = document.createElement('div'); root.id = 'tllc-cursor'; root.setAttribute('aria-hidden', 'true'); root.dataset.s = 'd';
+  // all three states are decoded up front and only shown/hidden, so a click never flashes blank
+  ['d', 'h', 'c'].forEach((k) => { const i = document.createElement('img'); i.alt = ''; i.className = 'tc-' + k; i.decoding = 'sync'; i.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(TLLC_CURSOR_SVG[k]); root.appendChild(i); });
+  document.body.appendChild(root); document.body.classList.add('tllc-cursor-enabled');
+  let clicking = false, hover = false, timer = 0, lastX = -100, lastY = -100;
+  const show = (s) => { if (root.dataset.s !== s) root.dataset.s = s; };
+  const place = () => { root.style.translate = (lastX - 7) + 'px ' + (lastY - 8) + 'px'; };
+  const isEl = (t) => t && t.nodeType === 1 && t.closest;
+  const move = (e) => {
+    if (e.pointerType && e.pointerType !== 'mouse') return;
+    lastX = e.clientX; lastY = e.clientY; place();
+    const t = isEl(e.target) ? e.target : null;
+    const inText = !!(t && t.closest(TEXT));
+    if (root.style.display !== (inText ? 'none' : 'block')) root.style.display = inText ? 'none' : 'block';
+    hover = !!(t && t.closest(HOVER));
+    root.classList.toggle('is-hover', hover);
+    if (!clicking) show(hover ? 'h' : 'd');
+  };
+  const down = (e) => {
+    if (e.pointerType !== 'mouse' || e.button !== 0) return;
+    if (isEl(e.target) && e.target.closest(TEXT)) return;
+    lastX = e.clientX; lastY = e.clientY; place();
+    clicking = true; show('c');
+    root.classList.remove('is-click'); void root.offsetWidth; root.classList.add('is-click');
+    clearTimeout(timer);
+    timer = setTimeout(() => { clicking = false; root.classList.remove('is-click'); show(hover ? 'h' : 'd'); }, 260);
+  };
+  const leave = () => { root.style.display = 'none'; };
+  const enter = () => { root.style.display = 'block'; };
+  window.addEventListener('pointermove', move, { passive: true });
+  window.addEventListener('pointerdown', down, { passive: true, capture: true });
+  document.documentElement.addEventListener('mouseleave', leave);
+  document.documentElement.addEventListener('mouseenter', enter);
+  window.__tllcCursor = { n: 1, off() {
+    clearTimeout(timer);
+    window.removeEventListener('pointermove', move); window.removeEventListener('pointerdown', down, { capture: true });
+    document.documentElement.removeEventListener('mouseleave', leave); document.documentElement.removeEventListener('mouseenter', enter);
+    root.remove(); document.body.classList.remove('tllc-cursor-enabled'); window.__tllcCursor = null;
+  } };
+  return window.__tllcCursor;
+}
+function tllcCursorUnmount() { const c = typeof window !== 'undefined' && window.__tllcCursor; if (c && --c.n <= 0) c.off(); }
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { open: false, group: null }; this.onDoc = this.onDoc.bind(this); this.onKey = this.onKey.bind(this); }
+  componentDidMount() { document.addEventListener('click', this.onDoc); document.addEventListener('keydown', this.onKey); tllcCursorMount(); }
+  componentWillUnmount() { document.removeEventListener('click', this.onDoc); document.removeEventListener('keydown', this.onKey); tllcCursorUnmount(); }
+  onDoc(e) { if (this.state.group && !(e.target.closest && e.target.closest('.dd'))) this.setState({ group: null }); }
+  onKey(e) { if (e.key === 'Escape' && this.state.group) this.setState({ group: null }); }
+  renderVals() {
+    const current = this.props.current ?? 'home';
+    // Sitemap: items with `soon: true` aren't built yet, so they show as "Coming soon" instead of linking anywhere.
+    const tree = [
+      { id: 'home', label: 'Home', href: '/' },
+      { id: 'about', label: 'About', items: [
+        { id: 'about', label: 'Our Story', hint: 'Why TLLC exists', href: '/about/#story-title' },
+        { id: 'about-values', label: 'Mission & Values', hint: 'What we believe and how we work', href: '/about/#values-title' },
+        { id: 'about-team', label: 'Meet the Team', hint: 'EXCO, volunteers and friends', href: '/team/' },
+        { id: 'about-creators', label: 'Meet Our Creators', hint: 'The makers behind the collections', href: '/creators/' }
+      ] },
+      { id: 'work', label: 'Our Work', items: [
+        { id: 'programmes', label: 'Dear, You', hint: 'Creative correspondence', href: '/programmes/#dear-you' },
+        { id: 'prog-2', label: 'Little Things Studio', hint: 'Small things, thoughtfully made', href: '/programmes/#little-things-studio' },
+        { id: 'prog-3', label: 'Seasons of Kindness', hint: 'Festive and seasonal campaigns', href: '/programmes/#seasons-of-kindness' },
+        { id: 'prog-4', label: 'Across Generations', hint: 'Supervised shared activities', href: '/programmes/#across-generations' },
+        { id: 'event', label: 'Letters & Little Blooms', hint: 'Across Generations · our first event', href: '/event/' },
+        { id: 'prog-5', label: 'The Kindness Workshop', hint: 'Learn something lovely', href: '/programmes/#kindness-workshop' }
+      ] },
+      { id: 'involved', label: 'Get Involved', items: [
+        { id: 'volunteer', label: 'Volunteer With Us', hint: 'In person or from home', href: '/volunteer/' },
+        { id: 'exco', label: 'Work With Us', hint: 'Apply for the 2026 Founding EXCO', href: '/exco/' },
+        { id: 'community', label: 'Partner With Us', hint: 'Charities, schools and collaborators', href: '/community/#partner-form' },
+        { id: 'supportus', label: 'Support Us', hint: 'The Little Giving Circle', href: '/supportus/' },
+        { id: 'getinvolved', label: 'All ways to help', hint: 'Volunteer, join the team, partner, attend', href: '/getinvolved/', all: true }
+      ] },
+      { id: 'chapters', label: 'Chapters', items: [
+        { id: 'chapters', label: 'Our Chapters', hint: 'One little world, many communities', href: '/chapters/' },
+        { id: 'chapters-sg', label: '🇸🇬 Singapore', hint: 'Home Chapter', href: '/about/' },
+        { id: 'india', label: '🇮🇳 India', hint: 'Forming', href: '/india/' },
+        { id: 'chapters-start', label: '＋ Start a Chapter', hint: 'Tell us where the next letter should travel', href: '/contact/' }
+      ] },
+      { id: 'lbx', label: 'Letterbox', items: [
+        { id: 'letterbox', label: 'Create a Letter', hint: 'Write and decorate an e-letter', href: '/letterbox/#studio' },
+        { id: 'myletters', label: 'My Letters', hint: 'Your saved and sent letters', soon: true },
+        { id: 'lbarchive', label: 'Community Archive', hint: 'Letters shared with permission', soon: true },
+        { id: 'lbhow', label: 'How It Works', hint: 'From draft to delivery', soon: true }
+      ] },
+      { id: 'more', label: 'Explore', items: [
+        { id: 'journal', label: 'Journal', hint: 'Stories, ideas and prompts', href: '/journal/' },
+        { id: 'impact', label: 'Our Impact', hint: 'Verified figures only', href: '/remote/#impact' },
+        { id: 'gallery', label: 'Little Moments', hint: 'Our Polaroid gallery', href: '/gallery/' },
+        { id: 'scrapbook', label: 'Our Little Scrapbook', hint: 'Moments from our little corner', soon: true }
+      ] },
+      { id: 'contact', label: 'Contact', href: '/contact/' }
+    ];
+    const groups = tree.map((g) => {
+      if (!g.items) return { label: g.label, href: g.href, isLink: true, isMenu: false, cur: g.id === current ? 'page' : undefined };
+      const inGroup = g.items.some((i) => i.id === current);
+      const isOpen = this.state.group === g.id;
+      return {
+        label: g.label, isLink: false, isMenu: true, cur: inGroup ? 'true' : undefined, show: isOpen, expanded: isOpen ? 'true' : 'false',
+        toggle: () => this.setState({ group: isOpen ? null : g.id }),
+        items: g.items.map((i) => ({ ...i, live: !i.soon, soon: !!i.soon, liCls: i.all ? 'dd__all' : '', cur: i.id === current ? 'page' : undefined }))
+      };
+    });
+    const open = this.state.open;
+    return {
+      groups,
+      open,
+      expanded: open ? 'true' : 'false',
+      menuLabel: open ? 'Close menu' : 'Open menu',
+      toggle: () => this.setState({ open: !this.state.open })
+    };
+  }
+}
+
+return Component;
+});
+TLLC.define("Gallery", function (DCLogic) {
+
+// ---- Polaroid gallery data ----
+// PHOTOS: real photographs. Add one ONLY after publication approval AND media consent are recorded
+// (for children and beneficiaries, also the partner organisation's permission). Volunteer uploads are never auto-published.
+// Fields: id, src, full, alt, caption, category, date, project, detail, publication ('draft'|'published'|'unpublished'), consent ('pending'|'approved'|'withdrawn').
+const PHOTOS = [];
+// ILLUSTRATIONS: shown only while no approved photographs exist. Clearly labelled; never presented as real events.
+const ILLUSTRATIONS = [
+  { id: 'ill-1', art: '/assets/e32b4bda770d057d0ff3e88a73bcdbd3.png', category: 'Squishy-Making', caption: 'squishy-making', alt: 'Illustration of a squishy craft, for our first activity: squishy-making + letter writing.', tone: '#fbe9ec', r: -4, tape: '/assets/44b3a8e90b6aafb95c8dd457bbac7027.png' },
+  { id: 'ill-2', art: '/assets/9cd4e36ab98213f345fc7cbb8fade569.png', category: 'Letter Writing', caption: 'letter writing', alt: 'Illustration of a lined letter page.', tone: '#fdf3cf', r: 3, tape: '/assets/f250469d7496b7bfda1fa65856aa78d1.png' },
+  { id: 'ill-3', art: '/assets/e68ad3374439e8fcc8e7ff6c85a13291.png', category: 'Behind the Scenes', caption: 'behind the scenes', alt: 'Illustration of the craft table: scissors and a thread spool.', tone: '#e8efe0', r: -2, tape: '/assets/6574047dc93edcab24265e9bf00f766b.png' },
+  { id: 'ill-4', art: '/assets/da5d93f5c54a85bb2597de3192216a80.png', category: 'Volunteer Creations', caption: 'volunteer creations', alt: 'Illustration of a handmade postcard.', tone: '#e3eef6', r: 4, tape: '/assets/44b3a8e90b6aafb95c8dd457bbac7027.png' },
+  { id: 'ill-5', art: '/assets/0d64320dbae386920a683e2d9edd7561.png', category: 'Workshops', caption: 'workshops', alt: 'Illustration of pressed daisies for a paper-flower workshop.', tone: '#fdf3cf', r: -3, tape: '/assets/f250469d7496b7bfda1fa65856aa78d1.png' },
+  { id: 'ill-6', art: '/assets/60744f25a6e10870f62c0433b37fccc8.png', category: 'Community Events', caption: 'community events', alt: 'Illustration of a floral envelope.', tone: '#fbe9ec', r: 2, tape: '/assets/6574047dc93edcab24265e9bf00f766b.png' }
+];
+const CATS = ['Workshops', 'Squishy-Making', 'Letter Writing', 'Behind the Scenes', 'Volunteer Creations', 'Community Events'];
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { cat: 'all', box: -1 }; this.onKey = this.onKey.bind(this); this.lastFocus = null; }
+  pool() {
+    const real = PHOTOS.filter((p) => p.publication === 'published' && p.consent === 'approved');
+    return real.length ? real.map((p) => ({ ...p, isIll: false })) : ILLUSTRATIONS.map((p) => ({ ...p, isIll: true }));
+  }
+  visible() { const c = this.state.cat; return this.pool().filter((p) => c === 'all' || p.category === c); }
+  openAt(i) { try { this.lastFocus = document.activeElement; } catch (e) {} this.setState({ box: i }, () => { try { const b = document.getElementById('gl-close'); b && b.focus(); } catch (e) {} }); }
+  closeBox() { this.setState({ box: -1 }, () => { try { this.lastFocus && this.lastFocus.focus && this.lastFocus.focus(); } catch (e) {} }); }
+  step(d) { const n = this.visible().length; if (!n) return; this.setState({ box: (this.state.box + d + n) % n }); }
+  onKey(e) {
+    if (this.state.box < 0) return;
+    if (e.key === 'Escape') { e.preventDefault(); this.closeBox(); }
+    else if (e.key === 'ArrowRight') this.step(1);
+    else if (e.key === 'ArrowLeft') this.step(-1);
+    else if (e.key === 'Tab') { // keep focus inside the dialog
+      const panel = document.querySelector('.gl-box__panel'); if (!panel) return;
+      const f = panel.querySelectorAll('button'); if (!f.length) return;
+      const first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  }
+  renderVals() {
+    const pool = this.pool(); const isIll = pool.length > 0 && pool[0].isIll;
+    const list = this.visible();
+    const items = list.map((p, i) => ({
+      ...p, imgCls: p.isIll ? '' : 'gl-photo', art: p.isIll ? p.art : p.src,
+      reveal: p.isIll ? p.category + ' · illustration' : p.category + (p.date ? ' · ' + p.date : ''),
+      label: (p.isIll ? 'Illustration: ' : 'Photo: ') + p.caption + '. Open larger view.',
+      tape: p.tape || '/assets/6574047dc93edcab24265e9bf00f766b.png', tone: p.tone || '#fbe9ec', r: typeof p.r === 'number' ? p.r : (i % 2 ? 3 : -3),
+      open: () => this.openAt(i)
+    }));
+    const cur = this.state.box >= 0 ? list[this.state.box] : null;
+    const b = cur ? {
+      tone: cur.tone || '#fbe9ec', imgCls: cur.isIll ? '' : 'gl-photo', full: cur.isIll ? cur.art : (cur.full || cur.src), alt: cur.alt,
+      category: cur.category, dateText: cur.isIll ? ' · illustration' : (cur.date ? ' · ' + cur.date : ''), caption: cur.caption,
+      detail: cur.isIll ? cur.alt + ' This is artwork, not a photograph of a real event.' : (cur.detail || '')
+    } : {};
+    const n = list.length;
+    return {
+      cats: [{ id: 'all', label: 'All' }].concat(CATS.map((c) => ({ id: c, label: c }))).map((c) => ({ ...c, on: this.state.cat === c.id ? 'true' : 'false', go: () => this.setState({ cat: c.id, box: -1 }) })),
+      items, none: n === 0, illus: isIll,
+      countText: n + (isIll ? (n === 1 ? ' illustration' : ' illustrations') : (n === 1 ? ' photograph' : ' photographs')) + (this.state.cat === 'all' ? '' : ' in ' + this.state.cat),
+      showAll: () => this.setState({ cat: 'all' }),
+      boxOpen: !!cur, b, pos: cur ? (this.state.box + 1) + ' of ' + n : '',
+      close: () => this.closeBox(), prev: () => this.step(-1), next: () => this.step(1),
+      boxKey: this.onKey,
+      boxBackdrop: (e) => { if (e.target === e.currentTarget) this.closeBox(); }
+    };
+  }
+}
+
+return Component;
+});
+TLLC.start("Gallery", document.getElementById('app'));
+</script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+{
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/about.html",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/article.html",
+      "destination": "/article/",
+      "permanent": true
+    },
+    {
+      "source": "/chapters.html",
+      "destination": "/chapters/",
+      "permanent": true
+    },
+    {
+      "source": "/collection.html",
+      "destination": "/collection/",
+      "permanent": true
+    },
+    {
+      "source": "/community.html",
+      "destination": "/community/",
+      "permanent": true
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/creators.html",
+      "destination": "/creators/",
+      "permanent": true
+    },
+    {
+      "source": "/event.html",
+      "destination": "/event/",
+      "permanent": true
+    },
+    {
+      "source": "/exco.html",
+      "destination": "/exco/",
+      "permanent": true
+    },
+    {
+      "source": "/gallery.html",
+      "destination": "/gallery/",
+      "permanent": true
+    },
+    {
+      "source": "/getinvolved.html",
+      "destination": "/getinvolved/",
+      "permanent": true
+    },
+    {
+      "source": "/harman.html",
+      "destination": "/harman/",
+      "permanent": true
+    },
+    {
+      "source": "/india.html",
+      "destination": "/india/",
+      "permanent": true
+    },
+    {
+      "source": "/journal.html",
+      "destination": "/journal/",
+      "permanent": true
+    },
+    {
+      "source": "/kafia.html",
+      "destination": "/kafia/",
+      "permanent": true
+    },
+    {
+      "source": "/kym.html",
+      "destination": "/kym/",
+      "permanent": true
+    },
+    {
+      "source": "/laks.html",
+      "destination": "/laks/",
+      "permanent": true
+    },
+    {
+      "source": "/letterbox.html",
+      "destination": "/letterbox/",
+      "permanent": true
+    },
+    {
+      "source": "/letterpreview.html",
+      "destination": "/letterpreview/",
+      "permanent": true
+    },
+    {
+      "source": "/lynn.html",
+      "destination": "/lynn/",
+      "permanent": true
+    },
+    {
+      "source": "/meitong.html",
+      "destination": "/meitong/",
+      "permanent": true
+    },
+    {
+      "source": "/opportunities.html",
+      "destination": "/opportunities/",
+      "permanent": true
+    },
+    {
+      "source": "/programmes.html",
+      "destination": "/programmes/",
+      "permanent": true
+    },
+    {
+      "source": "/remote.html",
+      "destination": "/remote/",
+      "permanent": true
+    },
+    {
+      "source": "/sitemap.html",
+      "destination": "/sitemap/",
+      "permanent": true
+    },
+    {
+      "source": "/support.html",
+      "destination": "/support/",
+      "permanent": true
+    },
+    {
+      "source": "/supportus.html",
+      "destination": "/supportus/",
+      "permanent": true
+    },
+    {
+      "source": "/team.html",
+      "destination": "/team/",
+      "permanent": true
+    },
+    {
+      "source": "/volunteer.html",
+      "destination": "/volunteer/",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        }
+      ]
+    }
+  ]
+}

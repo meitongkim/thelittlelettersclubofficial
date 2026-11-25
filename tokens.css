@@ -1,0 +1,38 @@
+/* The Little Letters Club — design tokens (from the TLLC design system's tokens.json). Edit here to restyle every page. */
+:root {
+  --warm-beige: #f8f1e6;
+  --paper: #fffbf5;
+  --cream: #fdf2dc;
+  --blush-pink: #f4dadd;
+  --butter-yellow: #fff4c8;
+  --sage-green: #cfe1d2;
+  --sky-blue: #bdd8e7;
+  --peach: #fdd4bf;
+  --lavender: #ecd7f1;
+  --mocha-brown: #7b5e54;
+  --ink: #45261b;
+  --ink-muted: #6b4f45;
+  --line: #ead9c7;
+  --rose: #f86c86;
+  --rose-deep: #b8375a;
+  --rose-deeper: #9e2d4c;
+  --on-rose: #ffffff;
+
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-hand: "Gaegu", "Segoe Print", "Comic Sans MS", cursive;
+
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px;
+  --space-6: 24px; --space-8: 32px; --space-10: 40px; --space-12: 48px;
+
+  --radius-sm: 8px; --radius-md: 16px; --radius-lg: 24px; --radius-xl: 32px; --radius-pill: 999px;
+
+  --shadow-soft: 0 2px 8px rgba(123, 94, 84, 0.10);
+  --shadow-hover: 0 6px 18px rgba(123, 94, 84, 0.16);
+  --shadow-floating: 0 14px 36px rgba(123, 94, 84, 0.22);
+
+  --container-max: 1200px;
+  --grid-gutter: 24px;
+  --bp-tablet: 1000px;
+  --bp-mobile: 760px;
+}

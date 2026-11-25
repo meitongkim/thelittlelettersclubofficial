@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en-SG">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Little Letterbox · The Little Letters Club</title>
+<meta name="description" content="Make a little letter: choose stationery, write, decorate with stickers and seal it in an envelope. A prototype letter studio from The Little Letters Club.">
+<link rel="icon" href="/assets/8bda083cb5af8508bbc9696637fdb16f.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&amp;family=Inter:wght@400;500;600&amp;family=Gaegu:wght@400;700&amp;display=swap">
+<link rel="stylesheet" href="/tokens.css">
+<link rel="stylesheet" href="/ds/llc/components/bundle.css">
+<link rel="stylesheet" href="/site.css">
+<link rel="stylesheet" href="/letterbox.css">
+<style>
+body{margin:0}
+.paper{container-type:inline-size}
+@media (hover:hover) and (pointer:fine){
+.cur-pen,.cur-pen *{cursor:url(/_blob/c05a2263ef4ac9992d56f322e3a848e8) 23 29,auto}
+.cur-envelope,.cur-envelope *{cursor:url(/_blob/3d98521adbdefa3cd828776852327b60) 4 6,auto}
+.cur-flower,.cur-flower *{cursor:url(/_blob/42b7fd37a8e91c4a198deac46a195acf) 16 16,auto}
+.cur-heart,.cur-heart *{cursor:url(/_blob/fff94b3cd841b7bb7039068110848cac) 16 16,auto}
+.cur-sparkle,.cur-sparkle *{cursor:url(/_blob/4b9497a9cee5da1363e33f5c6f1fb33b) 16 16,auto}
+.cur-pen input,.cur-pen textarea,.cur-envelope input,.cur-envelope textarea,.cur-flower input,.cur-flower textarea,.cur-heart input,.cur-heart textarea,.cur-sparkle input,.cur-sparkle textarea{cursor:text}
+}
+</style>
+<style>body{margin:0}</style>
+<script src="/js/preact.min.js"></script>
+<script src="/js/tllc-runtime.js"></script>
+<script src="/js/asset-ext.js"></script>
+<script src="/js/letterbox-registry.js"></script>
+<script src="/js/letterbox-model.js"></script>
+</head>
+<body>
+<div id="app"></div>
+<noscript><p style="font-family:sans-serif;padding:24px">The Little Letters Club website needs JavaScript turned on.</p></noscript>
+<script type="application/x-tllc-template" data-dc="Letterbox">["\n\n",["div",{"class":"{{rootCls}}","style":"position: relative; width: 100%; min-height: 100vh; display: flex; flex-direction: column; overflow-x: clip; background: var(--warm-beige); color: var(--ink); font-family: var(--font-sans)","onpointerdown":"{{onBurst}}"},["\n",["a",{"class":"skip","href":"#studio"},["Skip to the letter studio"]],"\n",["div",{"style":"position: sticky; top: 0; z-index: 50"},[["dc-import",{"name":"Nav","current":"letterbox","hint-size":"100%,96px"},[]]]],"\n",["main",{"id":"main"},["\n\n",["section",{"class":"sec","style":"padding-top: 40px; padding-bottom: 24px","aria-labelledby":"lb-h1"},["\n",["div",{"class":"wrap","style":"max-width: 1360px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px"},["\n",["div",{"class":"stack","style":"gap: 10px"},["\n",["div",{"class":"row"},[["p",{"class":"llc-eyebrow"},["The Little Letterbox"]],["span",{"class":"status status--planned"},["Prototype"]]]],"\n",["h1",{"id":"lb-h1","class":"llc-h1"},["Make a little ",["span",{"class":"llc-hand accent","style":"font-size: 1.12em; font-weight: 600"},["letter."]]]],"\n",["p",{"class":"lead","style":"max-width: 640px"},["Choose your stationery, write something kind, decorate it with stickers and seal it in an envelope. Everything stays on this device while we build the rest."]],"\n"]],"\n",["div",{"class":"lb-tools","role":"group","aria-label":"Studio settings"},["\n",["span",{"class":"desk-only"},["Cursor"]],"\n",["div",{"class":"seg desk-only"},["\n",["sc-for",{"list":"{{cursors}}","as":"c","hint-placeholder-count":"6"},["\n",["button",{"type":"button","aria-pressed":"{{c.pressed}}","onclick":"{{c.pick}}","title":"{{c.label}} cursor"},[["sc-if",{"value":"{{c.hasImg}}","hint-placeholder-val":"{{false}}"},[["img",{"src":"{{c.img}}","alt":"","width":"18","height":"18"},[]]]],"{{c.label}}"]],"\n"]],"\n"]],"\n",["label",{"class":"switch desk-only"},[["input",{"type":"checkbox","checked":"{{sparkles}}","onchange":"{{toggleSparkles}}","disabled":"{{reduced}}"},[]],"Sparkles"]],"\n",["button",{"type":"button","class":"btn-s","onclick":"{{saveNow}}"},["Save draft"]],"\n",["span",{"role":"status"},["{{saveText}}"]],"\n"]],"\n"]],"\n"]],"\n\n",["section",{"id":"studio","class":"sec","style":"padding-top: 8px","aria-label":"Letter studio"},["\n",["div",{"class":"wrap","style":"max-width: 1360px"},["\n",["div",{"class":"lb"},["\n\n",["aside",{"class":"lb-rail","aria-label":"Letter steps"},["\n",["div",{"class":"row lb-rail__title","style":"gap: 8px; align-items: flex-end"},["\n",["img",{"src":"/assets/a3554ad343d55b60f7157c0b4962c3ad.webp","alt":"","width":"58","height":"42","style":"rotate: -8deg"},[]],"\n",["span",{},["The Little Letterbox"]],"\n"]],"\n",["ol",{"class":"lb-steps"},["\n",["sc-for",{"list":"{{steps}}","as":"s","hint-placeholder-count":"5"},["\n",["li",{},[["button",{"type":"button","class":"{{s.cls}}","aria-current":"{{s.cur}}","onclick":"{{s.go}}"},[["span",{"class":"lb-step__n"},["{{s.n}}"]],["span",{"class":"lb-step__label"},["{{s.label}}"]]]]]],"\n"]],"\n"]],"\n",["img",{"class":"lb-rail__lumi float","src":"/assets/e8221ad41b1d5002775d895acc2df7cb.webp","alt":"","width":"170","height":"185","loading":"lazy"},[]],"\n",["p",{"class":"hand-md lb-rail__tip","style":"text-align: center; font-size: 26px"},["Small letters, brighter days."]],"\n"]],"\n\n",["div",{},["\n",["div",{"class":"lb-head"},["\n",["div",{"class":"stack","style":"gap: 6px"},["\n",["p",{"class":"llc-eyebrow"},["Step {{step}} of 5"]],"\n",["h2",{"class":"lb-title"},["{{stepTitle}}"]],"\n",["p",{"class":"llc-body muted"},["{{stepDesc}}"]],"\n"]],"\n"]],"\n\n",["div",{"class":"lb-work"},["\n\n",["div",{"class":"paper-wrap"},["\n",["sc-if",{"value":"{{showPaper}}","hint-placeholder-val":"{{true}}"},["\n",["div",{"class":"{{paperCls}}","aria-label":"Your letter, live preview"},["\n",["img",{"class":"paper__bg","src":"{{paperSrc}}","alt":"","width":"900","height":"1200"},[]],"\n",["div",{"class":"paper__text","style":"{{letterStyle}}"},["\n",["p",{"class":"paper__greet"},["{{greeting}}"]],"\n",["sc-if",{"value":"{{hasBody}}","hint-placeholder-val":"{{false}}"},[["p",{"class":"paper__body"},["{{body}}"]]]],"\n",["sc-if",{"value":"{{noBody}}","hint-placeholder-val":"{{true}}"},[["p",{"class":"paper__body paper__empty"},["Your message will appear here as you write…"]]]],"\n",["p",{"class":"paper__sign"},["{{signoff}}"]],"\n"]],"\n",["sc-for",{"list":"{{placed}}","as":"s","hint-placeholder-count":"2"},["\n",["button",{"type":"button","class":"{{s.cls}}","style":"{{s.style}}","aria-label":"{{s.aria}}","onpointerdown":"{{s.down}}","onpointermove":"{{s.move}}","onpointerup":"{{s.up}}","onpointercancel":"{{s.up}}","onkeydown":"{{s.key}}","onclick":"{{s.select}}"},[["img",{"src":"{{s.src}}","alt":"","draggable":"false"},[]]]],"\n"]],"\n"]],"\n",["div",{"class":"paper-meta"},["\n",["span",{"class":"mini"},["{{paperName}} paper"]],"\n",["span",{"class":"mini"},["{{stickerCount}} stickers"]],"\n",["sc-if",{"value":"{{hasPhotos}}","hint-placeholder-val":"{{false}}"},[["span",{"class":"mini"},["{{photoCount}} photos"]]]],"\n",["sc-if",{"value":"{{postcardOn}}","hint-placeholder-val":"{{false}}"},[["span",{"class":"mini"},["Postcard"]]]],"\n",["sc-if",{"value":"{{songOn}}","hint-placeholder-val":"{{false}}"},[["span",{"class":"mini"},["Song dedication"]]]],"\n"]],"\n"]],"\n\n",["sc-if",{"value":"{{show5}}","hint-placeholder-val":"{{false}}"},["\n",["div",{"class":"stack","style":"gap: 18px"},["\n",["div",{"class":"env2","aria-label":"Your envelope, live preview"},["\n",["img",{"class":"env2__layer env2__back","src":"{{env.back}}","alt":""},[]],"\n",["img",{"class":"env2__layer env2__front","src":"{{env.front}}","alt":""},[]],"\n",["img",{"class":"env2__layer env2__flap","src":"{{env.flap}}","alt":""},[]],"\n",["img",{"class":"env2__stamp","src":"{{stampSrc}}","alt":""},[]],"\n",["img",{"class":"env2__seal","src":"{{sealSrc}}","alt":""},[]],"\n"]],"\n",["div",{"class":"row"},["\n",["a",{"class":"llc-btn llc-btn--secondary","href":"/letterpreview/","onclick":"{{saveNow}}"},["Preview as the recipient ",["span",{"aria-hidden":"true"},["→"]]]],"\n",["span",{"class":"llc-caption"},["Opens the envelope experience with this draft."]],"\n"]],"\n"]],"\n"]],"\n\n",["sc-if",{"value":"{{show4}}","hint-placeholder-val":"{{false}}"},["\n",["div",{"class":"row","style":"gap: 20px; align-items: flex-start; margin-top: 8px"},["\n",["sc-if",{"value":"{{hasPhotos}}","hint-placeholder-val":"{{false}}"},["\n",["div",{"class":"strip2","aria-label":"Photostrip"},["\n",["sc-for",{"list":"{{stripSlots}}","as":"w","hint-placeholder-count":"3"},["\n",["sc-if",{"value":"{{w.hasPhoto}}","hint-placeholder-val":"{{false}}"},[["img",{"class":"strip2__photo","src":"{{w.url}}","alt":"{{w.alt}}","style":"{{w.style}}"},[]]]],"\n",["sc-if",{"value":"{{w.empty}}","hint-placeholder-val":"{{true}}"},[["span",{"class":"strip2__empty","style":"{{w.style}}"},["Empty"]]]],"\n"]],"\n",["img",{"class":"strip2__frame","src":"{{stripFrame}}","alt":""},[]],"\n"]],"\n"]],"\n",["div",{"class":"stack","style":"gap: 14px; flex: 1; min-width: 240px"},["\n",["sc-if",{"value":"{{postcardOn}}","hint-placeholder-val":"{{false}}"},["\n",["button",{"type":"button","class":"{{pcCls}}","onclick":"{{flipPc}}","aria-label":"Postcard. Select to flip it over."},["\n",["span",{"class":"pc__inner"},["\n",["span",{"class":"pc__face"},[["img",{"class":"pc__art","src":"{{pcFront}}","alt":""},[]]]],"\n",["span",{"class":"pc__face pc__back2"},[["img",{"src":"{{pcBack}}","alt":""},[]],["span",{"class":"pc__msg"},["{{pcMsg}}"]]]],"\n"]],"\n"]],"\n"]],"\n",["sc-if",{"value":"{{songOn}}","hint-placeholder-val":"{{false}}"},["\n",["div",{"class":"music2"},[["img",{"class":"music2__art","src":"/assets/188c4797ac8af4bda48b6f2f86bbd5c5.webp","alt":"","width":"58","height":"95"},[]],["span",{"class":"stack","style":"gap: 2px"},[["span",{"class":"music__t"},["{{songTitle}}"]],["span",{"class":"music__a"},["{{songArtist}}"]]]]]],"\n"]],"\n"]],"\n"]],"\n"]],"\n"]],"\n\n",["div",{"class":"lb-panel"},["\n\n",["sc-if",{"value":"{{show1}}","hint-placeholder-val":"{{true}}"},["\n",["div",{},["\n",["h3",{},["Letter paper collection"]],"\n",["div",{"class":"opt-grid opt-grid--paper"},["\n",["sc-for",{"list":"{{papers}}","as":"t","hint-placeholder-count":"5"},["\n",["button",{"type":"button","class":"opt-card","aria-pressed":"{{t.pressed}}","onclick":"{{t.pick}}","onpointerenter":"{{t.warm}}","onfocus":"{{t.warm}}"},["\n",["img",{"class":"opt-card__thumb","src":"{{t.preview}}","alt":"","width":"600","height":"800","loading":"lazy","decoding":"async"},[]],"\n",["span",{"class":"opt-card__name","style":"font-size: 21px"},["{{t.label}}"]],"\n",["span",{"class":"opt-card__desc"},["{{t.desc}}"]],"\n"]],"\n"]],"\n"]],"\n"]],"\n",["p",{"class":"llc-caption"},["Pickers show small previews; the full paper loads only when you choose it."]],"\n"]],"\n\n",["sc-if",{"value":"{{show2}}","hint-placeholder-val":"{{false}}"},["\n",["section",{"class":"lb-group","aria-labelledby":"g2a"},[["p",{"class":"lb-group__t","id":"g2a"},[["span",{"aria-hidden":"true"},["A"]],"Your words"]],"\n",["div",{},["\n",["h3",{},["Greeting"]],"\n",["div",{"class":"seg","style":"margin-bottom: 10px"},["\n",["sc-for",{"list":"{{greetings}}","as":"g","hint-placeholder-count":"4"},[["button",{"type":"button","aria-pressed":"{{g.pressed}}","onclick":"{{g.pick}}"},["{{g.label}}"]]]],"\n"]],"\n",["label",{"class":"sr-only","for":"lb-greet"},["Greeting"]],"\n",["input",{"id":"lb-greet","class":"ctl","maxlength":"60","value":"{{greeting}}","onchange":"{{onGreeting}}"},[]],"\n"]],"\n",["div",{"class":"fld"},["\n",["label",{"for":"lb-body"},["Your message"]],"\n",["textarea",{"id":"lb-body","class":"ctl","maxlength":"1200","style":"min-height: 180px","value":"{{body}}","onchange":"{{onBody}}","placeholder":"Share a kind thought, an everyday joy or a gentle wish."},[]],"\n",["span",{"class":"help"},["{{bodyCount}} / 1200 characters"]],"\n"]],"\n",["div",{"class":"fld"},["\n",["label",{"for":"lb-sign"},["Sign-off"]],"\n",["textarea",{"id":"lb-sign","class":"ctl","maxlength":"120","style":"min-height: 70px","value":"{{signoff}}","onchange":"{{onSignoff}}"},[]],"\n"]],"\n",["sc-if",{"value":"{{hasWarnings}}","hint-placeholder-val":"{{false}}"},["\n",["div",{"class":"warn","role":"status"},[["strong",{},["A little check before you send"]],["sc-for",{"list":"{{warnings}}","as":"w","hint-placeholder-count":"1"},[["span",{},["{{w}}"]]]]]],"\n"]],"\n"]],"\n",["section",{"class":"lb-group","aria-labelledby":"g2b"},[["p",{"class":"lb-group__t","id":"g2b"},[["span",{"aria-hidden":"true"},["B"]],"How it looks"]],"\n",["div",{},["\n",["h3",{},["Font style"]],"\n",["div",{"class":"opt-grid opt-grid--3"},["\n",["sc-for",{"list":"{{fonts}}","as":"f","hint-placeholder-count":"3"},["\n",["button",{"type":"button","class":"opt-card","aria-pressed":"{{f.pressed}}","onclick":"{{f.pick}}","style":"align-items: center; text-align: center"},[["span",{"style":"{{f.sample}}"},["Aa"]],["span",{"class":"opt-card__desc"},["{{f.label}} · {{f.note}}"]]]],"\n"]],"\n"]],"\n"]],"\n",["div",{"class":"range"},[["label",{"for":"lb-size"},["Font size"]],["input",{"id":"lb-size","type":"range","min":"80","max":"130","step":"5","value":"{{sizePct}}","onchange":"{{onSize}}"},[]],["span",{},["{{sizePct}}%"]]]],"\n",["div",{"class":"lb-duo"},["\n",["div",{},["\n",["h3",{},["Text colour"]],"\n",["div",{"class":"row","style":"gap: 8px"},["\n",["sc-for",{"list":"{{inks}}","as":"i","hint-placeholder-count":"4"},[["button",{"type":"button","class":"seal-dot","style":"{{i.style}}","aria-pressed":"{{i.pressed}}","aria-label":"{{i.label}}","onclick":"{{i.pick}}"},["{{i.mark}}"]]]],"\n"]],"\n"]],"\n",["div",{},["\n",["h3",{},["Alignment"]],"\n",["div",{"class":"seg"},[["sc-for",{"list":"{{aligns}}","as":"a","hint-placeholder-count":"3"},[["button",{"type":"button","aria-pressed":"{{a.pressed}}","onclick":"{{a.pick}}"},["{{a.label}}"]]]]]],"\n"]],"\n"]],"\n"]],"\n",["p",{"class":"llc-caption"},["Letters for a collection should avoid assumptions about someone's health, family or beliefs, and never include contact details."]],"\n"]],"\n\n",["sc-if",{"value":"{{show3}}","hint-placeholder-val":"{{false}}"},["\n",["div",{},["\n",["h3",{},["Stickers"]],"\n",["div",{"class":"lib"},["\n",["sc-for",{"list":"{{library}}","as":"l","hint-placeholder-count":"12"},["\n",["button",{"type":"button","class":"lib-btn","onclick":"{{l.add}}","aria-label":"Add {{l.label}} sticker","title":"{{l.label}}"},[["img",{"src":"{{l.preview}}","alt":"","loading":"lazy","decoding":"async"},[]]]],"\n"]],"\n"]],"\n"]],"\n",["sc-if",{"value":"{{hasSel}}","hint-placeholder-val":"{{false}}"},["\n",["div",{"class":"sel-bar"},["\n",["strong",{},["Selected: {{selLabel}}"]],"\n",["div",{"class":"touch-row","role":"group","aria-label":"Sticker controls"},["\n",["button",{"type":"button","class":"touch-btn","onclick":"{{smaller}}"},[["span",{"aria-hidden":"true"},["−"]],"Smaller"]],"\n",["button",{"type":"button","class":"touch-btn","onclick":"{{bigger}}"},[["span",{"aria-hidden":"true"},["+"]],"Bigger"]],"\n",["button",{"type":"button","class":"touch-btn","onclick":"{{rotL}}"},[["span",{"aria-hidden":"true"},["↺"]],"Rotate"]],"\n",["button",{"type":"button","class":"touch-btn","onclick":"{{rotR}}"},[["span",{"aria-hidden":"true"},["↻"]],"Rotate"]],"\n",["button",{"type":"button","class":"touch-btn","onclick":"{{bringForward}}"},[["span",{"aria-hidden":"true"},["⬆"]],"Front"]],"\n",["button",{"type":"button","class":"touch-btn","onclick":"{{removeSel}}"},[["span",{"aria-hidden":"true"},["×"]],"Remove"]],"\n"]],"\n",["div",{"class":"range desk-only"},[["label",{"for":"lb-ssize"},["Size"]],["input",{"id":"lb-ssize","type":"range","min":"4","max":"45","value":"{{selSize}}","onchange":"{{onSelSize}}"},[]],["span",{},["{{selSize}}%"]]]],"\n",["div",{"class":"range desk-only"},[["label",{"for":"lb-srot"},["Rotation"]],["input",{"id":"lb-srot","type":"range","min":"-180","max":"180","value":"{{selRot}}","onchange":"{{onSelRot}}"},[]],["span",{},["{{selRot}}°"]]]],"\n",["div",{"class":"btnrow"},[["button",{"type":"button","class":"btn-s","onclick":"{{duplicate}}"},["Duplicate"]],["button",{"type":"button","class":"btn-s","onclick":"{{deselect}}"},["Done"]]]],"\n"]],"\n"]],"\n",["sc-if",{"value":"{{noSel}}","hint-placeholder-val":"{{true}}"},["\n",["p",{"class":"llc-caption"},["Tap a sticker to add it, then drag it around the paper. Select one to resize or rotate it. With a keyboard: Tab to a sticker, then use the arrow keys to move, + and − to resize, [ and ] to rotate and Delete to remove."]],"\n"]],"\n",["button",{"type":"button","class":"btn-s","onclick":"{{clearStickers}}","style":"align-self: flex-start"},["Remove all stickers"]],"\n"]],"\n\n",["sc-if",{"value":"{{show4}}","hint-placeholder-val":"{{false}}"},["\n",["div",{"class":"attach-card"},["\n",["div",{"class":"attach-card__head"},[["span",{"class":"attach-card__title"},["Photostrip"]],["span",{"class":"llc-caption"},["JPG, PNG or WebP · 5 MB each"]]]],"\n",["div",{"class":"row"},["\n",["label",{"class":"llc-btn llc-btn--secondary llc-btn--small","style":"position: relative"},["Choose photos",["input",{"type":"file","accept":"image/jpeg,image/png,image/webp","multiple":"","onchange":"{{onPhotos}}","class":"sr-only"},[]]]],"\n",["div",{"class":"seg"},[["sc-for",{"list":"{{strips}}","as":"s","hint-placeholder-count":"2"},[["button",{"type":"button","aria-pressed":"{{s.pressed}}","onclick":"{{s.pick}}"},["{{s.label}}"]]]]]],"\n"]],"\n",["sc-if",{"value":"{{hasPhotos}}","hint-placeholder-val":"{{false}}"},["\n",["div",{"class":"thumbs"},[["sc-for",{"list":"{{photos}}","as":"p","hint-placeholder-count":"1"},[["div",{"class":"thumb"},[["img",{"src":"{{p.url}}","alt":"{{p.alt}}"},[]],["button",{"type":"button","onclick":"{{p.remove}}","aria-label":"Remove {{p.name}}"},["×"]]]]]]]],"\n"]],"\n",["sc-for",{"list":"{{photoErr}}","as":"e","hint-placeholder-count":"0"},[["span",{"class":"err","role":"alert"},["{{e}}"]]]],"\n",["p",{"class":"help"},["Photos stay on this device and are never saved in the letter data. When uploads are built, they'll go to private storage and be reviewed. Please don't share photos of other people without their permission. Photos are for personal letters only."]],"\n"]],"\n\n",["div",{"class":"attach-card"},["\n",["div",{"class":"attach-card__head"},[["span",{"class":"attach-card__title"},["Postcard"]],["label",{"class":"switch"},[["input",{"type":"checkbox","checked":"{{postcardOn}}","onchange":"{{togglePostcard}}"},[]],"Include"]]]],"\n",["sc-if",{"value":"{{postcardOn}}","hint-placeholder-val":"{{false}}"},["\n",["div",{"class":"seg"},[["sc-for",{"list":"{{postcards}}","as":"a","hint-placeholder-count":"2"},[["button",{"type":"button","aria-pressed":"{{a.pressed}}","onclick":"{{a.pick}}"},["{{a.label}}"]]]]]],"\n",["div",{"class":"fld"},[["label",{"for":"lb-pc"},["Postcard message"]],["input",{"id":"lb-pc","class":"ctl","maxlength":"140","value":"{{pcMsgRaw}}","onchange":"{{onPcMsg}}","placeholder":"Sending bright days your way!"},[]]]],"\n"]],"\n"]],"\n\n",["div",{"class":"attach-card"},["\n",["div",{"class":"attach-card__head"},[["span",{"class":"attach-card__title"},["Song dedication"]],["label",{"class":"switch"},[["input",{"type":"checkbox","checked":"{{songOn}}","onchange":"{{toggleSong}}"},[]],"Include"]]]],"\n",["sc-if",{"value":"{{songOn}}","hint-placeholder-val":"{{false}}"},["\n",["div",{"class":"g2","style":"gap: 12px"},["\n",["div",{"class":"fld"},[["label",{"for":"lb-mt"},["Song title"]],["input",{"id":"lb-mt","class":"ctl","maxlength":"80","value":"{{songTitleRaw}}","onchange":"{{onSongTitle}}"},[]]]],"\n",["div",{"class":"fld"},[["label",{"for":"lb-ma"},["Artist"]],["input",{"id":"lb-ma","class":"ctl","maxlength":"80","value":"{{songArtistRaw}}","onchange":"{{onSongArtist}}"},[]]]],"\n"]],"\n",["div",{"class":"fld"},[["label",{"for":"lb-ml"},["Link ",["span",{"class":"opt"},["(optional · Spotify, Apple Music or YouTube)"]]]],["input",{"id":"lb-ml","class":"ctl","type":"url","value":"{{songLink}}","onchange":"{{onSongLink}}","placeholder":"https://"},[]]]],"\n",["sc-if",{"value":"{{hasLinkErr}}","hint-placeholder-val":"{{false}}"},[["span",{"class":"err","role":"alert"},["{{linkErr}}"]]]],"\n",["p",{"class":"help"},["The recipient chooses whether to open the song; nothing plays by itself. An in-page player needs an approved embed integration."]],"\n"]],"\n"]],"\n\n",["div",{"class":"fld"},["\n",["label",{"for":"lb-vn"},["A private note for our volunteers ",["span",{"class":"opt"},["(optional, never shown in the letter)"]]]],"\n",["textarea",{"id":"lb-vn","class":"ctl","maxlength":"300","style":"min-height: 80px","value":"{{volNote}}","onchange":"{{onVolNote}}","placeholder":"Anything our reviewers should know about this letter."},[]],"\n"]],"\n"]],"\n\n",["sc-if",{"value":"{{show5}}","hint-placeholder-val":"{{false}}"},["\n",["section",{"class":"lb-group","aria-labelledby":"g5a"},[["p",{"class":"lb-group__t","id":"g5a"},[["span",{"aria-hidden":"true"},["A"]],"Dress the envelope"]],"\n",["div",{},["\n",["h3",{},["1. Envelope"]],"\n",["div",{"class":"opt-grid opt-grid--5"},["\n",["sc-for",{"list":"{{envelopes}}","as":"e","hint-placeholder-count":"5"},["\n",["button",{"type":"button","class":"opt-card","aria-pressed":"{{e.pressed}}","onclick":"{{e.pick}}","style":"padding: 8px"},[["img",{"class":"env-swatch","src":"{{e.front}}","alt":"","loading":"lazy"},[]],["span",{"class":"opt-card__desc","style":"text-align: center"},["{{e.label}}"]]]],"\n"]],"\n"]],"\n"]],"\n",["div",{},["\n",["h3",{},["2. Stamp"]],"\n",["div",{"class":"opt-grid opt-grid--5"},["\n",["sc-for",{"list":"{{stamps}}","as":"s","hint-placeholder-count":"5"},["\n",["button",{"type":"button","class":"opt-card","aria-pressed":"{{s.pressed}}","onclick":"{{s.pick}}","aria-label":"{{s.label}} stamp","style":"padding: 8px"},[["img",{"class":"stamp-img","src":"{{s.src}}","alt":"","loading":"lazy","width":"280","height":"340"},[]]]],"\n"]],"\n"]],"\n"]],"\n\n"]],"\n",["section",{"class":"lb-group","aria-labelledby":"g5b"},[["p",{"class":"lb-group__t","id":"g5b"},[["span",{"aria-hidden":"true"},["B"]],"Choose how to share"]],"\n",["div",{},["\n",["h3",{},["How would you like to share it?"]],"\n",["div",{"class":"paths"},["\n",["sc-for",{"list":"{{paths}}","as":"p","hint-placeholder-count":"3"},["\n",["button",{"type":"button","class":"path","aria-pressed":"{{p.pressed}}","onclick":"{{p.pick}}"},[["span",{"class":"path__t"},["{{p.title}}"]],["span",{"class":"path__d"},["{{p.desc}}"]]]],"\n"]],"\n"]],"\n"]],"\n\n",["sc-if",{"value":"{{isPersonal}}","hint-placeholder-val":"{{true}}"},["\n",["div",{"class":"stack","style":"gap: 12px"},["\n",["p",{"class":"llc-body"},["Send it to someone you know with a private link. Links are long and random so they can't be guessed, and you (or our team) can switch them off at any time."]],"\n",["div",{"class":"stack","style":"gap: 6px"},[["span",{"class":"llc-card__label"},["Example link format · not live"]],["div",{"class":"token"},["https://[TLLC_DOMAIN]/letter/{{token}}"]]]],"\n",["div",{"class":"btnrow"},[["button",{"type":"button","class":"btn-s btn-s--primary","onclick":"{{tryShare}}"},["Create private link"]],["a",{"class":"btn-s","href":"/letterpreview/","onclick":"{{saveNow}}","style":"text-decoration: none; display: inline-flex; align-items: center"},["Preview as the recipient"]]]],"\n"]],"\n"]],"\n\n",["sc-if",{"value":"{{isCollection}}","hint-placeholder-val":"{{false}}"},["\n",["div",{"class":"stack","style":"gap: 12px"},["\n",["p",{"class":"llc-body"},["Letters for a TLLC collection are reviewed by our volunteers and delivered through a community partner. You won't receive any details about who reads it."]],"\n",["div",{"class":"fld"},[["label",{"for":"lb-coll"},["Collection"]],"\n",["select",{"id":"lb-coll","class":"ctl","disabled":""},[["option",{},["The Sunshine Letters Project · planning stage, not open yet"]]]]]],"\n",["ul",{"class":"checklist"},["\n",["sc-for",{"list":"{{collChecks}}","as":"c","hint-placeholder-count":"4"},[["li",{},[["span",{"class":"{{c.cls}}","aria-hidden":"true"},["{{c.mark}}"]],["span",{},["{{c.text}}"]]]]]],"\n"]],"\n",["button",{"type":"button","class":"btn-s btn-s--primary","disabled":"","style":"align-self: flex-start"},["Submissions open when a collection opens"]],"\n"]],"\n"]],"\n\n",["sc-if",{"value":"{{isArchive}}","hint-placeholder-val":"{{false}}"},["\n",["div",{"class":"stack","style":"gap: 12px"},["\n",["p",{"class":"llc-body"},["Ask for your letter to be considered for our public community archive. It's reviewed first, photos and song links are left out, and you can withdraw it at any time."]],"\n",["div",{"class":"fld"},[["label",{"for":"lb-show"},["Show my letter as"]],"\n",["select",{"id":"lb-show","class":"ctl","value":"{{arcName}}","onchange":"{{onArcName}}"},[["option",{"value":"anonymous"},["Anonymous"]],["option",{"value":"initials"},["Initials only"]],["option",{"value":"first"},["First name only"]]]]]],"\n",["div",{"class":"fld"},[["label",{"for":"lb-age"},["Age band"]],"\n",["select",{"id":"lb-age","class":"ctl","value":"{{arcAge}}","onchange":"{{onArcAge}}"},[["option",{"value":""},["Choose one"]],["option",{"value":"under-16"},["Under 16"]],["option",{"value":"16-17"},["16–17"]],["option",{"value":"18-plus"},["18 and above"]]]]]],"\n",["label",{"class":"check"},[["input",{"type":"checkbox","checked":"{{arcPublic}}","onchange":"{{onArcPublic}}"},[]],["span",{},["I agree that, after review, my letter may be shown publicly in the TLLC community archive. This is separate from any other sharing."]]]],"\n",["label",{"class":"check"},[["input",{"type":"checkbox","checked":"{{arcClean}}","onchange":"{{onArcClean}}"},[]],["span",{},["My letter has no personal or contact details about me or anyone else."]]]],"\n",["sc-if",{"value":"{{arcMinor}}","hint-placeholder-val":"{{false}}"},["\n",["label",{"class":"check","style":"padding: 12px; background: var(--butter-yellow); border-radius: var(--radius-md)"},[["input",{"type":"checkbox","checked":"{{arcGuardian}}","onchange":"{{onArcGuardian}}"},[]],["span",{},["My parent or guardian agrees to this request. Our team will ask them to confirm before anything is published."]]]],"\n"]],"\n",["button",{"type":"button","class":"btn-s btn-s--primary","onclick":"{{tryArchive}}","style":"align-self: flex-start"},["Request archive review"]],"\n",["sc-if",{"value":"{{hasArcErr}}","hint-placeholder-val":"{{false}}"},[["span",{"class":"err","role":"alert"},["{{arcErr}}"]]]],"\n"]],"\n"]],"\n\n"]],"\n",["sc-if",{"value":"{{hasNotice}}","hint-placeholder-val":"{{false}}"},["\n",["div",{"class":"notice","role":"status"},[["strong",{},["Prototype only: nothing was sent."]],["span",{},["{{notice}}"]]]],"\n"]],"\n"]],"\n\n"]],"\n"]],"\n\n",["div",{"class":"lb-nav"},["\n",["button",{"type":"button","class":"llc-btn llc-btn--secondary","onclick":"{{back}}","disabled":"{{isFirst}}"},[["span",{"aria-hidden":"true"},["←"]]," Back"]],"\n",["sc-if",{"value":"{{notLast}}","hint-placeholder-val":"{{true}}"},[["button",{"type":"button","class":"llc-btn llc-btn--primary","onclick":"{{next}}"},["Next: {{nextLabel}} ",["span",{"aria-hidden":"true"},["→"]]]]]],"\n",["sc-if",{"value":"{{show5}}","hint-placeholder-val":"{{false}}"},[["button",{"type":"button","class":"llc-btn llc-btn--secondary","onclick":"{{startOver}}"},["Start a new letter"]]]],"\n"]],"\n"]],"\n\n"]],"\n\n",["details",{"class":"llc-faq","style":"margin-top: 48px"},["\n",["summary",{},[["span",{"class":"llc-faq__q"},["{ }"]],"How this letter is stored and loaded",["span",{"class":"llc-faq__chev","aria-hidden":"true"},["▼"]]]],"\n",["div",{"class":"llc-faq__a stack","style":"gap: 14px"},["\n",["div",{"class":"stats"},["\n",["div",{"class":"stat"},[["b",{},["{{jsonKb}}"]],["span",{},["Letter data (instructions only)"]]]],"\n",["div",{"class":"stat"},[["b",{},["{{assetRefs}}"]],["span",{},["Shared artwork referenced by ID"]]]],"\n",["div",{"class":"stat"},[["b",{},["{{loadedKb}}"]],["span",{},["Editor-size artwork loaded this visit ({{loadedCount}} files)"]]]],"\n"]],"\n",["p",{},["The letter saves asset IDs such as ",["code",{},["paper.daisy@1"]],", your text, font settings and each sticker's relative position, size, rotation and layer, never copies of the artwork. Picker previews are small WebP files; the larger editor versions load only when you choose them and are kept in memory for the rest of your visit. Asset IDs are versioned, so if Daisy paper is redrawn as ",["code",{},["paper.daisy@2"]],", letters made today still show today's paper. Photos are never part of this data."]],"\n",["pre",{"class":"json","aria-label":"Current letter data"},["{{letterJson}}"]],"\n"]],"\n"]],"\n\n",["details",{"class":"llc-faq"},["\n",["summary",{},[["span",{"class":"llc-faq__q"},["i"]],"What works in this prototype, and what still needs building",["span",{"class":"llc-faq__chev","aria-hidden":"true"},["▼"]]]],"\n",["div",{"class":"llc-faq__a"},["\n",["strong",{},["Working now, on this device:"]]," all five steps, five stationery papers, fonts and colours, the contact-details check, stickers you can drag, resize and rotate (mouse, touch and keyboard), photo checks (type, file signature, size, count), photostrips, postcards, the song card, layered envelopes, stamps and wax seal, desktop cursors, draft saving in this browser, and the recipient preview.",["br",{},[]],["br",{},[]],"\n",["strong",{},["Needs a server and review before launch:"]]," private cloud storage and server-side checks for photos, creating and revoking private links, sending to a collection, archive requests and guardian confirmation, rendered preview images, volunteer sign-in, and an approved music embed. Until then, share buttons explain what would happen and send nothing.\n"]],"\n"]],"\n"]],"\n"]],"\n\n"]],"\n",["sc-for",{"list":"{{bursts}}","as":"b","hint-placeholder-count":"0"},["\n",["span",{"class":"burst","style":"{{b.style}}","aria-hidden":"true"},[["span",{},["✦"]],["span",{},["♥"]],["span",{},["✦"]],["span",{},["♥"]],["span",{},["✦"]],["span",{},["♥"]]]],"\n"]],"\n",["div",{"style":"margin-top: auto"},[["dc-import",{"name":"Footer","hint-size":"100%,480px"},[]]]],"\n"]],"\n"]</script>
+<script type="application/x-tllc-template" data-dc="Nav">["\n\n",["header",{"class":"llc-root","style":"position: relative; z-index: 30; width: 100%; box-sizing: border-box; padding: 12px 24px; background: var(--warm-beige); font-family: var(--font-sans); color: var(--ink)"},["\n",["div",{"style":"max-width: 1248px; margin: 0 auto"},["\n",["nav",{"class":"llc-nav","aria-label":"Main"},["\n",["a",{"href":"/","style":"display: block; flex: none; border-radius: 8px","aria-label":"The Little Letters Club, home"},["\n",["img",{"class":"llc-nav__logo","src":"/assets/4827cd5e7ac01a186531a4bde3041dc2.webp","alt":"The Little Letters Club, Singapore","style":"width: auto; height: 72px"},[]],"\n"]],"\n",["ul",{"class":"llc-nav__links"},["\n",["sc-for",{"list":"{{groups}}","as":"g","hint-placeholder-count":"4"},["\n",["li",{"class":"dd"},["\n",["sc-if",{"value":"{{g.isLink}}","hint-placeholder-val":"{{false}}"},[["a",{"class":"llc-nav__link","href":"{{g.href}}","aria-current":"{{g.cur}}"},[["span",{"class":"env-nav","aria-hidden":"true"},[]],"{{g.label}}"]]]],"\n",["sc-if",{"value":"{{g.isMenu}}","hint-placeholder-val":"{{true}}"},["\n",["button",{"type":"button","class":"llc-nav__link dd__btn","aria-expanded":"{{g.expanded}}","aria-haspopup":"true","aria-current":"{{g.cur}}","onclick":"{{g.toggle}}"},[["span",{"class":"env-nav","aria-hidden":"true"},[]],"{{g.label}} ",["svg",{"width":"12","height":"12","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","stroke-width":"2.4","stroke-linecap":"round","stroke-linejoin":"round","aria-hidden":"true"},[["path",{"d":"m6 9 6 6 6-6"},[]]]]]],"\n",["sc-if",{"value":"{{g.show}}","hint-placeholder-val":"{{false}}"},["\n",["ul",{"class":"dd__menu"},["\n",["sc-for",{"list":"{{g.items}}","as":"i","hint-placeholder-count":"3"},["\n",["li",{"class":"{{i.liCls}}"},["\n",["sc-if",{"value":"{{i.live}}","hint-placeholder-val":"{{true}}"},[["a",{"class":"dd__item","href":"{{i.href}}","aria-current":"{{i.cur}}"},[["b",{},["{{i.label}}"]],["span",{},["{{i.hint}}"]]]]]],"\n",["sc-if",{"value":"{{i.soon}}","hint-placeholder-val":"{{false}}"},[["span",{"class":"dd__item dd__item--soon","aria-disabled":"true"},[["b",{},["{{i.label}} ",["em",{"class":"soon-pill"},["Coming soon"]]]],["span",{},["{{i.hint}}"]]]]]],"\n"]],"\n"]],"\n"]],"\n"]],"\n"]],"\n"]],"\n"]],"\n"]],"\n",["div",{"class":"llc-nav__actions"},["\n",["a",{"class":"llc-btn llc-btn--primary llc-btn--small nav-cta","href":"/getinvolved/"},["Get Involved ",["span",{"aria-hidden":"true"},["→"]]]],"\n",["button",{"type":"button","class":"llc-iconbtn llc-nav__menu","aria-label":"{{menuLabel}}","aria-expanded":"{{expanded}}","aria-controls":"mobile-menu","onclick":"{{toggle}}"},["\n",["svg",{"width":"20","height":"20","viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","stroke-width":"1.8","stroke-linecap":"round","stroke-linejoin":"round","aria-hidden":"true"},[["path",{"d":"M4 7h16"},[]],["path",{"d":"M4 12h16"},[]],["path",{"d":"M4 17h16"},[]]]],"\n"]],"\n"]],"\n"]],"\n",["sc-if",{"value":"{{open}}","hint-placeholder-val":"{{false}}"},["\n",["div",{"id":"mobile-menu","class":"drawer"},["\n",["sc-for",{"list":"{{groups}}","as":"g","hint-placeholder-count":"4"},["\n",["sc-if",{"value":"{{g.isLink}}","hint-placeholder-val":"{{false}}"},[["a",{"class":"drawer__link","href":"{{g.href}}","aria-current":"{{g.cur}}"},["{{g.label}}"]]]],"\n",["sc-if",{"value":"{{g.isMenu}}","hint-placeholder-val":"{{true}}"},["\n",["div",{"class":"drawer__group"},["{{g.label}}"]],"\n",["sc-for",{"list":"{{g.items}}","as":"i","hint-placeholder-count":"3"},["\n",["sc-if",{"value":"{{i.live}}","hint-placeholder-val":"{{true}}"},[["a",{"class":"drawer__link drawer__link--sub","href":"{{i.href}}","aria-current":"{{i.cur}}"},["{{i.label}}"]]]],"\n",["sc-if",{"value":"{{i.soon}}","hint-placeholder-val":"{{false}}"},[["span",{"class":"drawer__link drawer__link--sub drawer__link--soon","aria-disabled":"true"},["{{i.label}} ",["em",{"class":"soon-pill"},["Coming soon"]]]]]],"\n"]],"\n"]],"\n"]],"\n",["a",{"class":"llc-btn llc-btn--primary","href":"/getinvolved/","style":"margin-top: 8px"},["Get Involved ",["span",{"aria-hidden":"true"},["→"]]]],"\n"]],"\n"]],"\n"]],"\n"]],"\n"]</script>
+<script type="application/x-tllc-template" data-dc="Footer">["\n\n",["div",{"class":"llc-root","style":"width: 100%; box-sizing: border-box; padding: 48px 0 32px; background: var(--warm-beige); font-family: var(--font-sans); color: var(--ink)"},["\n",["div",{"class":"wrap","style":"display: flex; flex-direction: column; gap: 24px"},["\n",["div",{"class":"sb-foot"},["\n",["div",{"class":"sb-foot__stage"},["\n",["img",{"class":"sb-i sb-sway sb-hide-m","src":"/assets/0d64320dbae386920a683e2d9edd7561.png","alt":"","aria-hidden":"true","style":"left:-1%; bottom:2%; width:15%; z-index:4"},[]],"\n",["img",{"class":"sb-i sb-sway sb-sway--b sb-hide-m","src":"/assets/3ad3113d9a81488f5eead45075b3971a.png","alt":"","aria-hidden":"true","style":"right:-1%; bottom:2%; width:14%; rotate:5deg; z-index:4"},[]],"\n",["img",{"class":"sb-i","src":"/assets/c308dc5e0ae8d98b55d5b8ec645e1e93.webp","alt":"","aria-hidden":"true","style":"left:30%; top:-2%; width:26%; rotate:-5deg; z-index:5"},[]],"\n",["div",{"class":"sb-foot__env","aria-hidden":"true"},[["img",{"src":"/assets/60744f25a6e10870f62c0433b37fccc8.png","alt":""},[]]]],"\n",["div",{"class":"sb-foot__paper"},[["img",{"src":"/assets/313c609f37b6a8a255eff432ce98288a.png","alt":""},[]],["div",{},[["p",{},["thank you for being part of our little story."]],["em",{},["little creations. lasting connections."]]]]]],"\n",["img",{"class":"sb-i sb-hide-m","src":"/assets/fb6da06754db5f0e915d67a10a7ed9de.png","alt":"","aria-hidden":"true","style":"right:16%; bottom:6%; width:11%; rotate:8deg; z-index:5"},[]],"\n"]],"\n"]],"\n",["section",{"class":"llc-newsletter","aria-labelledby":"nl-title"},["\n",["img",{"class":"llc-newsletter__art","src":"/assets/c4142018fdd1a3c0cb79cdd93a58c7ca.png","alt":""},[]],"\n",["div",{"class":"llc-newsletter__copy","style":"display: flex; flex-direction: column; gap: 6px"},["\n",["h2",{"id":"nl-title","class":"llc-newsletter__title"},["A little note in your inbox?"]],"\n",["p",{"class":"llc-caption"},["Get updates on upcoming collections, creative guides and opportunities to volunteer. No clutter, just the occasional little letter."]],"\n"]],"\n",["div",{"style":"flex: 1; max-width: 460px; display: flex; flex-direction: column; gap: 8px; min-width: 240px"},["\n",["form",{"class":"llc-newsletter__form","onsubmit":"{{quick}}","style":"max-width: none"},["\n",["label",{"class":"sr-only","for":"nl-email"},["Email address"]],"\n",["input",{"id":"nl-email","name":"email","type":"email","required":"","autocomplete":"email","placeholder":"Your email address"},[]],"\n",["button",{"class":"llc-btn llc-btn--primary llc-btn--small","type":"submit"},["Send Me Little Updates"]],"\n"]],"\n",["p",{"class":"privacy-line"},["We'll only use your details to send TLLC updates. ",["a",{"class":"txt","href":"/support/#privacy"},["Privacy Notice (pending review)"]]]],"\n"]],"\n"]],"\n",["footer",{"class":"llc-footer","style":"flex-wrap: wrap"},["\n",["img",{"class":"llc-footer__logo","src":"/assets/a76cbe2cd4d403a460252ecc50649c88.webp","alt":"The Little Letters Club, Singapore","style":"width: auto; height: 140px"},[]],"\n",["nav",{"aria-label":"Footer","class":"ft-cols"},["\n",["div",{"class":"ft-col"},[["h2",{"class":"ft-h"},["Explore"]],["ul",{"class":"llc-footer__links ft-list"},["\n",["li",{},[["a",{"href":"/"},["Home"]]]],"\n",["li",{},[["a",{"href":"/about/"},["About Us"]]]],"\n",["li",{},[["a",{"href":"/team/"},["Meet the Team"]]]],"\n",["li",{},[["a",{"href":"/programmes/"},["Programmes"]]]],"\n",["li",{},[["a",{"href":"/chapters/"},["Chapters"]]]],"\n",["li",{},[["a",{"href":"/journal/"},["Journal"]]]],"\n",["li",{},[["a",{"href":"/letterbox/"},["The Little Letterbox"]]]],"\n"]]]],"\n",["div",{"class":"ft-col"},[["h2",{"class":"ft-h"},["Get Involved"]],["ul",{"class":"llc-footer__links ft-list"},["\n",["li",{},[["a",{"href":"/volunteer/"},["Volunteer With Us"]]]],"\n",["li",{},[["a",{"href":"/exco/"},["Work With Us"]]]],"\n",["li",{},[["a",{"href":"/community/"},["Partner With Us"]]]],"\n",["li",{},[["a",{"href":"/supportus/"},["Support Us"]]]],"\n",["li",{},[["a",{"href":"/getinvolved/"},["All Ways to Help"]]]],"\n"]]]],"\n",["div",{"class":"ft-col"},[["h2",{"class":"ft-h"},["Good to Know"]],["ul",{"class":"llc-footer__links ft-list"},["\n",["li",{},[["a",{"href":"/contact/"},["Contact"]]]],"\n",["li",{},[["a",{"href":"/support/"},["FAQ"]]]],"\n",["li",{},[["a",{"href":"/support/#safeguarding"},["Safeguarding"]]]],"\n",["li",{},[["a",{"href":"/support/#privacy"},["Privacy Notice"]]]],"\n",["li",{},[["a",{"href":"/support/#terms"},["Terms of Use"]]]],"\n",["li",{},[["a",{"href":"/support/#accessibility"},["Accessibility"]]]],"\n"]]]],"\n"]],"\n",["p",{"class":"llc-footer__sign"},["Made with care",["br",{},[]],"in Singapore ",["span",{"class":"llc-heart","aria-hidden":"true"},["♥"]]]],"\n"]],"\n",["div",{"class":"ft-legal"},["\n",["nav",{"class":"ft-legal__links","aria-label":"Site information"},["\n",["a",{"href":"/sitemap/"},["Sitemap"]],"\n",["a",{"href":"/support/#terms"},["Terms of Use"]],"\n",["a",{"href":"/support/#privacy"},["Privacy Notice"]],"\n",["a",{"href":"/support/#whistleblowing"},["Whistleblowing Policy"]],"\n"]],"\n",["div",{"class":"ft-legal__social"},["\n",["span",{"class":"ft-legal__lbl"},["follow us on"]],"\n",["a",{"class":"ft-ig","href":"https://www.instagram.com/thelittlelettersclubsg/","target":"_blank","rel":"noopener noreferrer","aria-label":"Instagram, @thelittlelettersclubsg (opens in a new tab)"},[["svg",{"viewBox":"0 0 24 24","width":"20","height":"20","aria-hidden":"true","fill":"none","stroke":"currentColor","stroke-width":"1.8"},[["rect",{"x":"3","y":"3","width":"18","height":"18","rx":"5"},[]],["circle",{"cx":"12","cy":"12","r":"4.2"},[]],["circle",{"cx":"17.3","cy":"6.7","r":"1.1","fill":"currentColor","stroke":"none"},[]]]]]],"\n",["a",{"class":"ft-ig","href":"mailto:hello@thelittlelettersclub.org","aria-label":"Email hello@thelittlelettersclub.org"},[["svg",{"viewBox":"0 0 24 24","width":"20","height":"20","aria-hidden":"true","fill":"none","stroke":"currentColor","stroke-width":"1.8"},[["rect",{"x":"3","y":"5","width":"18","height":"14","rx":"3"},[]],["path",{"d":"M4 7l8 6 8-6"},[]]]]]],"\n"]],"\n",["div",{"class":"ft-legal__sub"},["\n",["span",{"class":"ft-legal__lbl"},["be in the know"]],"\n",["button",{"type":"button","class":"llc-btn llc-btn--primary llc-btn--small","onclick":"{{openSub}}"},["Subscribe"]],"\n"]],"\n"]],"\n",["p",{"class":"llc-caption ft-legal__note"},["The Little Letters Club is a youth-led initiative, not a registered charity. A little letter goes a long way. © 2026"]],"\n",["sc-if",{"value":"{{open}}","hint-placeholder-val":"{{false}}"},["\n",["div",{"class":"gl-box sub-box","onclick":"{{backdrop}}","onkeydown":"{{key}}"},["\n",["div",{"class":"gl-box__panel sub-panel","role":"dialog","aria-modal":"true","aria-labelledby":"sub-title"},["\n",["button",{"type":"button","class":"llc-iconbtn gl-box__close","id":"sub-close","aria-label":"Close","onclick":"{{close}}"},["×"]],"\n",["img",{"class":"sub-art","src":"/assets/c4142018fdd1a3c0cb79cdd93a58c7ca.png","alt":""},[]],"\n",["p",{"class":"llc-eyebrow","style":"margin: 0"},["be in the know"]],"\n",["h2",{"id":"sub-title","class":"llc-h3","style":"margin: 0"},["Subscribe to our little letters"]],"\n",["p",{"class":"llc-caption","style":"margin: 0"},["Sign up for occasional updates on new collections, creative guides and ways to volunteer."]],"\n",["sc-if",{"value":"{{notSent}}","hint-placeholder-val":"{{true}}"},["\n",["form",{"class":"sub-form","onsubmit":"{{submit}}","novalidate":""},["\n",["div",{"class":"sub-row"},["\n",["label",{"class":"sub-field"},[["span",{},["First name",["b",{"aria-hidden":"true"},["*"]]]],["input",{"id":"sub-first","name":"first","type":"text","required":"","autocomplete":"given-name","aria-required":"true"},[]]]],"\n",["label",{"class":"sub-field"},[["span",{},["Last name",["b",{"aria-hidden":"true"},["*"]]]],["input",{"name":"last","type":"text","required":"","autocomplete":"family-name","aria-required":"true"},[]]]],"\n"]],"\n",["label",{"class":"sub-field"},[["span",{},["Email",["b",{"aria-hidden":"true"},["*"]]]],["input",{"id":"sub-email","name":"email","type":"email","required":"","autocomplete":"email","aria-required":"true"},[]]]],"\n",["fieldset",{"class":"sub-consent"},["\n",["legend",{},["Staying in touch"]],"\n",["p",{},["We'd love to send you news about TLLC activities, collections and volunteering opportunities. If you're happy to hear from us, tick how you'd like us to reach you:"]],"\n",["label",{"class":"sub-check"},[["input",{"type":"checkbox","name":"byEmail"},[]]," Email updates"]],"\n"]],"\n",["fieldset",{"class":"sub-consent"},["\n",["legend",{},["Storing your details",["b",{"aria-hidden":"true"},["*"]]]],"\n",["p",{},["To send you updates, we need to store and use your name and email. Please tick to agree:"]],"\n",["label",{"class":"sub-check"},[["input",{"type":"checkbox","name":"store","required":"","aria-required":"true"},[]]," I agree to TLLC storing and processing my details for this purpose."]],"\n"]],"\n",["sc-if",{"value":"{{err}}","hint-placeholder-val":"{{false}}"},[["p",{"class":"sub-err","role":"alert"},["{{err}}"]]]],"\n",["p",{"class":"llc-caption","style":"margin: 0"},["You can unsubscribe at any time using the link in any of our emails, or by writing to ",["a",{"class":"txt","href":"mailto:hello@thelittlelettersclub.org"},["hello@thelittlelettersclub.org"]],". For how we look after your information, see our ",["a",{"class":"txt","href":"/support/#privacy"},["Privacy Notice"]]," (pending review)."]],"\n",["button",{"class":"llc-btn llc-btn--primary","type":"submit"},["Subscribe"]],"\n"]],"\n"]],"\n",["sc-if",{"value":"{{sent}}","hint-placeholder-val":"{{false}}"},["\n",["div",{"class":"notice","role":"status"},["\n",["strong",{},["Prototype only: nothing was sent."]],"\n",["span",{},["The updates list isn't connected yet, so your details weren't stored. Connect a mailing-list service at ",["span",{"class":"ph"},["[NEWSLETTER_ENDPOINT]"]]," before launch."]],"\n"]],"\n",["button",{"type":"button","id":"sub-done","class":"llc-btn llc-btn--secondary","onclick":"{{close}}"},["Close"]],"\n"]],"\n"]],"\n"]],"\n"]],"\n"]],"\n"]],"\n","\n"]</script>
+<script>
+TLLC.define("Footer", function (DCLogic) {
+
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { open: false, sent: false, err: '' }; }
+  openSub(email) {
+    try { this.lastFocus = document.activeElement; } catch (e) {}
+    this.setState({ open: true, sent: false, err: '' }, () => {
+      try {
+        const em = document.getElementById('sub-email'); if (em && email) em.value = email;
+        const f = document.getElementById('sub-first'); f && f.focus();
+      } catch (e) {}
+    });
+  }
+  closeSub() { this.setState({ open: false }, () => { try { this.lastFocus && this.lastFocus.focus && this.lastFocus.focus(); } catch (e) {} }); }
+  renderVals() {
+    return {
+      open: this.state.open, sent: this.state.sent, notSent: !this.state.sent, err: this.state.err,
+      openSub: () => this.openSub(''),
+      quick: (e) => { e.preventDefault(); const v = (e.target.elements.email || {}).value || ''; this.openSub(v); },
+      close: () => this.closeSub(),
+      backdrop: (e) => { if (e.target === e.currentTarget) this.closeSub(); },
+      key: (e) => {
+        if (e.key === 'Escape') { e.preventDefault(); this.closeSub(); }
+        else if (e.key === 'Tab') { // keep focus inside the dialog
+          const panel = document.querySelector('.sub-panel'); if (!panel) return;
+          const els = panel.querySelectorAll('button, a[href], input, [tabindex]:not([tabindex="-1"])');
+          const first = els[0], last = els[els.length - 1];
+          if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+          else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+        }
+      },
+      // Integration point: send these fields to the mailing-list service, and only show a
+      // "thank you for subscribing" message once it succeeds. Record both consent ticks with a timestamp.
+      submit: (e) => {
+        e.preventDefault();
+        const f = e.target.elements;
+        if (!f.first.value.trim() || !f.last.value.trim()) return this.setState({ err: 'Please add your first and last name.' });
+        if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.email.value.trim())) return this.setState({ err: 'Please enter a valid email address.' });
+        if (!f.store.checked) return this.setState({ err: 'Please tick the box to let us store your details, so we can send updates.' });
+        this.setState({ sent: true, err: '' }, () => { try { const d = document.getElementById('sub-done'); d && d.focus(); } catch (er) {} });
+      }
+    };
+  }
+}
+
+return Component;
+});
+TLLC.define("Nav", function (DCLogic) {
+
+// ---- TLLC envelope cursor (desktop fine pointers only; off for touch and reduced motion) ----
+const TLLC_CURSOR_SVG = { d: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"128\" height=\"128\" viewBox=\"0 0 128 128\"><defs><filter id=\"shadow\" x=\"-30%\" y=\"-40%\" width=\"160%\" height=\"180%\"><feDropShadow dx=\"1\" dy=\"3\" stdDeviation=\"3\" flood-color=\"#8B6F61\" flood-opacity=\".25\"/></filter></defs><g filter=\"url(#shadow)\"><rect x=\"21\" y=\"44\" width=\"87\" height=\"60\" rx=\"10\" fill=\"#FFF9F0\" stroke=\"#8B6F61\" stroke-width=\"3\"/><path d=\"M24 50 L64 79 L105 50\" fill=\"none\" stroke=\"#8B6F61\" stroke-width=\"3\" stroke-linejoin=\"round\"/><path d=\"M24 101 L51 71 M105 101 L77 71\" fill=\"none\" stroke=\"#E8B8BE\" stroke-width=\"2.5\"/><path d=\"M64 91 C46 81 51 69 59 73 C62 74 64 77 64 77 C72 67 83 79 64 91Z\" fill=\"#E8B8BE\" stroke=\"#B66F7B\" stroke-width=\"2\"/></g></svg>", h: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"128\" height=\"128\" viewBox=\"0 0 128 128\"><defs><filter id=\"shadow\" x=\"-30%\" y=\"-40%\" width=\"160%\" height=\"180%\"><feDropShadow dx=\"1\" dy=\"3\" stdDeviation=\"3\" flood-color=\"#8B6F61\" flood-opacity=\".25\"/></filter></defs><g filter=\"url(#shadow)\"><path d=\"M21 51 L64 17 L108 51 L108 103 Q108 108 102 108 L27 108 Q21 108 21 102Z\" fill=\"#F2DFA6\" stroke=\"#8B6F61\" stroke-width=\"3\" stroke-linejoin=\"round\"/><rect x=\"33\" y=\"34\" width=\"63\" height=\"62\" rx=\"3\" fill=\"#FFF9F0\" stroke=\"#D4B9A4\" stroke-width=\"2\"/><path d=\"M44 56 H84 M44 66 H81\" stroke=\"#D4B9A4\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M21 54 L64 83 L108 54 L108 102 Q108 108 102 108 L27 108 Q21 108 21 102Z\" fill=\"#FFF9F0\" stroke=\"#8B6F61\" stroke-width=\"3\" stroke-linejoin=\"round\"/><path d=\"M21 104 L51 75 M108 104 L77 75\" stroke=\"#E8B8BE\" stroke-width=\"2.5\"/></g><path d=\"M64 42 C49 30 39 43 45 54 C49 62 64 71 64 71 C64 71 81 60 85 51 C91 37 75 30 64 42Z\" fill=\"#E8B8BE\" stroke=\"#B66F7B\" stroke-width=\"2.5\"/><path d=\"M102 17 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4Z\" fill=\"#F2DFA6\" stroke=\"#8B6F61\" stroke-width=\"1.4\"/><circle cx=\"16\" cy=\"33\" r=\"3\" fill=\"#A9BE9A\"/></svg>", c: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"128\" height=\"128\" viewBox=\"0 0 128 128\"><defs><filter id=\"shadow\" x=\"-30%\" y=\"-40%\" width=\"160%\" height=\"180%\"><feDropShadow dx=\"1\" dy=\"3\" stdDeviation=\"3\" flood-color=\"#8B6F61\" flood-opacity=\".25\"/></filter></defs><g filter=\"url(#shadow)\"><path d=\"M21 51 L64 17 L108 51 L108 103 Q108 108 102 108 L27 108 Q21 108 21 102Z\" fill=\"#F2DFA6\" stroke=\"#8B6F61\" stroke-width=\"3\" stroke-linejoin=\"round\"/><rect x=\"33\" y=\"34\" width=\"63\" height=\"62\" rx=\"3\" fill=\"#FFF9F0\" stroke=\"#D4B9A4\" stroke-width=\"2\"/><path d=\"M44 56 H84 M44 66 H81\" stroke=\"#D4B9A4\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M21 54 L64 83 L108 54 L108 102 Q108 108 102 108 L27 108 Q21 108 21 102Z\" fill=\"#FFF9F0\" stroke=\"#8B6F61\" stroke-width=\"3\" stroke-linejoin=\"round\"/><path d=\"M21 104 L51 75 M108 104 L77 75\" stroke=\"#E8B8BE\" stroke-width=\"2.5\"/></g><path d=\"M64 42 C49 30 39 43 45 54 C49 62 64 71 64 71 C64 71 81 60 85 51 C91 37 75 30 64 42Z\" fill=\"#E8B8BE\" stroke=\"#B66F7B\" stroke-width=\"2.5\"/><path d=\"M102 17 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4Z\" fill=\"#F2DFA6\" stroke=\"#8B6F61\" stroke-width=\"1.4\"/><circle cx=\"16\" cy=\"33\" r=\"3\" fill=\"#A9BE9A\"/><g fill=\"none\" stroke=\"#E8B8BE\" stroke-width=\"4\" stroke-linecap=\"round\"><path d=\"M64 5V14M115 53h9M7 69h10M112 98l9 6M18 21l-8 -7\"/></g></svg>" };
+function tllcCursorMount() {
+  if (typeof window === 'undefined' || !window.matchMedia) return null;
+  if (!matchMedia('(hover: hover) and (pointer: fine)').matches || matchMedia('(prefers-reduced-motion: reduce)').matches) return null;
+  if (window.__tllcCursor) { window.__tllcCursor.n++; return window.__tllcCursor; }
+  const HOVER = 'a,button,[role="button"],summary,label,.sb-pol,.sb-lift,.pc--link,.pc-filter';
+  const TEXT = 'input,textarea,select,[contenteditable="true"]';
+  const root = document.createElement('div'); root.id = 'tllc-cursor'; root.setAttribute('aria-hidden', 'true'); root.dataset.s = 'd';
+  // all three states are decoded up front and only shown/hidden, so a click never flashes blank
+  ['d', 'h', 'c'].forEach((k) => { const i = document.createElement('img'); i.alt = ''; i.className = 'tc-' + k; i.decoding = 'sync'; i.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(TLLC_CURSOR_SVG[k]); root.appendChild(i); });
+  document.body.appendChild(root); document.body.classList.add('tllc-cursor-enabled');
+  let clicking = false, hover = false, timer = 0, lastX = -100, lastY = -100;
+  const show = (s) => { if (root.dataset.s !== s) root.dataset.s = s; };
+  const place = () => { root.style.translate = (lastX - 7) + 'px ' + (lastY - 8) + 'px'; };
+  const isEl = (t) => t && t.nodeType === 1 && t.closest;
+  const move = (e) => {
+    if (e.pointerType && e.pointerType !== 'mouse') return;
+    lastX = e.clientX; lastY = e.clientY; place();
+    const t = isEl(e.target) ? e.target : null;
+    const inText = !!(t && t.closest(TEXT));
+    if (root.style.display !== (inText ? 'none' : 'block')) root.style.display = inText ? 'none' : 'block';
+    hover = !!(t && t.closest(HOVER));
+    root.classList.toggle('is-hover', hover);
+    if (!clicking) show(hover ? 'h' : 'd');
+  };
+  const down = (e) => {
+    if (e.pointerType !== 'mouse' || e.button !== 0) return;
+    if (isEl(e.target) && e.target.closest(TEXT)) return;
+    lastX = e.clientX; lastY = e.clientY; place();
+    clicking = true; show('c');
+    root.classList.remove('is-click'); void root.offsetWidth; root.classList.add('is-click');
+    clearTimeout(timer);
+    timer = setTimeout(() => { clicking = false; root.classList.remove('is-click'); show(hover ? 'h' : 'd'); }, 260);
+  };
+  const leave = () => { root.style.display = 'none'; };
+  const enter = () => { root.style.display = 'block'; };
+  window.addEventListener('pointermove', move, { passive: true });
+  window.addEventListener('pointerdown', down, { passive: true, capture: true });
+  document.documentElement.addEventListener('mouseleave', leave);
+  document.documentElement.addEventListener('mouseenter', enter);
+  window.__tllcCursor = { n: 1, off() {
+    clearTimeout(timer);
+    window.removeEventListener('pointermove', move); window.removeEventListener('pointerdown', down, { capture: true });
+    document.documentElement.removeEventListener('mouseleave', leave); document.documentElement.removeEventListener('mouseenter', enter);
+    root.remove(); document.body.classList.remove('tllc-cursor-enabled'); window.__tllcCursor = null;
+  } };
+  return window.__tllcCursor;
+}
+function tllcCursorUnmount() { const c = typeof window !== 'undefined' && window.__tllcCursor; if (c && --c.n <= 0) c.off(); }
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { open: false, group: null }; this.onDoc = this.onDoc.bind(this); this.onKey = this.onKey.bind(this); }
+  componentDidMount() { document.addEventListener('click', this.onDoc); document.addEventListener('keydown', this.onKey); tllcCursorMount(); }
+  componentWillUnmount() { document.removeEventListener('click', this.onDoc); document.removeEventListener('keydown', this.onKey); tllcCursorUnmount(); }
+  onDoc(e) { if (this.state.group && !(e.target.closest && e.target.closest('.dd'))) this.setState({ group: null }); }
+  onKey(e) { if (e.key === 'Escape' && this.state.group) this.setState({ group: null }); }
+  renderVals() {
+    const current = this.props.current ?? 'home';
+    // Sitemap: items with `soon: true` aren't built yet, so they show as "Coming soon" instead of linking anywhere.
+    const tree = [
+      { id: 'home', label: 'Home', href: '/' },
+      { id: 'about', label: 'About', items: [
+        { id: 'about', label: 'Our Story', hint: 'Why TLLC exists', href: '/about/#story-title' },
+        { id: 'about-values', label: 'Mission & Values', hint: 'What we believe and how we work', href: '/about/#values-title' },
+        { id: 'about-team', label: 'Meet the Team', hint: 'EXCO, volunteers and friends', href: '/team/' },
+        { id: 'about-creators', label: 'Meet Our Creators', hint: 'The makers behind the collections', href: '/creators/' }
+      ] },
+      { id: 'work', label: 'Our Work', items: [
+        { id: 'programmes', label: 'Dear, You', hint: 'Creative correspondence', href: '/programmes/#dear-you' },
+        { id: 'prog-2', label: 'Little Things Studio', hint: 'Small things, thoughtfully made', href: '/programmes/#little-things-studio' },
+        { id: 'prog-3', label: 'Seasons of Kindness', hint: 'Festive and seasonal campaigns', href: '/programmes/#seasons-of-kindness' },
+        { id: 'prog-4', label: 'Across Generations', hint: 'Supervised shared activities', href: '/programmes/#across-generations' },
+        { id: 'event', label: 'Letters & Little Blooms', hint: 'Across Generations · our first event', href: '/event/' },
+        { id: 'prog-5', label: 'The Kindness Workshop', hint: 'Learn something lovely', href: '/programmes/#kindness-workshop' }
+      ] },
+      { id: 'involved', label: 'Get Involved', items: [
+        { id: 'volunteer', label: 'Volunteer With Us', hint: 'In person or from home', href: '/volunteer/' },
+        { id: 'exco', label: 'Work With Us', hint: 'Apply for the 2026 Founding EXCO', href: '/exco/' },
+        { id: 'community', label: 'Partner With Us', hint: 'Charities, schools and collaborators', href: '/community/#partner-form' },
+        { id: 'supportus', label: 'Support Us', hint: 'The Little Giving Circle', href: '/supportus/' },
+        { id: 'getinvolved', label: 'All ways to help', hint: 'Volunteer, join the team, partner, attend', href: '/getinvolved/', all: true }
+      ] },
+      { id: 'chapters', label: 'Chapters', items: [
+        { id: 'chapters', label: 'Our Chapters', hint: 'One little world, many communities', href: '/chapters/' },
+        { id: 'chapters-sg', label: '🇸🇬 Singapore', hint: 'Home Chapter', href: '/about/' },
+        { id: 'india', label: '🇮🇳 India', hint: 'Forming', href: '/india/' },
+        { id: 'chapters-start', label: '＋ Start a Chapter', hint: 'Tell us where the next letter should travel', href: '/contact/' }
+      ] },
+      { id: 'lbx', label: 'Letterbox', items: [
+        { id: 'letterbox', label: 'Create a Letter', hint: 'Write and decorate an e-letter', href: '/letterbox/#studio' },
+        { id: 'myletters', label: 'My Letters', hint: 'Your saved and sent letters', soon: true },
+        { id: 'lbarchive', label: 'Community Archive', hint: 'Letters shared with permission', soon: true },
+        { id: 'lbhow', label: 'How It Works', hint: 'From draft to delivery', soon: true }
+      ] },
+      { id: 'more', label: 'Explore', items: [
+        { id: 'journal', label: 'Journal', hint: 'Stories, ideas and prompts', href: '/journal/' },
+        { id: 'impact', label: 'Our Impact', hint: 'Verified figures only', href: '/remote/#impact' },
+        { id: 'gallery', label: 'Little Moments', hint: 'Our Polaroid gallery', href: '/gallery/' },
+        { id: 'scrapbook', label: 'Our Little Scrapbook', hint: 'Moments from our little corner', soon: true }
+      ] },
+      { id: 'contact', label: 'Contact', href: '/contact/' }
+    ];
+    const groups = tree.map((g) => {
+      if (!g.items) return { label: g.label, href: g.href, isLink: true, isMenu: false, cur: g.id === current ? 'page' : undefined };
+      const inGroup = g.items.some((i) => i.id === current);
+      const isOpen = this.state.group === g.id;
+      return {
+        label: g.label, isLink: false, isMenu: true, cur: inGroup ? 'true' : undefined, show: isOpen, expanded: isOpen ? 'true' : 'false',
+        toggle: () => this.setState({ group: isOpen ? null : g.id }),
+        items: g.items.map((i) => ({ ...i, live: !i.soon, soon: !!i.soon, liCls: i.all ? 'dd__all' : '', cur: i.id === current ? 'page' : undefined }))
+      };
+    });
+    const open = this.state.open;
+    return {
+      groups,
+      open,
+      expanded: open ? 'true' : 'false',
+      menuLabel: open ? 'Close menu' : 'Open menu',
+      toggle: () => this.setState({ open: !this.state.open })
+    };
+  }
+}
+
+return Component;
+});
+TLLC.define("Letterbox", function (DCLogic) {
+
+const GREETINGS = ['Dear Friend,', 'Hello there,', 'To a wonderful you,', 'Dear kind friend,'];
+const STEPS = [
+  { n: 1, label: 'Choose your stationery', title: 'Choose your stationery', desc: 'Pick a paper for your letter. You can change it any time.' },
+  { n: 2, label: 'Write your letter', title: 'Write your letter', desc: 'Type your message, choose a font and add a greeting.' },
+  { n: 3, label: 'Decorate', title: 'Decorate your creation', desc: 'Add stickers, then drag, resize and rotate them on the paper.' },
+  { n: 4, label: 'Add something special', title: 'Add something special', desc: 'Optional extras: a photostrip, a postcard or a song dedication.' },
+  { n: 5, label: 'Seal & share', title: 'Seal your envelope', desc: 'Pick an envelope and stamp, then choose how to share it.' }
+];
+const MUSIC_HOSTS = ['open.spotify.com', 'music.apple.com', 'www.youtube.com', 'youtube.com', 'youtu.be', 'music.youtube.com'];
+const MAX_STICKERS = 24;
+const uid = () => Math.random().toString(36).slice(2, 9);
+const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+const clone = (o) => JSON.parse(JSON.stringify(o));
+const CONTACT_CHECKS = [
+  { re: /[\w.+-]+@[\w-]+\.[\w.]+/, msg: 'It looks like there is an email address. Please remove contact details.' },
+  { re: /(\+?\d[\d\s-]{6,}\d)/, msg: 'It looks like there is a phone number. Please remove contact details.' },
+  { re: /(^|\s)@\w{2,}/, msg: 'It looks like there is a social media handle. Please remove it.' },
+  { re: /(https?:\/\/|www\.)/i, msg: 'It looks like there is a web link. Links are not allowed in letters.' }
+];
+const sniff = async (file) => {
+  const b = new Uint8Array(await file.slice(0, 12).arrayBuffer());
+  const jpg = b[0] === 0xff && b[1] === 0xd8 && b[2] === 0xff;
+  const png = b[0] === 0x89 && b[1] === 0x50 && b[2] === 0x4e && b[3] === 0x47;
+  const webp = b[0] === 0x52 && b[1] === 0x49 && b[2] === 0x46 && b[3] === 0x46 && b[8] === 0x57 && b[9] === 0x45 && b[10] === 0x42 && b[11] === 0x50;
+  return jpg || png || webp;
+};
+const makeToken = () => {
+  try { const a = new Uint8Array(16); window.crypto.getRandomValues(a); return btoa(String.fromCharCode.apply(null, a)).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, ''); }
+  catch (e) { return '[128-BIT-RANDOM-TOKEN]'; }
+};
+const REG = () => window.TLLC_LETTERBOX_REGISTRY;
+const MODEL = () => window.TLLC_LETTER;
+
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    const M = MODEL();
+    this.state = {
+      letter: M ? M.blank() : null, step: 1, sel: null, photos: [], photoErr: [], saveText: 'Not saved yet',
+      cursor: 'default', sparkles: false, bursts: [], token: '', pcFlipped: false, linkErr: '', notice: '', volNote: '',
+      arcName: 'anonymous', arcAge: '', arcPublic: false, arcClean: false, arcGuardian: false, arcErr: '', reduced: false, tick: 0
+    };
+    this.drag = null;
+    this.cache = new Map(); // url -> { img, done, bytes }: keeps selected artwork decoded for the rest of the visit
+  }
+  componentDidMount() {
+    const reduced = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    const M = MODEL(); const patch = { token: makeToken(), reduced };
+    if (M) {
+      const r = M.load();
+      if (r.letter) { patch.letter = r.letter; patch.saveText = r.source === 'migrated' ? 'Earlier draft updated and restored' : 'Draft restored from this device'; }
+      else if (r.source === 'unavailable') patch.saveText = 'Drafts can\'t be saved in this browser';
+      if (!patch.letter && !this.state.letter) patch.letter = M.blank();
+    }
+    this.setState(patch, () => this.warmNeeded());
+  }
+  componentDidUpdate() { this.warmNeeded(); }
+  // Load an editor-size asset once; later uses come from memory / HTTP cache.
+  ensure(tier) {
+    if (!tier || !tier.url || this.cache.has(tier.url)) return;
+    const img = new Image(); const rec = { img, done: false, bytes: tier.bytes || 0 };
+    this.cache.set(tier.url, rec);
+    img.decoding = 'async';
+    img.onload = () => { rec.done = true; this.setState({ tick: this.state.tick + 1 }); };
+    img.onerror = () => { rec.failed = true; };
+    img.src = tier.url;
+  }
+  ready(tier) { const r = tier && this.cache.get(tier.url); return !!(r && r.done); }
+  warmNeeded() {
+    const R = REG(); const L = this.state.letter; if (!R || !L) return;
+    const paper = R.resolve(L.paperId); if (paper) this.ensure(paper.tiers.editor);
+    L.stickers.forEach((s) => { const a = R.resolve(s.assetId); if (a) this.ensure(a.tiers.editor); });
+    if (this.state.step === 5) {
+      const env = R.resolve(L.envelopeId); if (env) { this.ensure(env.layers.back); this.ensure(env.layers.front); this.ensure(env.layers.flap); }
+      const st = R.resolve(L.stampId); if (st) this.ensure(st.tiers.editor);
+    }
+  }
+  setLetter(fn) { const L = clone(this.state.letter); fn(L); this.setState({ letter: L }); }
+  save() {
+    const M = MODEL(); if (!M) return;
+    try { M.save(Object.assign({}, this.state.letter)); this.setState({ saveText: 'Draft saved on this device at ' + new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) }); }
+    catch (e) { this.setState({ saveText: 'Drafts can\'t be saved in this browser' }); }
+  }
+  go(n) { this.setState({ step: clamp(n, 1, 5), sel: null, notice: '' }, () => this.save()); }
+  updSticker(id, patch) { this.setLetter((L) => { L.stickers = L.stickers.map((s) => (s.id === id ? Object.assign(s, patch) : s)); }); }
+  topZ() { return this.state.letter.stickers.reduce((m, s) => Math.max(m, s.zIndex || 0), 0); }
+  addSticker(assetId) {
+    const L = this.state.letter; if (L.stickers.length >= MAX_STICKERS) return;
+    const s = { id: uid(), assetId, x: 0.4 + Math.random() * 0.2, y: 0.4 + Math.random() * 0.2, scale: 0.14, rotation: Math.round(Math.random() * 20 - 10), zIndex: this.topZ() + 1 };
+    this.setLetter((M) => { M.stickers.push(s); }); this.setState({ sel: s.id });
+  }
+  removeSticker(id) { this.setLetter((L) => { L.stickers = L.stickers.filter((s) => s.id !== id); }); this.setState({ sel: null }); }
+  renderVals() {
+    const R = REG(); const M = MODEL(); const st = this.state; const L = st.letter;
+    if (!R || !M || !L) return { rootCls: 'llc-root', steps: [], cursors: [], placed: [], papers: [], library: [], bursts: [], showPaper: false, show1: false, show2: false, show3: false, show4: false, show5: false, saveText: 'Loading the studio…' };
+    const set = (patch) => this.setState(patch);
+    const paper = R.resolve(L.paperId) || R.list('paper')[0];
+    const text = L.text.greeting + ' ' + L.text.body + ' ' + L.text.signoff;
+    const warnings = CONTACT_CHECKS.filter((c) => c.re.test(text)).map((c) => c.msg);
+    const selS = L.stickers.find((s) => s.id === st.sel);
+    const hasPhotos = st.photos.length > 0;
+    const stepInfo = STEPS[st.step - 1];
+    const env = R.resolve(L.envelopeId) || R.list('envelope')[0];
+    const strip = R.resolve(L.attachments.photos.layoutId) || R.resolve('photostrip.three@1');
+    const pc = L.attachments.postcard; const pcAsset = pc ? R.resolve(pc.assetId) : null;
+    const song = L.attachments.song;
+    const json = M.serialise(Object.assign({}, L));
+    const refs = new Set([L.paperId, L.envelopeId, L.stampId, L.sealId].concat(L.stickers.map((s) => s.assetId)).concat(pc ? [pc.assetId] : []).concat(hasPhotos ? [L.attachments.photos.layoutId] : []));
+    let loadedBytes = 0; let loadedCount = 0; this.cache.forEach((r) => { if (r.done) { loadedBytes += r.bytes; loadedCount += 1; } });
+    const cursorOpts = [{ id: 'default', label: 'Standard' }].concat(R.list('cursor').map((c) => ({ id: c.id.split('.')[1].split('@')[0], label: c.label, img: c.tiers.editor.url })));
+    return {
+      rootCls: 'llc-root' + (st.cursor !== 'default' ? ' cur-' + st.cursor : ''),
+      cursors: cursorOpts.map((c) => ({ ...c, hasImg: !!c.img, pressed: st.cursor === c.id ? 'true' : 'false', pick: () => set({ cursor: c.id }) })),
+      sparkles: st.sparkles && !st.reduced, reduced: st.reduced,
+      toggleSparkles: (e) => set({ sparkles: e.target.checked }),
+      onBurst: (e) => {
+        if (!st.sparkles || st.reduced || e.pointerType === 'touch') return;
+        const r = e.currentTarget.getBoundingClientRect();
+        const b = { id: uid(), style: 'left: ' + Math.round(e.clientX - r.left) + 'px; top: ' + Math.round(e.clientY - r.top) + 'px' };
+        this.setState({ bursts: this.state.bursts.concat([b]).slice(-6) });
+        setTimeout(() => this.setState({ bursts: this.state.bursts.filter((x) => x.id !== b.id) }), 800);
+      },
+      bursts: st.bursts,
+      saveNow: () => this.save(), saveText: st.saveText,
+      step: st.step, stepTitle: stepInfo.title, stepDesc: stepInfo.desc,
+      steps: STEPS.map((s) => ({ ...s, cls: 'lb-step' + (s.n < st.step ? ' is-done' : ''), cur: s.n === st.step ? 'step' : undefined, go: () => this.go(s.n) })),
+      show1: st.step === 1, show2: st.step === 2, show3: st.step === 3, show4: st.step === 4, show5: st.step === 5, showPaper: st.step < 5,
+      isFirst: st.step === 1, notLast: st.step < 5, nextLabel: st.step < 5 ? STEPS[st.step].label : '',
+      back: () => this.go(st.step - 1), next: () => this.go(st.step + 1),
+      startOver: () => { M.clear(); st.photos.forEach((p) => { try { URL.revokeObjectURL(p.url); } catch (e) {} }); this.setState({ letter: M.blank(), photos: [], sel: null, notice: '', step: 1, saveText: 'Started a new letter', token: makeToken() }); },
+      // paper: preview first, editor-size once selected and loaded
+      paperCls: 'paper' + (this.ready(paper.tiers.editor) ? '' : ' is-loading'),
+      paperSrc: this.ready(paper.tiers.editor) ? paper.tiers.editor.url : paper.tiers.preview.url,
+      paperName: paper.label,
+      papers: R.list('paper').map((p) => ({ id: p.id, label: p.label, desc: p.desc, preview: p.tiers.preview.url, pressed: p.id === paper.id ? 'true' : 'false',
+        pick: () => { this.ensure(p.tiers.editor); this.setLetter((M2) => { M2.paperId = p.id; }); },
+        warm: () => this.ensure(p.tiers.editor) })),
+      letterStyle: M.textStyle(L, paper),
+      greeting: L.text.greeting, body: L.text.body, signoff: L.text.signoff,
+      hasBody: L.text.body.trim().length > 0, noBody: L.text.body.trim().length === 0, bodyCount: L.text.body.length,
+      onGreeting: (e) => { const v = e.target.value; this.setLetter((M2) => { M2.text.greeting = v; }); },
+      onBody: (e) => { const v = e.target.value; this.setLetter((M2) => { M2.text.body = v; }); },
+      onSignoff: (e) => { const v = e.target.value; this.setLetter((M2) => { M2.text.signoff = v; }); },
+      greetings: GREETINGS.map((g) => ({ label: g, pressed: L.text.greeting === g ? 'true' : 'false', pick: () => this.setLetter((M2) => { M2.text.greeting = g; }) })),
+      warnings, hasWarnings: warnings.length > 0,
+      fonts: Object.keys(M.FONTS).map((id) => { const f = M.FONTS[id]; return { label: f.label, note: f.note, pressed: L.fontId === id ? 'true' : 'false', sample: 'font-family: ' + f.family + '; font-size: 32px; line-height: 1.1', pick: () => this.setLetter((M2) => { M2.fontId = id; }) }; }),
+      sizePct: Math.round((L.fontScale || 1) * 100), onSize: (e) => { const v = Number(e.target.value) / 100; this.setLetter((M2) => { M2.fontScale = v; }); },
+      inks: Object.keys(M.INKS).map((id) => { const i = M.INKS[id]; const on = L.inkId === id; return { label: i.label, pressed: on ? 'true' : 'false', mark: on ? '✓' : '', style: 'background: ' + i.hex + '; border: 3px solid ' + (on ? 'var(--rose)' : 'transparent') + '; cursor: pointer', pick: () => this.setLetter((M2) => { M2.inkId = id; }) }; }),
+      aligns: [['left', 'Left'], ['center', 'Centre'], ['right', 'Right']].map(([id, label]) => ({ label, pressed: L.align === id ? 'true' : 'false', pick: () => this.setLetter((M2) => { M2.align = id; }) })),
+      // stickers: library shows previews; placed stickers load their own editor-size file
+      stickerCount: L.stickers.length,
+      library: R.list('sticker').map((s) => ({ label: s.label, preview: s.tiers.preview.url, add: () => { this.ensure(s.tiers.editor); this.addSticker(s.id); } })),
+      placed: L.stickers.slice().sort((a, b) => (a.zIndex || 0) - (b.zIndex || 0)).map((s) => {
+        const a = R.resolve(s.assetId) || R.resolve('sticker.pink_heart@1');
+        return {
+          src: this.ready(a.tiers.editor) ? a.tiers.editor.url : a.tiers.preview.url,
+          cls: 'stick' + (s.id === st.sel ? ' is-sel' : ''), style: M.stickerStyle(s),
+          aria: a.label + ' sticker. Arrow keys move, plus and minus resize, square brackets rotate, Delete removes.',
+          select: () => set({ sel: s.id }),
+          down: (e) => {
+            const paperEl = e.currentTarget.closest('.paper'); if (!paperEl) return;
+            e.preventDefault();
+            this.drag = { id: s.id, r: paperEl.getBoundingClientRect(), sx: e.clientX, sy: e.clientY, ox: s.x, oy: s.y };
+            try { e.currentTarget.setPointerCapture(e.pointerId); } catch (err) {}
+            this.setState({ sel: s.id });
+          },
+          move: (e) => {
+            const d = this.drag; if (!d || d.id !== s.id) return;
+            this.updSticker(s.id, { x: clamp(d.ox + (e.clientX - d.sx) / d.r.width, 0, 1), y: clamp(d.oy + (e.clientY - d.sy) / d.r.height, 0, 1) });
+          },
+          up: () => { this.drag = null; },
+          key: (e) => {
+            const k = e.shiftKey ? 0.05 : 0.01; let p = null;
+            if (e.key === 'ArrowLeft') p = { x: clamp(s.x - k, 0, 1) };
+            else if (e.key === 'ArrowRight') p = { x: clamp(s.x + k, 0, 1) };
+            else if (e.key === 'ArrowUp') p = { y: clamp(s.y - k, 0, 1) };
+            else if (e.key === 'ArrowDown') p = { y: clamp(s.y + k, 0, 1) };
+            else if (e.key === '+' || e.key === '=') p = { scale: clamp(s.scale + 0.01, 0.04, 0.45) };
+            else if (e.key === '-') p = { scale: clamp(s.scale - 0.01, 0.04, 0.45) };
+            else if (e.key === '[') p = { rotation: s.rotation - 5 };
+            else if (e.key === ']') p = { rotation: s.rotation + 5 };
+            else if (e.key === 'Delete' || e.key === 'Backspace') { e.preventDefault(); this.removeSticker(s.id); return; }
+            if (p) { e.preventDefault(); this.setState({ sel: s.id }); this.updSticker(s.id, p); }
+          }
+        };
+      }),
+      hasSel: !!selS && st.step === 3, noSel: !selS,
+      selLabel: selS ? (R.resolve(selS.assetId) || {}).label : '',
+      selSize: selS ? Math.round(selS.scale * 100) : 12, selRot: selS ? Math.round(selS.rotation) : 0,
+      onSelSize: (e) => selS && this.updSticker(selS.id, { scale: Number(e.target.value) / 100 }),
+      onSelRot: (e) => selS && this.updSticker(selS.id, { rotation: Number(e.target.value) }),
+      smaller: () => selS && this.updSticker(selS.id, { scale: clamp(selS.scale - 0.02, 0.04, 0.45) }),
+      bigger: () => selS && this.updSticker(selS.id, { scale: clamp(selS.scale + 0.02, 0.04, 0.45) }),
+      rotL: () => selS && this.updSticker(selS.id, { rotation: selS.rotation - 10 }),
+      rotR: () => selS && this.updSticker(selS.id, { rotation: selS.rotation + 10 }),
+      bringForward: () => selS && this.updSticker(selS.id, { zIndex: this.topZ() + 1 }),
+      duplicate: () => { if (!selS || L.stickers.length >= MAX_STICKERS) return; const c = Object.assign({}, selS, { id: uid(), x: clamp(selS.x + 0.06, 0, 1), y: clamp(selS.y + 0.06, 0, 1), zIndex: this.topZ() + 1 }); this.setLetter((M2) => { M2.stickers.push(c); }); this.setState({ sel: c.id }); },
+      removeSel: () => selS && this.removeSticker(selS.id), deselect: () => set({ sel: null }),
+      clearStickers: () => { this.setLetter((M2) => { M2.stickers = []; }); set({ sel: null }); },
+      // photostrip (photos stay local; never in letter data)
+      photos: st.photos.map((p, i) => ({ ...p, alt: 'Your photo ' + (i + 1), remove: () => { try { URL.revokeObjectURL(p.url); } catch (e) {} this.setState({ photos: this.state.photos.filter((x) => x.id !== p.id) }); } })),
+      hasPhotos, photoCount: st.photos.length, photoErr: st.photoErr,
+      strips: R.list('photostrip').map((s) => ({ label: s.label, pressed: s.id === strip.id ? 'true' : 'false', pick: () => this.setLetter((M2) => { M2.attachments.photos.layoutId = s.id; }) })),
+      stripFrame: strip.tiers.editor.url,
+      stripSlots: strip.windows.map((w, i) => { const p = st.photos[i]; return { hasPhoto: !!p, empty: !p, url: p ? p.url : '', alt: 'Your photo ' + (i + 1), style: 'left: ' + w[0] + '%; top: ' + w[1] + '%; width: ' + w[2] + '%; height: ' + w[3] + '%' }; }),
+      onPhotos: async (e) => {
+        const input = e.target; const files = Array.from(input.files || []); input.value = '';
+        const errs = []; const ok = []; const room = strip.windows.length - this.state.photos.length;
+        for (const f of files) {
+          if (['image/jpeg', 'image/png', 'image/webp'].indexOf(f.type) === -1) { errs.push(f.name + ': only JPG, PNG or WebP images can be added.'); continue; }
+          if (f.size > 5 * 1024 * 1024) { errs.push(f.name + ': this file is larger than 5 MB.'); continue; }
+          if (ok.length >= room) { errs.push(f.name + ': this photostrip has room for ' + strip.windows.length + ' photos.'); continue; }
+          let real = false; try { real = await sniff(f); } catch (err) { real = false; }
+          if (!real) { errs.push(f.name + ': this file doesn\'t look like a real image.'); continue; }
+          ok.push({ id: uid(), name: f.name, url: URL.createObjectURL(f) });
+        }
+        this.setState({ photos: this.state.photos.concat(ok), photoErr: errs });
+      },
+      // postcard
+      postcardOn: !!pc, pcMsg: (pc && pc.message) || 'Sending bright days your way!', pcMsgRaw: pc ? pc.message : '',
+      pcFront: pcAsset ? pcAsset.tiers.front.url : '', pcBack: pcAsset ? pcAsset.tiers.back.url : '',
+      pcCls: 'pc' + (st.pcFlipped ? ' is-flipped' : ''), flipPc: () => set({ pcFlipped: !st.pcFlipped }),
+      togglePostcard: (e) => { const on = e.target.checked; this.setLetter((M2) => { M2.attachments.postcard = on ? { assetId: 'postcard.blush@1', message: '' } : null; }); },
+      onPcMsg: (e) => { const v = e.target.value; this.setLetter((M2) => { if (M2.attachments.postcard) M2.attachments.postcard.message = v; }); },
+      postcards: R.list('postcard').map((p) => ({ label: p.label, pressed: pc && pc.assetId === p.id ? 'true' : 'false', pick: () => this.setLetter((M2) => { if (M2.attachments.postcard) M2.attachments.postcard.assetId = p.id; }) })),
+      // song
+      songOn: !!song, songTitle: (song && song.title) || 'A song for you', songArtist: (song && song.artist) || 'Artist',
+      songTitleRaw: song ? song.title : '', songArtistRaw: song ? song.artist : '', songLink: song ? song.link : '',
+      toggleSong: (e) => { const on = e.target.checked; this.setLetter((M2) => { M2.attachments.song = on ? { title: '', artist: '', link: '' } : null; }); },
+      onSongTitle: (e) => { const v = e.target.value; this.setLetter((M2) => { if (M2.attachments.song) M2.attachments.song.title = v; }); },
+      onSongArtist: (e) => { const v = e.target.value; this.setLetter((M2) => { if (M2.attachments.song) M2.attachments.song.artist = v; }); },
+      onSongLink: (e) => {
+        const v = e.target.value.trim(); let err = '';
+        if (v) { try { const u = new URL(v); if (u.protocol !== 'https:' || MUSIC_HOSTS.indexOf(u.hostname) === -1) err = 'Please use an https link from Spotify, Apple Music or YouTube.'; } catch (x) { err = 'That doesn\'t look like a full web link.'; } }
+        this.setLetter((M2) => { if (M2.attachments.song) M2.attachments.song.link = err ? '' : v; }); this.setState({ linkErr: err });
+      },
+      hasLinkErr: !!st.linkErr, linkErr: st.linkErr,
+      volNote: st.volNote, onVolNote: (e) => set({ volNote: e.target.value }),
+      // envelope, stamp, seal (layered SVG + small WebP)
+      env: { back: env.layers.back.url, front: env.layers.front.url, flap: env.layers.flap.url },
+      stampSrc: (R.resolve(L.stampId) || R.list('stamp')[0]).tiers.editor.url,
+      sealSrc: (R.resolve(L.sealId) || R.resolve('seal.wax_heart@1')).tiers.editor.url,
+      envelopes: R.list('envelope').map((e) => ({ label: e.label, front: e.layers.front.url, pressed: e.id === env.id ? 'true' : 'false', pick: () => this.setLetter((M2) => { M2.envelopeId = e.id; }) })),
+      stamps: R.list('stamp').map((s) => ({ label: s.label, src: s.tiers.editor.url, pressed: s.id === L.stampId ? 'true' : 'false', pick: () => this.setLetter((M2) => { M2.stampId = s.id; }) })),
+      // pathways
+      paths: [
+        { id: 'personal', title: 'Share personally', desc: 'A private link for someone you know.' },
+        { id: 'collection', title: 'Send to a TLLC collection', desc: 'Reviewed, then delivered through a partner.' },
+        { id: 'archive', title: 'Community archive', desc: 'Ask for it to be shown publicly after review.' }
+      ].map((p) => ({ ...p, pressed: L.pathway === p.id ? 'true' : 'false', pick: () => { this.setLetter((M2) => { M2.pathway = p.id; }); set({ notice: '', arcErr: '' }); } })),
+      isPersonal: L.pathway === 'personal', isCollection: L.pathway === 'collection', isArchive: L.pathway === 'archive',
+      token: st.token,
+      tryShare: () => { this.save(); set({ notice: 'Private links need the TLLC server, so no link was created and nothing left this device. When it is live, the link will look like the example above and can be switched off at any time.' }); },
+      collChecks: [
+        { ok: warnings.length === 0, text: 'No contact details, handles or links' },
+        { ok: !hasPhotos, text: 'No personal photos (collections are words and stickers only)' },
+        { ok: !song, text: 'No song link' },
+        { ok: L.text.body.trim().length >= 40, text: 'A message of at least a few lines' },
+        { ok: false, text: 'A collection is open for submissions (none yet)' }
+      ].map((c) => ({ ...c, cls: c.ok ? 'ok' : 'no', mark: c.ok ? '✓' : '✕' })),
+      arcName: st.arcName, arcAge: st.arcAge, arcPublic: st.arcPublic, arcClean: st.arcClean, arcGuardian: st.arcGuardian,
+      arcMinor: st.arcAge === 'under-16' || st.arcAge === '16-17',
+      onArcName: (e) => set({ arcName: e.target.value }), onArcAge: (e) => set({ arcAge: e.target.value, arcGuardian: false }),
+      onArcPublic: (e) => set({ arcPublic: e.target.checked }), onArcClean: (e) => set({ arcClean: e.target.checked }), onArcGuardian: (e) => set({ arcGuardian: e.target.checked }),
+      hasArcErr: !!st.arcErr, arcErr: st.arcErr,
+      tryArchive: () => {
+        const minor = st.arcAge === 'under-16' || st.arcAge === '16-17'; let err = '';
+        if (!st.arcAge) err = 'Please choose an age band.';
+        else if (!st.arcPublic) err = 'Public display needs your separate agreement.';
+        else if (!st.arcClean) err = 'Please confirm there are no personal details.';
+        else if (minor && !st.arcGuardian) err = 'Under 18s need a parent or guardian to agree.';
+        else if (warnings.length) err = 'Please remove contact details from your letter first.';
+        else if (L.text.body.trim().length < 40) err = 'Please write a few more lines first.';
+        if (err) { set({ arcErr: err, notice: '' }); return; }
+        this.save();
+        set({ arcErr: '', notice: 'Your request passed every check, but archive requests need the TLLC server and a volunteer review, so nothing was sent or published.' });
+      },
+      hasNotice: !!st.notice, notice: st.notice,
+      // storage + loading transparency
+      letterJson: JSON.stringify(JSON.parse(json), null, 2),
+      jsonKb: (json.length / 1024).toFixed(1) + ' KB', assetRefs: refs.size + ' IDs',
+      loadedKb: Math.round(loadedBytes / 1024) + ' KB', loadedCount
+    };
+  }
+}
+
+return Component;
+});
+TLLC.start("Letterbox", document.getElementById('app'));
+</script>
+</body>
+</html>
